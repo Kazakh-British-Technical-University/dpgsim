@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Common/DateCounter.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Common/Money.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Common/Header.gd" type="Script" id=3]
+[ext_resource path="res://Fonts/Font_Regular18.tres" type="DynamicFont" id=4]
+
+[node name="Header" type="ColorRect"]
+margin_right = 640.0
+margin_bottom = 80.0
+color = Color( 0.505882, 0.556863, 0.580392, 1 )
+script = ExtResource( 3 )
+
+[node name="DateCounter" parent="." instance=ExtResource( 1 )]
+margin_left = 12.0
+margin_top = 8.0
+margin_right = 142.0
+margin_bottom = 72.0
+
+[node name="Money" parent="." instance=ExtResource( 2 )]
+margin_left = 151.0
+margin_top = 8.0
+margin_right = 331.0
+margin_bottom = 72.0
+
+[node name="CurrentPhase" type="ColorRect" parent="."]
+margin_left = 339.0
+margin_top = 8.0
+margin_right = 572.0
+margin_bottom = 72.0
+
+[node name="PhaseTitle" type="Label" parent="CurrentPhase"]
+anchor_right = 1.0
+margin_bottom = 38.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "Research phase"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Button" type="Button" parent="CurrentPhase"]
+margin_left = 8.0
+margin_top = 41.0
+margin_right = 221.0
+margin_bottom = 61.0
+text = "Next phase"
+
+[node name="ProgressBar" type="ProgressBar" parent="CurrentPhase"]
+margin_left = 8.0
+margin_top = 41.0
+margin_right = 221.0
+margin_bottom = 61.0
+percent_visible = false
+
+[node name="Label" type="Label" parent="CurrentPhase/ProgressBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "Days left:"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="CurrentPhase/Button" to="." method="_on_Button_pressed"]

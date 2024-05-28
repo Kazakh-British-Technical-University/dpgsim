@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Fonts/Font_Regular16.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Sprites/UI/PointsMeter.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/MainSession/PointCounter.gd" type="Script" id=3]
+
+[node name="PointCounter" type="Label"]
+margin_right = 102.0
+margin_bottom = 19.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Market points"
+align = 1
+script = ExtResource( 3 )
+
+[node name="PointsMeter" type="Sprite" parent="."]
+position = Vector2( 51, 45 )
+texture = ExtResource( 2 )
+
+[node name="GoodPoints" type="Label" parent="."]
+margin_left = 10.0
+margin_top = 23.0
+margin_right = 48.0
+margin_bottom = 63.0
+custom_fonts/font = ExtResource( 1 )
+text = "99"
+align = 1
+valign = 1
+
+[node name="BadPoints" type="Label" parent="."]
+margin_left = 54.0
+margin_top = 23.0
+margin_right = 92.0
+margin_bottom = 63.0
+custom_fonts/font = ExtResource( 1 )
+text = "99"
+align = 1
+valign = 1

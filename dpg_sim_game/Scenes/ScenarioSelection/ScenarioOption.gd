@@ -1,19 +1,28 @@
-extends Node2D
+extends Button
 
 var normalColor : Color
-var selectedColor = Color.red
+export var selectedColor = Color.red
 
 var selected = false
+var scenarioIndex = 0
 
 func _ready():
-	normalColor = $InnerFrame.color
-
-func _on_Button_pressed():
-	Select(not selected)
+	normalColor = $ScenarioFrame.modulate
 
 func Select(on):
 	selected = on
 	if on:
-		$Frame.color = selectedColor
+		$ScenarioFrame.modulate = selectedColor
 	else:
-		$Frame.color = normalColor
+		$ScenarioFrame.modulate = normalColor
+
+func _on_ScenarioOption_pressed():
+	get_parent().get_parent().get_parent().get_parent().SelectScenario(scenarioIndex)
+	Select(true)
+
+func InitScenarioButton(index):
+	scenarioIndex = index
+	var scenario = global.scenarios[index]
+	$Title.text = trans.local(scenario["Title"])
+	$Description.text = trans.local(scenario["Description"])
+	$ScenarioPic.texture = load("res://Sprites/SGDs/sdg"+ str(scenario["SDG"]) + ".png")

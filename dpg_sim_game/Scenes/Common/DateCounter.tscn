@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Fonts/Font_Regular18.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scenes/Common/DateCounter.gd" type="Script" id=2]
+
+[node name="DateCounter" type="Label"]
+margin_right = 130.0
+margin_bottom = 64.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Date:
+11/11/1111"
+align = 1
+valign = 1
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+margin_right = 130.0
+margin_bottom = 64.0

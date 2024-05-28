@@ -1,0 +1,93 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/Common/Tooltip.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/UI/TooltipWindow.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/Font_Regular40.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Fonts/Font_Light16.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Sprites/UI/buttonLong.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Buttons/MM_Button.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Fonts/Font_Regular24.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Sprites/UI/buttonLongPressed.png" type="Texture" id=8]
+
+[node name="Tooltip" type="Node2D"]
+visible = false
+script = ExtResource( 1 )
+
+[node name="CloseButton" type="Button" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 640.0
+margin_bottom = 640.0
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 151.0
+margin_top = 136.0
+margin_right = 488.0
+margin_bottom = 502.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="CloseButton2" type="Button" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 465.0
+margin_top = 135.0
+margin_right = 490.0
+margin_bottom = 163.0
+flat = true
+
+[node name="TooltipWindow" type="Sprite" parent="."]
+modulate = Color( 0.835294, 0.866667, 0.870588, 1 )
+position = Vector2( 320, 320 )
+texture = ExtResource( 2 )
+
+[node name="Title" type="Label" parent="."]
+margin_left = 164.0
+margin_top = 148.0
+margin_right = 474.0
+margin_bottom = 263.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Tooltip title text"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Body" type="Label" parent="."]
+margin_left = 164.0
+margin_top = 272.0
+margin_right = 474.0
+margin_bottom = 418.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "This text represents the body of a tooltip and in it will be all the information necessary for user to make a decision."
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="MM_Button" parent="." instance=ExtResource( 6 )]
+margin_left = 229.0
+margin_top = 424.0
+margin_right = 401.0
+margin_bottom = 478.0
+icon = ExtResource( 5 )
+buttonText = "PROCEED"
+sPressed = ExtResource( 8 )
+sReleased = ExtResource( 5 )
+usedFont = ExtResource( 7 )
+
+[node name="X" type="Label" parent="."]
+margin_left = 465.0
+margin_top = 136.0
+margin_right = 489.0
+margin_bottom = 164.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "X"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="CloseButton" to="." method="_on_CloseButton_pressed"]
+[connection signal="pressed" from="CloseButton2" to="." method="_on_CloseButton_pressed"]
+[connection signal="buttonPressed" from="MM_Button" to="." method="_on_MM_Button_buttonPressed"]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/ScenarioSelection/MapRegion.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Map/outline0.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="MapRegion" type="Button"]
+margin_right = 105.0
+margin_bottom = 107.0
+custom_styles/focus = SubResource( 1 )
+icon = ExtResource( 2 )
+flat = true
+icon_align = 1
+script = ExtResource( 1 )
+
+[connection signal="mouse_entered" from="." to="." method="_on_Button_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_Button_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_MapRegion_pressed"]
