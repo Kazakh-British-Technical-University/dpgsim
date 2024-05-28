@@ -3,7 +3,7 @@
   "NPR": 20,
   "PGR_limit": 80,
   "NPR_limit": 60,
-  "Win conditions": "to do.......",
+  "InsightMultiplier": 5,
   "DayLength": 1,
   "Phases": [
     {

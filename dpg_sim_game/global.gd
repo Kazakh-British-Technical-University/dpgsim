@@ -19,17 +19,17 @@ var marketP = 0
 var marketN = 0
 
 func ApplyInsights():
-	var temp = int(global.curProject["ProductInsights"])
+	var temp = int(global.curProject["ProductInsights"]) * mainConfig["InsightMultiplier"]
 	if temp > 0:
 		productP += temp
 	else:
 		productN -= temp
-	temp = int(global.curProject["TechInsights"])
+	temp = int(global.curProject["TechInsights"]) * mainConfig["InsightMultiplier"]
 	if temp > 0:
 		techP += temp
 	else:
 		techN -= temp
-	temp = int(global.curProject["MarketInsights"])
+	temp = int(global.curProject["MarketInsights"]) * mainConfig["InsightMultiplier"]
 	if temp > 0:
 		marketP += temp
 	else:
