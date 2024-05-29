@@ -3,7 +3,7 @@
   "NPR": 20,
   "PGR_limit": 80,
   "NPR_limit": 60,
-  "InsightMultiplier": 5,
+  "InsightMultiplier": 500,
   "DayLength": 1,
   "Phases": [
     {
