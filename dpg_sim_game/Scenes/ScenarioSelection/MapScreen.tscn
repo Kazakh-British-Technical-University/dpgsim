@@ -19,20 +19,19 @@ color = Color( 0.560784, 0.827451, 1, 1 )
 
 [node name="Map Sprite" type="Sprite" parent="Map"]
 position = Vector2( 320, 320 )
-scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 
 [node name="MapRegion" parent="Map/Map Sprite" instance=ExtResource( 3 )]
-margin_left = -141.0
-margin_top = -162.0
-margin_right = -36.0
-margin_bottom = -55.0
+margin_left = -229.0
+margin_top = -206.0
+margin_right = -124.0
+margin_bottom = -99.0
 
 [node name="MapRegion2" parent="Map/Map Sprite" instance=ExtResource( 3 )]
-margin_left = 36.0
-margin_top = -151.0
-margin_right = 141.0
-margin_bottom = -44.0
+margin_left = 124.0
+margin_top = -222.0
+margin_right = 229.0
+margin_bottom = -115.0
 icon = ExtResource( 4 )
 regionIndex = 1
 

@@ -4,7 +4,9 @@
   "PGR_limit": 80,
   "NPR_limit": 60,
   "InsightMultiplier": 500,
-  "DayLength": 1,
+  "Salary":50,
+  "TeamBonus": 1000,
+  "DayLength": 0.1,
   "Phases": [
     {
       "PhaseName": "RESEARCH",

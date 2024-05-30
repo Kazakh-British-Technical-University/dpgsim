@@ -28,4 +28,4 @@ margin_right = 524.0
 margin_bottom = 127.0
 
 [node name="Office" parent="." instance=ExtResource( 4 )]
-position = Vector2( 313, 389 )
+position = Vector2( 313, 368 )

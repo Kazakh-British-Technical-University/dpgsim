@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Fonts/Font_Regular18.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scenes/HUD/Money.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/HUD/DPGS_Rate.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/HUD/money_icon.png" type="Texture" id=4]
+[ext_resource path="res://Fonts/Font_Bold16.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Fonts/Font_Regular16.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Sprites/HUD/human_icon.png" type="Texture" id=7]
+
+[node name="Money" type="Control"]
+margin_right = 180.0
+margin_bottom = 64.0
+script = ExtResource( 2 )
+
+[node name="DPGsWindow" type="Sprite" parent="."]
+position = Vector2( 48, 31 )
+texture = ExtResource( 3 )
+
+[node name="MoneyIcon" type="Sprite" parent="DPGsWindow"]
+position = Vector2( -26, -15 )
+texture = ExtResource( 4 )
+
+[node name="RateWindow" type="Sprite" parent="."]
+position = Vector2( 154, 31 )
+texture = ExtResource( 3 )
+
+[node name="HumanIcon" type="Sprite" parent="RateWindow"]
+position = Vector2( -24, -15 )
+texture = ExtResource( 7 )
+
+[node name="Total" type="Label" parent="."]
+margin_left = 38.0
+margin_top = 8.0
+margin_right = 92.0
+margin_bottom = 29.0
+custom_colors/font_color = Color( 0.513726, 0.321569, 0.470588, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "DPGs"
+align = 1
+
+[node name="Burn" type="Label" parent="."]
+margin_left = 146.0
+margin_top = 8.0
+margin_right = 198.0
+margin_bottom = 29.0
+custom_colors/font_color = Color( 0.513726, 0.321569, 0.470588, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "Rate"
+align = 1
+
+[node name="TotalMoney" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 33.0
+margin_right = 80.0
+margin_bottom = 52.0
+custom_colors/font_color = Color( 0.513726, 0.321569, 0.470588, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "9999999"
+align = 2
+
+[node name="BurnMoney" type="Label" parent="."]
+margin_left = 122.0
+margin_top = 33.0
+margin_right = 186.0
+margin_bottom = 52.0
+custom_colors/font_color = Color( 0.513726, 0.321569, 0.470588, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "9999999"
+align = 2
+
+[node name="Cost" type="Label" parent="."]
+visible = false
+margin_left = 14.0
+margin_top = 32.0
+margin_right = 80.0
+margin_bottom = 53.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "-1000"
+align = 2

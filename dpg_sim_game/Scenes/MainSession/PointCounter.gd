@@ -7,6 +7,7 @@ var good = 0
 var bad = 0
 var goodPos : Vector2
 var badPos : Vector2
+
 func Start():
 	visible = present
 	UpdateText()
@@ -24,3 +25,7 @@ func UpdateText():
 	$GoodPoints.text = str(good)
 	$BadPoints.text = str(bad)
 
+func Reset():
+	good = 0
+	bad = 0
+	UpdateText()

@@ -61,7 +61,7 @@ func LoadMainConfig():
 	window.fetchMainConfig()
 
 func LoadScenarios():
-	window.getFilesInDirectory()
+	window.getScenarios()
 
 func LoadProjects():
 	window.fetchProjects()

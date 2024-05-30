@@ -7,7 +7,7 @@ window.externalator = {
 
 function fetchMainConfig() 
 {
-	fetch("Data/MainConfig.txt")
+	fetch("./Data/MainConfig.txt")
 		.then(response => response.text())
 		.then
 		((data) => 
@@ -18,15 +18,27 @@ function fetchMainConfig()
 		)
 }
 
-function getFilesInDirectory() 
+function getScenarios() 
 {
-	$.getJSON("Data/Scenarios/", files => {
+	fetch("./Data/ScenarioList.txt")
+		.then(response => response.json())
+		.then
+		((data) => 
+			{
+				for (let index = 0; index < data.ScenarioFiles.length; ++index) 
+				{
+					//console.log(files[index]);
+					fetchScenario("./Data/"+data.ScenarioFiles[index]);
+				}
+			}
+		)
+	/*$.getJSON("./Data/Scenarios/", files => {
 		for (let index = 0; index < files.length; ++index) 
 		{
 			//console.log(files[index]);
-			fetchScenario("Data/Scenarios/"+files[index]);
+			fetchScenario("./Data/Scenarios/"+files[index]);
 		}
-	});
+	});*/
 }
 
 function fetchScenario(path) 
@@ -43,7 +55,7 @@ function fetchScenario(path)
 }
 
 function fetchTrans() {
-	fetch("Data/Translations.csv")
+	fetch("./Data/Translations.csv")
 		.then(response => response.text())
 		.then
 		((data) => 
@@ -55,7 +67,7 @@ function fetchTrans() {
 }
 
 function fetchProjects() {
-	fetch("Data/Projects.csv")
+	fetch("./Data/Projects.csv")
 		.then(response => response.text())
 		.then
 		((data) => 

@@ -17,13 +17,14 @@ margin_bottom = 15.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 3 )
 text = "Management"
+align = 1
 script = ExtResource( 10 )
 
 [node name="BgDefault" type="Sprite" parent="."]
 position = Vector2( 35, 68 )
 texture = ExtResource( 2 )
 
-[node name="Portrait01Transaprent" type="Sprite" parent="BgDefault"]
+[node name="Portrait" type="Sprite" parent="BgDefault"]
 position = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 __meta__ = {
@@ -58,3 +59,6 @@ custom_fonts/font = ExtResource( 9 )
 text = "99"
 align = 1
 valign = 1
+
+[connection signal="buttonPressed" from="Plus_Button" to="." method="_on_Plus_Button_buttonPressed"]
+[connection signal="buttonPressed" from="Minus_Button" to="." method="_on_Minus_Button_buttonPressed"]

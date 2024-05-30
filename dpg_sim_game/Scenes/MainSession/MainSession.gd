@@ -14,6 +14,10 @@ func Start():
 	$DevCounter.present = global.mainConfig["Phases"][global.curPhaseIndex]["Dev"]
 	$MarketCounter.present = global.mainConfig["Phases"][global.curPhaseIndex]["Market"]
 	
+	$FitCounter.text = trans.local("FIT_PTS")
+	$DevCounter.text = trans.local("DEV_PTS")
+	$MarketCounter.text = trans.local("MARKET_PTS")
+	
 	for counter in counters:
 		counter.Start()
 	
@@ -28,18 +32,9 @@ func GenPoints():
 			GenOnePoint(counters[i], i)
 
 func GenOnePoint(counter : PointCounter, ind : int):
-	var pBonus = 0
-	var nBonus = 0
-	match ind:
-		0:
-			pBonus = global.productP
-			nBonus = global.productN
-		1:
-			pBonus = global.techP
-			nBonus = global.techN
-		2:
-			pBonus = global.marketP
-			nBonus = global.marketN
+	var pBonus = global.GetInsight(ind, true)
+	var nBonus = global.GetInsight(ind, false)
+	
 	var remainder = PGR + pBonus
 	var negChance = clamp(NPR + nBonus, 0, NPR_limit)
 	while remainder > 0:
@@ -51,3 +46,7 @@ func GenOnePoint(counter : PointCounter, ind : int):
 			$Office.EnqueuePoint(counter, isGood)
 		else:
 			remainder = 0
+
+func ResetCounters():
+	for counter in counters:
+		counter.Reset()

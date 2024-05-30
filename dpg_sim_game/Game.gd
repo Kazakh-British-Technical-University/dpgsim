@@ -3,6 +3,8 @@ extends Node2D
 
 onready var gameTooltip = $Tooltip
 onready var dateCounter = $Header/DateCounter
+onready var teamScreen = $TeamScreen
+
 func _ready():
 	global.game = self
 	$WebInterface.ConnectToWeb()
@@ -13,7 +15,7 @@ func _ready():
 	$MainMenu.Start()
 	$MM_Button.Start()
 	dateCounter.connect("dayTick", $MainSession, "GenPoints")
-	dateCounter.connect("dayTick", self, "CheckTime")
+	dateCounter.connect("dayTick", $Header, "CheckTime")
 
 func LoadFiles():
 	$WebInterface.LoadTranslations()
@@ -25,28 +27,40 @@ func StartScenario():
 	$MapScreen.visible = false
 	global.curPhaseIndex = 0
 	$Header.Start()
+	$TeamScreen.Start()
+	$MainSession.ResetCounters()
 	$Header/Money.SetMoney(global.curScenario()["Money"])
 	$Header.visible = true
 	StartNextPhase()
 
 func StartNextPhase():
-	$Header.StartPhase()
+	$Header/PhaseHUD.StartPhase()
 	$Projects.Start()
 	$Projects.visible = true
 
 func StartProject():
-	PauseTimer(false)
 	$Projects.visible = false
+	$TeamScreen.UpdateAvailableWorkers()
+	if global.curPhaseIndex < 2:
+		StartSession()
+	else:
+		$TeamQuestion.Start()
+		$TeamQuestion.visible = true
+
+func StartSession():
+	PauseTimer(false)
 	$Header.StartProject()
 	$MainSession.Start()
 	$MainSession.visible = true
 
 func ProjectComplete():
 	PauseTimer(true)
-	curDays = 0
 	global.ApplyInsights()
 	$MainSession.visible = false
-	if (global.curPhaseIndex < 8):
+	if global.curPhaseIndex == 1:
+		##################################################
+		print("name your product")
+	if global.curPhaseIndex < 8:
 		global.curPhaseIndex += 1
 		StartNextPhase()
 	else:
@@ -59,12 +73,8 @@ func PauseTimer(pause):
 		dateCounter.t = 0
 		dateCounter.timerOn = true
 
-var curDays = 0
-func CheckTime():
-	curDays += 1
-	$Header.UpdateProgress(int(global.curProject["TimeCost"]) - curDays)
-	if curDays == int(global.curProject["TimeCost"]):
-		$Header.PhaseComplete()
+func HireWorker(quantity):
+	$Header/Money.AddBurn(int(global.mainConfig["Salary"]) * quantity)
 
 func _on_Start_Button_buttonPressed():
 	$MainMenu.visible = false
@@ -75,7 +85,14 @@ func _on_Start_Button_buttonPressed():
 func _on_MM_Button_buttonPressed():
 	PauseTimer(true)
 	global.ResetGame()
+	$Header/PhaseHUD.ResetPhases()
 	for child in get_children():
 		child.visible = false
-	
 	$MainMenu.visible = true
+
+func OpenTeamScreen():
+	$TeamScreen.visible = true
+
+func CloseTeamScreen():
+	$TeamScreen.visible = false
+	StartSession()

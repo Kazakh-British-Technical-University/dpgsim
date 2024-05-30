@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/HUD/phase_square.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/HUD/PhaseStep.gd" type="Script" id=2]
+
+[node name="PhaseStep" type="Sprite"]
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Color" type="ColorRect" parent="."]
+show_behind_parent = true
+margin_left = -8.0
+margin_top = -6.0
+margin_right = 8.0
+margin_bottom = 6.0
+mouse_filter = 2

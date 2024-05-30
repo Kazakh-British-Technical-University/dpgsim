@@ -1,0 +1,7 @@
+{
+	"ScenarioFiles":
+	[
+		"Scenarios/Scenario_CollectiveRentWebsite.txt",
+		"Scenarios/Scenario_SchoolEngagement.txt"		
+	]
+}
