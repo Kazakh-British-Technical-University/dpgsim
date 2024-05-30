@@ -96,3 +96,14 @@ func OpenTeamScreen():
 func CloseTeamScreen():
 	$TeamScreen.visible = false
 	StartSession()
+
+
+func GameOver():
+	PauseTimer(true)
+	$MainSession/Office.ClearQueue()
+	$Header/PhaseHUD.ShowButton(false)
+	var callback = funcref(self, "_on_MM_Button_buttonPressed")
+	gameTooltip.SetTooltip(trans.local("GAME_OVER"), trans.local("GAME_OVER_DESCR"), callback)
+
+func Win():
+	pass

@@ -14,15 +14,15 @@ margin_bottom = 62.0
 rect_pivot_offset = Vector2( -96, -38 )
 script = ExtResource( 5 )
 
-[node name="PrototypingPhase" type="Sprite" parent="."]
+[node name="Phase" type="Sprite" parent="."]
 position = Vector2( 116, 31 )
 texture = ExtResource( 1 )
 
-[node name="NextStage" type="Sprite" parent="PrototypingPhase"]
+[node name="NextStage" type="Sprite" parent="Phase"]
 visible = false
 texture = ExtResource( 4 )
 
-[node name="Button" type="Button" parent="PrototypingPhase/NextStage"]
+[node name="Button" type="Button" parent="Phase/NextStage"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -116.0
@@ -72,4 +72,4 @@ position = Vector2( 182, 42 )
 [node name="PhaseStep9" parent="Steps" instance=ExtResource( 3 )]
 position = Vector2( 204, 42 )
 
-[connection signal="pressed" from="PrototypingPhase/NextStage/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Phase/NextStage/Button" to="." method="_on_Button_pressed"]

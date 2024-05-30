@@ -48,3 +48,6 @@ func SpawnParticle(point):
 func ParticleFinished(oldParticle : PointParticle):
 	particles.append(oldParticle)
 	oldParticle.visible = false
+
+func ClearQueue():
+	queue.clear()

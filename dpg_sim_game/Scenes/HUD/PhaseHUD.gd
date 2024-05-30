@@ -18,7 +18,7 @@ func ResetPhases():
 		child.EmptyStep()
 
 func ShowButton(hide):
-	$PrototypingPhase/NextStage.visible = hide
+	$Phase/NextStage.visible = hide
 
 func _on_Button_pressed():
 	ShowButton(false)

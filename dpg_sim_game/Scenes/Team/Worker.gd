@@ -2,7 +2,6 @@ extends Label
 
 func Start():
 	text = trans.local("TEAM_" + name.to_upper())
-	print(name.to_upper())
 	match name:
 		"Management":
 			$BgDefault/Portrait.texture = load("res://Sprites/Portraits/portrait01Transaprent.png")
