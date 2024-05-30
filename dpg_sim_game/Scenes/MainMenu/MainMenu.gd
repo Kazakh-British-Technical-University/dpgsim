@@ -5,3 +5,14 @@ func Start():
 	$Start_Button.Start()
 	$Settings_Button.Start()
 	$Credits_Button.Start()
+
+func _on_Credits_Button_buttonPressed():
+	$Credits.visible = true
+	$Credits.Start()
+	ShowMainMenu(false)
+	
+func ShowMainMenu(show):
+	$Start_Button.visible = show
+	$Settings_Button.visible = show
+	$Credits_Button.visible = show
+

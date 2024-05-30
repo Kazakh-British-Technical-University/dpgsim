@@ -2,7 +2,7 @@
   "Title": "SCHOOL_APP_TITLE",
   "Description": "SCHOOL_APP_DESCR",
   "SDG": 4,
-  "Money": 777,
+  "Money": 1000000,
   "MapRegion":0,
   "PhaseProjects": [
       [0,1,2,3],

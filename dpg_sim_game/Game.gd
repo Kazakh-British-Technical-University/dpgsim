@@ -59,12 +59,13 @@ func ProjectComplete():
 	$MainSession.visible = false
 	if global.curPhaseIndex == 1:
 		##################################################
-		print("name your product")
+		# print("name your product")
+		pass
 	if global.curPhaseIndex < 8:
 		global.curPhaseIndex += 1
 		StartNextPhase()
 	else:
-		print("You win")
+		Win()
 
 func PauseTimer(pause):
 	if pause:
@@ -106,4 +107,5 @@ func GameOver():
 	gameTooltip.SetTooltip(trans.local("GAME_OVER"), trans.local("GAME_OVER_DESCR"), callback)
 
 func Win():
-	pass
+	$WinScreen.Start()
+	$WinScreen.visible = true

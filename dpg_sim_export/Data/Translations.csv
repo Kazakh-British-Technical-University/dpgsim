@@ -31,9 +31,12 @@ TEAM_ACTIONS,Team actions,,
 TEAM_ACTIONS_DESCR,Do you want to hire or fire a worker?,,
 GAME_OVER,Game over,,
 GAME_OVER_DESCR,You ran out of money…,,
-YOU_WIN,You won!,,
-YOU_WIN_DESCR,Congratulations! Your product was successful!,,
-,,,
+YOU_WIN,Congratulations! Your product was successful!,,
+RESTART,Play again,,
+CREDITS_LIST,"Game design by Aleksandr Mezin
+Developed by Almaskhan Baimyshev
+Art by Elena
+Music by Stephen Bennett from fesliyanstudios.com",,
 ,,,
 ,,,
 ,,,
