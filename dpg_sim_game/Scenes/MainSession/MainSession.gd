@@ -40,9 +40,12 @@ func GenOnePoint(counter : PointCounter, ind : int):
 	while remainder > 0:
 		var pointChance = rng.randi_range(1, 100)
 		var temp_PGR = clamp(remainder, 0, PGR_limit)
+		print(counter.name, " | random number:", pointChance, " PGR:", remainder, " clamped PGR: ", temp_PGR)
 		if pointChance <= temp_PGR:
 			remainder -= temp_PGR
-			var isGood = rng.randi_range(1, 100) > negChance
+			var negRandom = rng.randi_range(1, 100)
+			var isGood = negRandom > negChance
+			print("NPR:", NPR + nBonus, " clamped NPR:", negChance, " random number:", negRandom)
 			$Office.EnqueuePoint(counter, isGood)
 		else:
 			remainder = 0
