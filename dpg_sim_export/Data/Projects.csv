@@ -15,16 +15,16 @@ ID,Title,IconPath,Description,TimeCost,MoneyCost,ProductInsights,TechInsights,Ma
 13,Medium focus group testing,Data/Icons/Project14.png,This is project 14,56,25,2,1,1,0
 14,Real-world testing,Data/Icons/Project15.png,This is project 15,56,25,1,1,2,0
 15,Cascade testing with user groups,Data/Icons/Project16.png,This is project 16,112,50,3,3,3,0
-16,Project 1,Data/Icons/Project17.png,This is project 17,28,25,0,0,0,0
-17,Project 2,Data/Icons/Project18.png,This is project 18,56,25,0,0,0,0
-18,Project 3,Data/Icons/Project19.png,This is project 19,56,25,0,0,0,0
-19,Project 4,Data/Icons/Project20.png,This is project 20,112,50,0,0,0,0
-20,Project 1,Data/Icons/Project21.png,This is project 21,28,25,0,0,0,0
-21,Project 2,Data/Icons/Project22.png,This is project 22,56,25,0,0,0,0
-22,Project 3,Data/Icons/Project23.png,This is project 23,56,25,0,0,0,0
-23,Project 4,Data/Icons/Project24.png,This is project 24,112,50,0,0,0,0
-24,Project 1,Data/Icons/Project25.png,This is project 25,28,25,0,0,0,0
-25,Project 2,Data/Icons/Project26.png,This is project 26,56,25,0,0,0,0
+16,Website building,Data/Icons/Project17.png,This is project 17,28,25,0,0,0,0
+17,Social media setup,Data/Icons/Project18.png,This is project 18,28,25,0,0,0,0
+18,Website and Social Media,Data/Icons/Project19.png,This is project 19,56,25,0,0,0,0
+19,Full marketing commitment,Data/Icons/Project20.png,This is project 20,112,50,0,0,0,0
+20,Single server,Data/Icons/Project21.png,This is project 21,28,25,0,0,0,0
+21,Cloud infrastructure,Data/Icons/Project22.png,This is project 22,28,25,0,0,0,0
+22,Multiple servers,Data/Icons/Project23.png,This is project 23,56,25,0,0,0,0
+23,DevOPS team with an infrastructure,Data/Icons/Project24.png,This is project 24,112,50,0,0,0,0
+24,Prepare all documents,Data/Icons/Project25.png,This is project 25,28,25,0,0,0,0
+25,Contact UNICEF office to assist,Data/Icons/Project26.png,This is project 26,28,25,0,0,0,0
 26,Project 3,Data/Icons/Project27.png,This is project 27,56,25,0,0,0,0
 27,Project 4,Data/Icons/Project28.png,This is project 28,112,50,0,0,0,0
 28,Project 1,Data/Icons/Project29.png,This is project 29,28,25,0,0,0,0
@@ -33,5 +33,3 @@ ID,Title,IconPath,Description,TimeCost,MoneyCost,ProductInsights,TechInsights,Ma
 31,Project 4,Data/Icons/Project32.png,This is project 32,112,50,0,0,0,0
 32,Project 1,Data/Icons/Project33.png,This is project 33,28,25,0,0,0,0
 33,Project 2,Data/Icons/Project34.png,This is project 34,56,25,0,0,0,0
-34,Project 3,Data/Icons/Project35.png,This is project 35,56,25,0,0,0,0
-35,Project 4,Data/Icons/Project36.png,This is project 36,112,50,0,0,0,0
