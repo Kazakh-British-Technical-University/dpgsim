@@ -109,3 +109,21 @@ func GameOver():
 func Win():
 	$WinScreen.Start()
 	$WinScreen.visible = true
+	$WinScreen/Scores.text = trans.local("SCORES") + ": " + str(CalcScores())
+
+func CalcScores():
+	var points = 0
+	points += 20 * $MainSession/FitCounter.good
+	points -= 25 * $MainSession/FitCounter.bad
+	points += 15 * $MainSession/DevCounter.good
+	points -= 20 * $MainSession/DevCounter.bad
+	points += 10 * $MainSession/MarketCounter.good
+	points -= 15 * $MainSession/MarketCounter.bad
+	if $Header.totalDays < 336:
+		points += (336 - $Header.totalDays) * 5
+		points += 336 * 3
+	else:
+		if $Header.totalDays < 672:
+			points += (672 - $Header.totalDays) * 3
+	points += $Header/Money.total * 5
+	return points
