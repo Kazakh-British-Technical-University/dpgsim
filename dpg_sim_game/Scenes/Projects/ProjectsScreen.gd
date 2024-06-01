@@ -12,6 +12,8 @@ func Start():
 	for i in range(projectInds.size()):
 		randInds.append(i)
 	
+	numProjects = min(4, projectInds.size())
+	
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	
