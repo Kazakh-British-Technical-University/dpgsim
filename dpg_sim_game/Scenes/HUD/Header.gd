@@ -3,7 +3,6 @@ extends ColorRect
 func Start():
 	$DateCounter.Start()
 	$Money.Start()
-	#$PhaseHUD.StartPhase()
 
 func StartProject():
 	curDays = 0
@@ -12,8 +11,8 @@ func StartProject():
 var curDays = 0
 func CheckTime():
 	curDays += 1
+	$"../MainSession".SetProgress(curDays)
 	if curDays == int(global.curProject["TimeCost"]):
-		curDays = 0
 		$PhaseHUD.OverTime()
 	if $DateCounter.day == 1:
 		$Money.Salary()

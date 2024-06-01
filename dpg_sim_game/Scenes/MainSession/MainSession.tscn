@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/MainSession/MainSession.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/MainSession/PointCounter.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Fonts/Font_Regular24.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scenes/MainSession/Office.tscn" type="PackedScene" id=4]
 
 [node name="MainSession" type="Node2D"]
@@ -29,3 +30,14 @@ margin_bottom = 127.0
 
 [node name="Office" parent="." instance=ExtResource( 4 )]
 position = Vector2( 313, 368 )
+
+[node name="DaysCountdown" type="Label" parent="."]
+margin_left = 176.0
+margin_top = 564.0
+margin_right = 465.0
+margin_bottom = 617.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "Days left: 112"
+align = 1
+valign = 1

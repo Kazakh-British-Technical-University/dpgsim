@@ -1,7 +1,7 @@
 extends Control
 
 var total = 0
-var burn = 0
+var burn : float = 0
 var costPos : Vector2 
 func Start():
 	costPos = $Cost.rect_position
@@ -9,6 +9,7 @@ func Start():
 	$Burn.text = trans.local("RATE") + ": "
 	burn = global.mainConfig["Salary"]
 	$TotalMoney.add_color_override("font_color", Color.black)
+	_UpdateText()
 
 func SetMoney(_total):
 	total = int(_total)
@@ -33,12 +34,14 @@ func Spend(_cost):
 		global.game.GameOver()
 
 func Salary():
-	Spend(burn)
+	Spend(actualBurn())
 
+func actualBurn():
+	return burn * global.BurnMultiplier()
 
 func _UpdateText():
 	$TotalMoney.text = str(total)
-	$BurnMoney.text = str(burn)
+	$BurnMoney.text = str(actualBurn())
 
 func _SpendComplete():
 	yield(get_tree().create_timer(0.5),"timeout")

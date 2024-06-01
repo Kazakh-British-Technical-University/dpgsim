@@ -2,7 +2,7 @@ extends Node2D
 
 onready var allTeams = [$Management,$Development,$Design,$Product,$Marketing,$QA,$Support]
 var teamLimit = 5
-var teamSize = 1
+var teamSize = 0
 var team : Dictionary = {
 	"Management": 1,
 	"Development": 0,
@@ -13,9 +13,8 @@ var team : Dictionary = {
 	"Support": 0,
 }
 
-
 func Start():
-	teamSize = 1
+	teamSize = 0
 	teamLimit = 5
 	for key in team:
 		team[key] = 0
@@ -48,14 +47,17 @@ func UpdateAvailableWorkers():
 		allTeams[i].visible = i < ind
 
 func HireWorker(type):
+	if type == "Management":
+		team[type] += 1
+		teamLimit = ManagerLNfunc(team["Management"]) 
+		global.game.HireWorker(1)
+		UpdateTeamSizeLabel()
+		return
+	
 	if teamSize < teamLimit:
 		teamSize += 1
 		team[type] += 1
 		global.game.HireWorker(1)
-		
-		if type == "Management":
-			teamLimit += 5
-		
 		UpdateTeamSizeLabel()
 
 func FireWorker(type):
@@ -67,14 +69,13 @@ func FireWorker(type):
 			UpdateTeamSizeLabel()
 		return
 	else:
-		if team[type] > 1 and teamSize <= teamLimit - 5:
-			teamSize -= 1
+		if team[type] > 1 and teamSize <= ManagerLNfunc(team["Management"]-1):
 			team[type] -= 1
 			global.game.HireWorker(-1)
-			teamLimit -= 5
+			teamLimit = ManagerLNfunc(team["Management"])
 			UpdateTeamSizeLabel()
 
-func GetInsight(index, good):
+func GetTeamBonus(index, good):
 	var value = 0
 	match index:
 		0:
@@ -92,11 +93,19 @@ func GetInsight(index, good):
 				value = team["Marketing"]
 			else:
 				value = -team["Support"]
-	
-	return value * int(global.mainConfig["TeamBonus"])
+	if value == 0:
+		return 0
+	else:
+		return LNfunc(value) * float(global.mainConfig["TeamBonus"])
 
 func _on_Back_Button_buttonPressed():
 	global.game.CloseTeamScreen()
 
 func UpdateTeamSizeLabel():
 	$TeamSize.text = trans.local("TEAM_SIZE") + ": " + str(teamSize) + "/" + str(teamLimit)
+
+func ManagerLNfunc(value):
+	return round(LNfunc(value)*3+2)
+
+func LNfunc(value):
+	return sign(value) * (1.9 * log(abs(value)) + 1)

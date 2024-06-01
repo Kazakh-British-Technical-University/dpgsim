@@ -9,17 +9,24 @@ func OverTime():
 	ShowButton(true)
 	get_node("Steps/PhaseStep" + str(global.curPhaseIndex+1)).CompleteStep()
 	if (global.curPhaseIndex == 8):
-		$PhaseTitle.text = trans.local("FINISH_GAME")
+		$NextStage/NextPhaseParent/NextPhase.text = trans.local("FINISH_GAME")
 	else:
-		$PhaseTitle.text = trans.local("NEXT_PHASE")
+		$NextStage/NextPhaseParent/NextPhase.text = trans.local("NEXT_PHASE")
 
 func ResetPhases():
 	for child in $Steps.get_children():
 		child.EmptyStep()
 
 func ShowButton(hide):
-	$Phase/NextStage.visible = hide
+	$NextStage.visible = hide
 
 func _on_Button_pressed():
 	ShowButton(false)
 	global.game.ProjectComplete()
+
+var t = 0
+func _process(delta):
+	t += delta
+	if t > 1:
+		t -= 1
+	$NextStage/NextPhaseParent.scale = Vector2.ONE * lerp(1, 1.2, abs(t-0.5) * 2)

@@ -17,6 +17,7 @@ var techP = 0
 var techN = 0
 var marketP = 0
 var marketN = 0
+var teamInsight = 0
 
 func ApplyInsights():
 	var temp = int(global.curProject["ProductInsights"])
@@ -34,30 +35,48 @@ func ApplyInsights():
 		marketP += temp
 	else:
 		marketN -= temp
+	teamInsight += int(global.curProject["TeamInsights"])
 
 func GetInsight(index, good):
-	var value = 0
+	var insight = 0.0
+	var teamBonus = 0.0
 	match index:
 		0:
 			if good:
-				value = productP + game.teamScreen.GetInsight(index, good)
+				insight = productP
+				teamBonus = game.teamScreen.GetTeamBonus(index, good)
 			else:
-				value = productN + game.teamScreen.GetInsight(index, good)
+				insight = productN
+				teamBonus = game.teamScreen.GetTeamBonus(index, good)
 		1:
 			if good:
-				value = techP + game.teamScreen.GetInsight(index, good)
+				insight = techP
+				teamBonus = game.teamScreen.GetTeamBonus(index, good)
 			else:
-				value = techN + game.teamScreen.GetInsight(index, good)
+				insight = techN
+				teamBonus = game.teamScreen.GetTeamBonus(index, good)
 		2:
 			if good:
-				value = marketP + game.teamScreen.GetInsight(index, good)
+				insight = marketP
+				teamBonus = game.teamScreen.GetTeamBonus(index, good)
 			else:
-				value = marketN + game.teamScreen.GetInsight(index, good)
-	return value * int(mainConfig["InsightMultiplier"])
+				insight = marketN
+				teamBonus = game.teamScreen.GetTeamBonus(index, good)
+	
+	return insight * float(mainConfig["InsightMultiplier"]) + teamBonus
+
+func BurnMultiplier():
+	return 1 - float(mainConfig["TeamInsightBurnReductionPercent"]) * teamInsight / 100.0
 
 func ResetGame():
 	activeScenarioIndex = -1
 	curPhaseIndex = -1
+	productP = 0
+	productN = 0
+	techP = 0
+	techN = 0
+	marketP = 0
+	marketN = 0
 
 func curPhase():
 	return scenarios[activeScenarioIndex]["PhaseProjects"][curPhaseIndex]

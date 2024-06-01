@@ -5,8 +5,9 @@
   "NPR_limit": 60,
   "InsightMultiplier": 10,
   "Salary":50,
-  "TeamBonus": 10,
+  "TeamBonus": 1,
   "DayLength": 0.1,
+  "TeamInsightBurnReductionPercent": 5,
   "Phases": [
     {
       "PhaseName": "RESEARCH",
