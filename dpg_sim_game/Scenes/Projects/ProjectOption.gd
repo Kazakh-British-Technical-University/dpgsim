@@ -6,6 +6,7 @@ func InitProjectButton(project):
 	$Title.text = trans.local(data["Title"])
 
 func _on_ProjectOption_pressed():
+	global.game.soundManager.PlaySFX("Tick")
 	global.curProject = data
 	var desc = trans.local(data["Description"]) + "\n"
 	desc += trans.local("COST") + ": " + data["MoneyCost"] + "\n"

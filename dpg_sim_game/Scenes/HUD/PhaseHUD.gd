@@ -21,6 +21,7 @@ func ShowButton(hide):
 	$NextStage.visible = hide
 
 func _on_Button_pressed():
+	global.game.soundManager.PlaySFX("Boop")
 	ShowButton(false)
 	global.game.ProjectComplete()
 

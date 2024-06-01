@@ -16,3 +16,8 @@ func ShowMainMenu(show):
 	$Settings_Button.visible = show
 	$Credits_Button.visible = show
 
+func _on_Settings_Button_buttonPressed():
+	$Settings.Start()
+	$Settings.visible = true
+	ShowMainMenu(false)
+

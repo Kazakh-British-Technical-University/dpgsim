@@ -83,3 +83,4 @@ func curPhase():
 
 func curScenario():
 	return scenarios[activeScenarioIndex]
+

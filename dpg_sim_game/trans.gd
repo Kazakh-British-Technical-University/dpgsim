@@ -6,4 +6,7 @@ func local(line : String):
 	if (dict.has(line)):
 		return dict[line][curLang]
 	else:
-		return "Translation missing"
+		if len(line) > 0:
+			return line
+		else:
+			return "Translation missing"

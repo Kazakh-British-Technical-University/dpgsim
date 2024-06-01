@@ -10,6 +10,7 @@ func _ready():
 	normalColor = $ScenarioFrame.modulate
 
 func Select(on):
+	global.game.soundManager.PlaySFX("Tick")
 	selected = on
 	if on:
 		$ScenarioFrame.modulate = selectedColor

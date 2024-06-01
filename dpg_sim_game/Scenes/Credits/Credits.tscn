@@ -13,8 +13,8 @@ script = ExtResource( 3 )
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_top = -48.0
-margin_bottom = 180.0
+margin_top = -98.0
+margin_bottom = 104.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 1 )
 text = "Game design by Aleksandr Mezin
@@ -26,9 +26,9 @@ autowrap = true
 
 [node name="MM_Button" parent="." instance=ExtResource( 2 )]
 margin_left = 153.0
-margin_top = 520.0
+margin_top = 433.0
 margin_right = 488.0
-margin_bottom = 588.0
+margin_bottom = 501.0
 buttonText = "BACK"
 
 [connection signal="buttonPressed" from="MM_Button" to="." method="_on_MM_Button_buttonPressed"]

@@ -16,5 +16,6 @@ func _on_MM_Button_buttonPressed():
 	callback = null
 
 func _on_CloseButton_pressed():
+	global.game.soundManager.PlaySFX("Tick")
 	visible = false
 	callback = null

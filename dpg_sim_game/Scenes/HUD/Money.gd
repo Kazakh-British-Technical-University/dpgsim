@@ -20,6 +20,7 @@ func AddBurn(_burn):
 	_UpdateText()
 
 func Spend(_cost):
+	global.game.soundManager.PlaySFX("Ching")
 	var cost = int(_cost)
 	total -= cost
 	_UpdateText()

@@ -7,6 +7,7 @@ func _ready():
 
 func _on_MapRegion_pressed():
 	modulate.a = 0
+	global.game.soundManager.PlaySFX("Boop")
 	get_parent().get_parent().get_parent().OpenScenarioList(regionIndex)
 
 

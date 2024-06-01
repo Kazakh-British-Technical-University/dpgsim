@@ -4,6 +4,7 @@ extends Node2D
 onready var gameTooltip = $Tooltip
 onready var dateCounter = $Header/DateCounter
 onready var teamScreen = $TeamScreen
+onready var soundManager = $Sounds
 
 func _ready():
 	global.game = self

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Land_of_8_Bits_-_Stephen_Bennett.mp3-835fe27f232e770e030a0a633657e950.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Land_of_8_Bits_-_Stephen_Bennett.mp3"
+dest_files=[ "res://.import/Land_of_8_Bits_-_Stephen_Bennett.mp3-835fe27f232e770e030a0a633657e950.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -15,11 +15,14 @@ func Start():
 	icon = sReleased
 
 func _on_MM_Button_button_down():
+	global.game.soundManager.PlaySFX("KeyDown")
 	icon = sPressed
 	$Label.rect_position += Vector2.DOWN * pressedOffset
 
 func _on_MM_Button_button_up():
+	global.game.soundManager.PlaySFX("KeyUp")
 	icon = sReleased
 	$Label.rect_position -= Vector2.DOWN * pressedOffset
 	yield(get_tree().create_timer(0.05),"timeout")
 	emit_signal("buttonPressed")
+
