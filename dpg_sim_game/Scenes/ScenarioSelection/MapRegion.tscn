@@ -6,6 +6,7 @@
 [sub_resource type="StyleBoxEmpty" id=1]
 
 [node name="MapRegion" type="Button"]
+modulate = Color( 1, 1, 1, 0.627451 )
 margin_right = 105.0
 margin_bottom = 107.0
 custom_styles/focus = SubResource( 1 )

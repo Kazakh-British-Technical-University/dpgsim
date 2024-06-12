@@ -1,13 +1,18 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/ScenarioSelection/MapScreen.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Map/map.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/ScenarioSelection/MapRegion.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Sprites/Map/outline1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Map/villageOutline.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/UI/buttonLongPressed.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/UI/buttonLong.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/Buttons/MM_Button.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Fonts/Font_Regular24.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Sprites/Map/industryOutline.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Map/nuclearOutline.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Map/forestOutline.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Map/militaryOutline.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Map/waterOutline.png" type="Texture" id=13]
 
 [node name="MapScreen" type="Node2D"]
 script = ExtResource( 1 )
@@ -22,18 +27,58 @@ position = Vector2( 320, 320 )
 texture = ExtResource( 2 )
 
 [node name="MapRegion" parent="Map/Map Sprite" instance=ExtResource( 3 )]
-margin_left = -229.0
-margin_top = -206.0
-margin_right = -124.0
-margin_bottom = -99.0
+margin_left = -270.0
+margin_top = -317.0
+margin_right = -84.0
+margin_bottom = -117.0
+
+[node name="MapRegion3" parent="Map/Map Sprite" instance=ExtResource( 3 )]
+margin_left = -270.0
+margin_top = -81.0
+margin_right = -34.0
+margin_bottom = 41.0
+icon = ExtResource( 9 )
+regionIndex = 2
+
+[node name="MapRegion4" parent="Map/Map Sprite" instance=ExtResource( 3 )]
+margin_left = 46.0
+margin_top = -183.0
+margin_right = 270.0
+margin_bottom = 35.0
+icon = ExtResource( 10 )
+regionIndex = 3
 
 [node name="MapRegion2" parent="Map/Map Sprite" instance=ExtResource( 3 )]
-margin_left = 124.0
-margin_top = -222.0
-margin_right = 229.0
-margin_bottom = -115.0
+margin_left = 112.0
+margin_top = -255.0
+margin_right = 240.0
+margin_bottom = -137.0
 icon = ExtResource( 4 )
 regionIndex = 1
+
+[node name="MapRegion5" parent="Map/Map Sprite" instance=ExtResource( 3 )]
+margin_left = -294.0
+margin_top = 36.0
+margin_right = -26.0
+margin_bottom = 259.0
+icon = ExtResource( 11 )
+regionIndex = 4
+
+[node name="MapRegion6" parent="Map/Map Sprite" instance=ExtResource( 3 )]
+margin_left = 142.0
+margin_top = 39.0
+margin_right = 274.0
+margin_bottom = 145.0
+icon = ExtResource( 12 )
+regionIndex = 5
+
+[node name="MapRegion7" parent="Map/Map Sprite" instance=ExtResource( 3 )]
+margin_left = 118.0
+margin_top = 179.0
+margin_right = 276.0
+margin_bottom = 287.0
+icon = ExtResource( 13 )
+regionIndex = 6
 
 [node name="ScenarioList" type="Node2D" parent="."]
 visible = false

@@ -12,8 +12,7 @@ func _on_MapRegion_pressed():
 
 
 func _on_Button_mouse_entered():
-	modulate.a = 1
+	modulate.a = 0.65
 
 func _on_Button_mouse_exited():
 	modulate.a = 0
-

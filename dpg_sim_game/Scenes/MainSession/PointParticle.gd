@@ -6,10 +6,10 @@ func Launch(_point):
 	point = _point
 	var tween = create_tween()
 	if point["IsGood"]:
-		modulate = Color.white
+		modulate = Color.green
 		tween.tween_property(self, "global_position", point["Counter"].goodPos, 1)
 	else:
-		modulate = Color.black
+		modulate = Color.red
 		tween.tween_property(self, "global_position", point["Counter"].badPos, 1)
 	tween.tween_callback(self, "Ended")
 
