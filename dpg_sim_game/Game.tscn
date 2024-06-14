@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://web/WebInterface.gd" type="Script" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://Sounds/Boop.wav" type="AudioStream" id=19]
 [ext_resource path="res://Sounds/tick.wav" type="AudioStream" id=20]
 [ext_resource path="res://Sounds/Cash-register-sound.mp3" type="AudioStream" id=21]
+[ext_resource path="res://Scenes/Common/EventManager.tscn" type="PackedScene" id=22]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
@@ -63,6 +64,9 @@ sReleased = ExtResource( 5 )
 [node name="Tooltip" parent="." instance=ExtResource( 4 )]
 
 [node name="WinScreen" parent="." instance=ExtResource( 14 )]
+visible = false
+
+[node name="EventManager" parent="." instance=ExtResource( 22 )]
 visible = false
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]

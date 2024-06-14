@@ -6,6 +6,7 @@ var game : MainGame
 var mainConfig : Dictionary
 var scenarios = []
 var projects = []
+var events = []
 
 var activeScenarioIndex = -1
 var curPhaseIndex = -1

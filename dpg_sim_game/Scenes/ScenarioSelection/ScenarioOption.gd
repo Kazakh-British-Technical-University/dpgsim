@@ -26,4 +26,5 @@ func InitScenarioButton(index):
 	var scenario = global.scenarios[index]
 	$Title.text = trans.local(scenario["Title"])
 	$Description.text = trans.local(scenario["Description"])
-	$ScenarioPic.texture = load("res://Sprites/SGDs/sdg"+ str(scenario["SDG"]) + ".png")
+	var icon = load("res://Scenes/ScenarioSelection/SDG icons/SDG_Icon" + str(scenario["SDG"]) + ".tscn")
+	$sdgIcon.add_child(icon.instance())

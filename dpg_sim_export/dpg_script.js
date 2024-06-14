@@ -67,12 +67,24 @@ function fetchTrans() {
 }
 
 function fetchProjects() {
-	fetch("./Data/Projects.csv")
+	fetch("./Data/EN/Projects.csv")
 		.then(response => response.text())
 		.then
 		((data) => 
 			{
 				godotFunctions.SendProjects(JSON.stringify(CSVToArray(data, ",")));
+				//console.log(JSON.stringify(CSVToArray(data, ",")));
+			}
+		)
+}
+
+function fetchEvents() {
+	fetch("./Data/EN/Events.csv")
+		.then(response => response.text())
+		.then
+		((data) => 
+			{
+				godotFunctions.SendEvents(JSON.stringify(CSVToArray(data, ",")));
 				//console.log(JSON.stringify(CSVToArray(data, ",")));
 			}
 		)

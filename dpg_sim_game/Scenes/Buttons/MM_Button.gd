@@ -14,6 +14,10 @@ func Start():
 		$Label.add_font_override("font", usedFont)
 	icon = sReleased
 
+func SetText(_text):
+	buttonText = _text
+	$Label.text = buttonText
+
 func _on_MM_Button_button_down():
 	global.game.soundManager.PlaySFX("KeyDown")
 	icon = sPressed

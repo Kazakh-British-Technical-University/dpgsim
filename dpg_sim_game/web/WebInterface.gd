@@ -6,6 +6,7 @@ var _mainConfigCallback = JavaScript.create_callback(self, "_ParseMainConfig")
 var _scenarioCallback = JavaScript.create_callback(self, "_ParseScenarios")
 var _trans_callback = JavaScript.create_callback(self, "_ProcessTrans")
 var _projects_callback = JavaScript.create_callback(self, "_ProcessProjects")
+var _events_callback = JavaScript.create_callback(self, "_ProcessEvents")
 
 # JS callbacks
 func _ParseMainConfig(args):
@@ -40,7 +41,19 @@ func _ProcessProjects(args):
 				project[keys[str(j)]] = parsed["Lines"][i][str(j)]
 			global.projects.append(project)
 	else:
-		print("CSV parse error: Data/Projects.csv")
+		print("CSV parse error: Data/EN/Projects.csv")
+
+func _ProcessEvents(args):
+	var parsed = JSON.parse(str(args[0])).result
+	if (parsed != null):
+		var keys = parsed["Lines"][0]
+		for i in range(1, parsed["Lines"].size()):
+			var event : Dictionary
+			for j in range(keys.size()):
+				event[keys[str(j)]] = parsed["Lines"][i][str(j)]
+			global.events.append(event)
+	else:
+		print("CSV parse error: Data/EN/Events.csv")
 
 
 # public functions
@@ -53,6 +66,7 @@ func ConnectToWeb():
 	externalator.addGodotFunction('SendScenarios', _scenarioCallback)
 	externalator.addGodotFunction('SendTrans',_trans_callback)
 	externalator.addGodotFunction('SendProjects',_projects_callback)
+	externalator.addGodotFunction('SendEvents',_events_callback)
 
 func LoadTranslations():
 	window.fetchTrans()
@@ -65,4 +79,7 @@ func LoadScenarios():
 
 func LoadProjects():
 	window.fetchProjects()
+
+func LoadEvents():
+	window.fetchEvents()
 

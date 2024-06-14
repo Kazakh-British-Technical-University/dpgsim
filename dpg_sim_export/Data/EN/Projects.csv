@@ -1,0 +1,35 @@
+ID,Title,IconPath,Description,TimeCost,MoneyCost,ProductInsights,TechInsights,MarketInsights,TeamInsights
+0,Limited research,Data/Icons/Project1.png,This is project 1,28,25,1,1,1,0
+1,Customer focus research,Data/Icons/Project2.png,This is project 2,56,25,2,0,2,0
+2,Technical focus research,Data/Icons/Project3.png,This is project 3,56,25,2,2,0,0
+3,Full scale research,Data/Icons/Project4.png,This is project 4,112,50,2,2,2,0
+4,Essential prototype,Data/Icons/Project5.png,This is project 5,28,25,1,1,1,0
+5,Service prototype,Data/Icons/Project6.png,This is project 6,56,25,1,1,1,0
+6,Technical prototype,Data/Icons/Project7.png,This is project 7,56,25,1,1,1,0
+7,Product MVP,Data/Icons/Project8.png,This is project 8,112,50,1,1,1,0
+8,Mission only,Data/Icons/Project9.png,This is project 9,28,25,1,0,0,0
+9,Values and Strategy,Data/Icons/Project10.png,This is project 10,56,25,2,2,2,2
+10,Values and Mission,Data/Icons/Project11.png,This is project 11,56,25,3,3,3,2
+11,"Values, Mission and Strategy",Data/Icons/Project12.png,This is project 12,112,50,4,4,4,4
+12,Internal testing,Data/Icons/Project13.png,This is project 13,28,25,0,0,0,-1
+13,Medium focus group testing,Data/Icons/Project14.png,This is project 14,56,25,2,1,1,0
+14,Real-world testing,Data/Icons/Project15.png,This is project 15,56,25,1,1,2,0
+15,Cascade testing with user groups,Data/Icons/Project16.png,This is project 16,112,50,3,3,3,0
+16,Website building,Data/Icons/Project17.png,This is project 17,28,25,0,0,0,0
+17,Social media setup,Data/Icons/Project18.png,This is project 18,28,25,0,0,0,0
+18,Website and Social Media,Data/Icons/Project19.png,This is project 19,56,25,0,0,0,0
+19,Full marketing commitment,Data/Icons/Project20.png,This is project 20,112,50,0,0,0,0
+20,Single server,Data/Icons/Project21.png,This is project 21,28,25,0,0,0,0
+21,Cloud infrastructure,Data/Icons/Project22.png,This is project 22,28,25,0,0,0,0
+22,Multiple servers,Data/Icons/Project23.png,This is project 23,56,25,0,0,0,0
+23,DevOPS team with an infrastructure,Data/Icons/Project24.png,This is project 24,112,50,0,0,0,0
+24,Prepare all documents,Data/Icons/Project25.png,This is project 25,28,25,0,0,0,0
+25,Contact UNICEF office to assist,Data/Icons/Project26.png,This is project 26,28,25,0,0,0,0
+26,Project 3,Data/Icons/Project27.png,This is project 27,56,25,0,0,0,0
+27,Project 4,Data/Icons/Project28.png,This is project 28,112,50,0,0,0,0
+28,Project 1,Data/Icons/Project29.png,This is project 29,28,25,0,0,0,0
+29,Project 2,Data/Icons/Project30.png,This is project 30,56,25,0,0,0,0
+30,Project 3,Data/Icons/Project31.png,This is project 31,56,25,0,0,0,0
+31,Project 4,Data/Icons/Project32.png,This is project 32,112,50,0,0,0,0
+32,Project 1,Data/Icons/Project33.png,This is project 33,28,25,0,0,0,0
+33,Project 2,Data/Icons/Project34.png,This is project 34,56,25,0,0,0,0

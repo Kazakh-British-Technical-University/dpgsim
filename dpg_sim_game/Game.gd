@@ -17,12 +17,14 @@ func _ready():
 	$MM_Button.Start()
 	dateCounter.connect("dayTick", $MainSession, "GenPoints")
 	dateCounter.connect("dayTick", $Header, "CheckTime")
+	dateCounter.connect("dayTick", $EventManager, "CheckTime")
 
 func LoadFiles():
 	$WebInterface.LoadTranslations()
 	$WebInterface.LoadMainConfig()
 	$WebInterface.LoadScenarios()
 	$WebInterface.LoadProjects()
+	$WebInterface.LoadEvents()
 
 func StartScenario():
 	$MapScreen.visible = false
@@ -41,6 +43,7 @@ func StartNextPhase():
 
 func StartProject():
 	$Projects.visible = false
+	$EventManager.StartProject()
 	$TeamScreen.UpdateAvailableWorkers()
 	if global.curPhaseIndex < 2:
 		StartSession()

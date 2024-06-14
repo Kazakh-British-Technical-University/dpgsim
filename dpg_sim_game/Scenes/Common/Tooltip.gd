@@ -12,8 +12,11 @@ func SetTooltip(title, body, _callback):
 
 func _on_MM_Button_buttonPressed():
 	visible = false
-	callback.call_func()
-	callback = null
+	if callback != null:
+		callback.call_func()
+		callback = null
+	else:
+		visible = false
 
 func _on_CloseButton_pressed():
 	global.game.soundManager.PlaySFX("Tick")
