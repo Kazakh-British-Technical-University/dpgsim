@@ -99,7 +99,7 @@ func GetTeamBonus(index, good):
 		return LNfunc(value) * float(global.mainConfig["TeamBonus"])
 
 func _on_Back_Button_buttonPressed():
-	global.game.CloseTeamScreen()
+	global.game.OpenTeamScreen(false)
 
 func UpdateTeamSizeLabel():
 	$TeamSize.text = trans.local("TEAM_SIZE") + ": " + str(teamSize) + "/" + str(teamLimit)

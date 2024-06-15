@@ -2,7 +2,7 @@
   "Title": "COL_RENT_TITLE",
   "Description": "COL_RENT_DESCR",
   "SDG": 11,
-  "Money": 666,
+  "Money": 666666666,
   "MapRegion":0,
   "PhaseProjects": [
       [0,1,2,3],

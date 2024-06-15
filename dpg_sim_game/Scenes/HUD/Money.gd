@@ -1,7 +1,8 @@
 extends Control
 
 var total = 0
-var burn : float = 0
+var burn : int = 0
+var maxBurn = 0
 var costPos : Vector2 
 func Start():
 	costPos = $Cost.rect_position
@@ -19,6 +20,10 @@ func AddBurn(_burn):
 	burn += _burn
 	_UpdateText()
 
+func SetMaxBurn():
+	if (maxBurn < burn):
+		maxBurn = burn
+
 func Spend(_cost):
 	global.game.soundManager.PlaySFX("Ching")
 	var cost = int(_cost)
@@ -35,14 +40,12 @@ func Spend(_cost):
 		global.game.GameOver()
 
 func Salary():
-	Spend(actualBurn())
-
-func actualBurn():
-	return burn * global.BurnMultiplier()
+	Spend(max(burn, maxBurn) * global.BurnMultiplier())
+	maxBurn = burn
 
 func _UpdateText():
 	$TotalMoney.text = str(total)
-	$BurnMoney.text = str(actualBurn())
+	$BurnMoney.text = str(burn * global.BurnMultiplier())
 
 func _SpendComplete():
 	yield(get_tree().create_timer(0.5),"timeout")

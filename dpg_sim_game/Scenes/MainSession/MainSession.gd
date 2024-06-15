@@ -10,23 +10,27 @@ var NPR = 0.0
 var PGR_limit = 0.0
 var NPR_limit = 0.0
 func Start():
-	$FitCounter.present = global.mainConfig["Phases"][global.curPhaseIndex]["Fit"]
-	$DevCounter.present = global.mainConfig["Phases"][global.curPhaseIndex]["Dev"]
-	$MarketCounter.present = global.mainConfig["Phases"][global.curPhaseIndex]["Market"]
+	$Office.Start()
+	$Team_Button.Start()
 	
 	$FitCounter.text = trans.local("FIT_PTS")
 	$DevCounter.text = trans.local("DEV_PTS")
 	$MarketCounter.text = trans.local("MARKET_PTS")
 	
-	for counter in counters:
-		counter.Start()
-	
 	PGR = float(global.mainConfig["PGR"])
 	NPR = float(global.mainConfig["NPR"])
 	PGR_limit = float(global.mainConfig["PGR_limit"])
 	NPR_limit = float(global.mainConfig["NPR_limit"])
-	
+
+func StartProject():
+	$Team_Button.visible = global.curPhaseIndex > 1
 	SetProgress(0)
+	$Office.StartProject()
+	$FitCounter.present = global.mainConfig["Phases"][global.curPhaseIndex]["Fit"]
+	$DevCounter.present = global.mainConfig["Phases"][global.curPhaseIndex]["Dev"]
+	$MarketCounter.present = global.mainConfig["Phases"][global.curPhaseIndex]["Market"]
+	for counter in counters:
+		counter.Start()
 
 func GenPoints():
 	for i in range(counters.size()):
@@ -57,4 +61,8 @@ func ResetCounters():
 		counter.Reset()
 
 func SetProgress(days):
-	$DaysCountdown.text = trans.local("PROJECT_PROGRESS") + ": " + str(days) + "/" + global.curProject["TimeCost"]
+	$ProjectProgress.value = float(days) / float(global.curProject["TimeCost"]) * 100.0
+	$ProjectProgress/ProjectProgressLabel.text = str(days) + "/" + global.curProject["TimeCost"]
+
+func _on_Team_Button_buttonPressed():
+	global.game.OpenTeamScreen(true)

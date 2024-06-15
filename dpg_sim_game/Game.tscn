@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://web/WebInterface.gd" type="Script" id=2]
@@ -12,7 +12,6 @@
 [ext_resource path="res://Scenes/ScenarioSelection/MapScreen.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Team/TeamScreen.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/HUD/Header.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/Team/TeamQuestion.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/WinScreen/WinScreen.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Sounds/Land_of_8_Bits_-_Stephen_Bennett.mp3" type="AudioStream" id=15]
 [ext_resource path="res://Sounds/key_up.wav" type="AudioStream" id=16]
@@ -42,9 +41,6 @@ visible = false
 visible = false
 
 [node name="TeamScreen" parent="." instance=ExtResource( 11 )]
-visible = false
-
-[node name="TeamQuestion" parent="." instance=ExtResource( 13 )]
 visible = false
 
 [node name="Header" parent="." instance=ExtResource( 12 )]

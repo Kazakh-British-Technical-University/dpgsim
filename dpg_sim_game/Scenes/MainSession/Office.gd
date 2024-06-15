@@ -1,5 +1,54 @@
 extends Node2D
 
+var seats = []
+
+func Start():
+	for i in range(2, 12):
+		var mini = get_node("Worker" + str(i)) as Sprite
+		mini.visible = false
+		seats.append(mini)
+
+func StartProject():
+	if global.curPhaseIndex < 7:
+		$Stage.texture = load("res://Sprites/MainSession/stage" + str(global.curPhaseIndex + 1) + ".png")
+	else:
+		$Stage.texture = load("res://Sprites/MainSession/stage7.png")
+	if global.curPhaseIndex == 2:
+		maxTeamSize = 4
+	else:
+		if global.curPhaseIndex < 2:
+			maxTeamSize = 0
+		else:
+			maxTeamSize = 10
+	UpdateMinis()
+
+var actualTeamSize = 0
+var team : Dictionary
+var teamSize = 0
+var maxTeamSize = 0
+func UpdateMinis():
+	for seat in seats:
+		seat.visible = false
+	
+	teamSize = 0
+	actualTeamSize = 0
+	team = global.game.teamScreen.team.duplicate()
+	for key in team:
+		if key != "Management":
+			actualTeamSize += team[key]
+	while actualTeamSize > 0 and teamSize < maxTeamSize:
+		for key in team:
+			if key != "Management" and team[key] > 0 and teamSize < maxTeamSize:
+				AddMiniWorker(key, seats[teamSize])
+				teamSize += 1
+				team[key] -= 1
+				actualTeamSize -= 1
+
+func AddMiniWorker(worker, spot):
+	spot.texture = load("res://Sprites/MainSession/Worker" + worker + ".png")
+	spot.visible = true
+
+###################################################
 var particle = preload("res://Scenes/MainSession/PointParticle.tscn")
 var particles = []
 var queue = []
@@ -10,12 +59,13 @@ var height = 100
 
 func _ready():
 	rng.randomize()
-	width = $BG.texture.get_width()
-	height = $BG.texture.get_height()
+	width = $Room.texture.get_width()
+	height = $Room.texture.get_height()
 
 var t = 0
 var pointPeriod = 0.05
 func _process(delta):
+	ScrollClouds(delta)
 	if t < pointPeriod:
 		t += delta
 		return
@@ -51,3 +101,10 @@ func ParticleFinished(oldParticle : PointParticle):
 
 func ClearQueue():
 	queue.clear()
+
+var cloudSpeed = 5
+func ScrollClouds(delta):
+	$OfficeClouds.position.x -= cloudSpeed * delta
+	if $OfficeClouds.position.x < -242:
+		$OfficeClouds.position.x = 242
+

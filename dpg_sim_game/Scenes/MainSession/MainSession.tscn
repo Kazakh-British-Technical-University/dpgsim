@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/MainSession/MainSession.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/MainSession/PointCounter.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Fonts/Font_Regular24.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Fonts/Font_Regular20.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scenes/MainSession/Office.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Buttons/MM_Button.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sprites/UI/buttonLongPressed.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/UI/buttonLong.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/UI/energyMeter.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/UI/greenMeter.png" type="Texture" id=9]
 
 [node name="MainSession" type="Node2D"]
 script = ExtResource( 1 )
@@ -29,15 +34,38 @@ margin_right = 524.0
 margin_bottom = 127.0
 
 [node name="Office" parent="." instance=ExtResource( 4 )]
-position = Vector2( 313, 368 )
+position = Vector2( 320, 368 )
 
-[node name="DaysCountdown" type="Label" parent="."]
-margin_left = 176.0
-margin_top = 564.0
-margin_right = 465.0
-margin_bottom = 617.0
+[node name="Team_Button" parent="." instance=ExtResource( 5 )]
+margin_left = 58.0
+margin_top = 559.0
+margin_right = 230.0
+margin_bottom = 613.0
+icon = ExtResource( 7 )
+buttonText = "TEAM"
+sPressed = ExtResource( 6 )
+sReleased = ExtResource( 7 )
+
+[node name="ProjectProgress" type="TextureProgress" parent="."]
+margin_left = 240.0
+margin_top = 562.0
+margin_right = 400.0
+margin_bottom = 610.0
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 9 )
+nine_patch_stretch = true
+stretch_margin_left = 4
+stretch_margin_top = 4
+stretch_margin_right = 4
+stretch_margin_bottom = 6
+
+[node name="ProjectProgressLabel" type="Label" parent="ProjectProgress"]
+anchor_right = 1.0
+anchor_bottom = 1.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 3 )
-text = "Days left: 112"
+text = "99/9999"
 align = 1
 valign = 1
+
+[connection signal="buttonPressed" from="Team_Button" to="." method="_on_Team_Button_buttonPressed"]

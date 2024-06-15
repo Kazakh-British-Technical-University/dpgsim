@@ -31,6 +31,7 @@ func StartScenario():
 	global.curPhaseIndex = 0
 	$Header.Start()
 	$TeamScreen.Start()
+	$MainSession.Start()
 	$MainSession.ResetCounters()
 	$Header/Money.SetMoney(global.curScenario()["Money"])
 	$Header.visible = true
@@ -45,16 +46,9 @@ func StartProject():
 	$Projects.visible = false
 	$EventManager.StartProject()
 	$TeamScreen.UpdateAvailableWorkers()
-	if global.curPhaseIndex < 2:
-		StartSession()
-	else:
-		$TeamQuestion.Start()
-		$TeamQuestion.visible = true
-
-func StartSession():
 	PauseTimer(false)
 	$Header.StartProject()
-	$MainSession.Start()
+	$MainSession.StartProject()
 	$MainSession.visible = true
 
 func ProjectComplete():
@@ -80,28 +74,7 @@ func PauseTimer(pause):
 
 func HireWorker(quantity):
 	$Header/Money.AddBurn(int(global.mainConfig["Salary"]) * quantity)
-
-func _on_Start_Button_buttonPressed():
-	$MainMenu.visible = false
-	$MM_Button.visible = true
-	$MapScreen.visible = true
-	$MapScreen.Start()
-
-func _on_MM_Button_buttonPressed():
-	PauseTimer(true)
-	global.ResetGame()
-	$Header/PhaseHUD.ResetPhases()
-	for child in get_children():
-		child.visible = false
-	$MainMenu.visible = true
-
-func OpenTeamScreen():
-	$TeamScreen.visible = true
-
-func CloseTeamScreen():
-	$TeamScreen.visible = false
-	StartSession()
-
+	$MainSession/Office.UpdateMinis()
 
 func GameOver():
 	PauseTimer(true)
@@ -131,3 +104,26 @@ func CalcScores():
 			points += (672 - $Header.totalDays) * 3
 	points += $Header/Money.total * 5
 	return points
+
+
+
+func _on_Start_Button_buttonPressed():
+	$MainMenu.visible = false
+	$MM_Button.visible = true
+	$MapScreen.visible = true
+	$MapScreen.Start()
+
+func _on_MM_Button_buttonPressed():
+	PauseTimer(true)
+	global.ResetGame()
+	$Header/PhaseHUD.ResetPhases()
+	for child in get_children():
+		child.visible = false
+	$MainMenu.visible = true
+
+func OpenTeamScreen(open):
+	PauseTimer(open)
+	$TeamScreen.visible = open
+	$MainSession.visible = not open
+	if not open:
+		$Header/Money.SetMaxBurn()
