@@ -15,9 +15,8 @@ func _ready():
 	$MainMenu.visible = true
 	$MainMenu.Start()
 	$MM_Button.Start()
-	dateCounter.connect("dayTick", $MainSession, "GenPoints")
+	dateCounter.connect("dayTick", $MainSession, "CheckTime")
 	dateCounter.connect("dayTick", $Header, "CheckTime")
-	dateCounter.connect("dayTick", $EventManager, "CheckTime")
 
 func LoadFiles():
 	$WebInterface.LoadTranslations()
@@ -25,6 +24,7 @@ func LoadFiles():
 	$WebInterface.LoadScenarios()
 	$WebInterface.LoadProjects()
 	$WebInterface.LoadEvents()
+	$WebInterface.LoadActions()
 
 func StartScenario():
 	$MapScreen.visible = false
@@ -44,10 +44,10 @@ func StartNextPhase():
 
 func StartProject():
 	$Projects.visible = false
-	$EventManager.StartProject()
 	$TeamScreen.UpdateAvailableWorkers()
 	PauseTimer(false)
 	$Header.StartProject()
+	$ActionScreen.Start()
 	$MainSession.StartProject()
 	$MainSession.visible = true
 
@@ -127,3 +127,14 @@ func OpenTeamScreen(open):
 	$MainSession.visible = not open
 	if not open:
 		$Header/Money.SetMaxBurn()
+
+func OpenActionScreen(open):
+	PauseTimer(open)
+	$ActionScreen.visible = open
+	$MainSession.visible = not open
+	
+func Overtime():
+	$Header/PhaseHUD.OverTime()
+
+func CheckEvents(day):
+	$EventManager.CheckEvents(day)

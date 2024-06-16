@@ -52,6 +52,7 @@ func AddMiniWorker(worker, spot):
 var particle = preload("res://Scenes/MainSession/PointParticle.tscn")
 var particles = []
 var queue = []
+var cleanQueue = []
 
 var rng = RandomNumberGenerator.new()
 var width = 100
@@ -71,8 +72,11 @@ func _process(delta):
 		return
 	t -= pointPeriod
 	if queue.size() > 0:
-		SpawnParticle(queue[0])
+		SpawnParticle(queue[0], false)
 		queue.remove(0)
+	if cleanQueue.size() > 0:
+		SpawnParticle(cleanQueue[0], true)
+		cleanQueue.remove(0)
 
 func EnqueuePoint(counter, isGood):
 	var newPoint : Dictionary
@@ -80,9 +84,12 @@ func EnqueuePoint(counter, isGood):
 	newPoint["IsGood"] = isGood
 	queue.append(newPoint)
 
-func SpawnParticle(point):
-	var x : float = rng.randf_range(-0.45, 0.45) * float(width)
-	var y : float = rng.randf_range(-0.45, 0.45) * float(height)
+func EnqueueClean(counter):
+	var newPoint : Dictionary
+	newPoint["Counter"] = counter
+	cleanQueue.append(newPoint)
+
+func SpawnParticle(point, clean):
 	var newParticle : PointParticle
 	if particles.size() > 0:
 		newParticle = particles[0]
@@ -92,15 +99,22 @@ func SpawnParticle(point):
 		newParticle = particle.instance()
 		add_child(newParticle)
 	
-	newParticle.global_position = Vector2(x, y) + global_position
-	newParticle.Launch(point)
+	if not clean:
+		var x : float = rng.randf_range(-0.45, 0.45) * float(width)
+		var y : float = rng.randf_range(-0.45, 0.45) * float(height)
+		newParticle.global_position = Vector2(x, y) + global_position
+		newParticle.Launch(point)
+	else:
+		newParticle.Clean(point)
 
 func ParticleFinished(oldParticle : PointParticle):
 	particles.append(oldParticle)
 	oldParticle.visible = false
+	oldParticle.scale = Vector2.ONE
 
 func ClearQueue():
 	queue.clear()
+	cleanQueue.clear()
 
 var cloudSpeed = 5
 func ScrollClouds(delta):

@@ -1,28 +1,17 @@
 extends ColorRect
 
-var curProjectDays = 0
 var curEvent
 
-func _ready():
-	visible = false
-
-func StartProject():
-	curProjectDays = 0
-
-func CheckTime():
-	curProjectDays += 1
-	CheckEvents()
-
-func CheckEvents():
+func CheckEvents(day):
 	for event in global.events:
 		if len(event["Day"]) == 0:
 			continue
 		if int(event["Phase"]) == global.curPhaseIndex:
 			if event["FromStart"] == "TRUE":
-				if int(event["Day"]) == curProjectDays:
+				if int(event["Day"]) == day:
 					ShowEvent(event)
 			else:
-				if curProjectDays == int(global.curProject["TimeCost"]) - int(event["Day"]):
+				if day == int(global.curProject["TimeCost"]) - int(event["Day"]):
 					ShowEvent(event)
 
 func ShowEvent(event):

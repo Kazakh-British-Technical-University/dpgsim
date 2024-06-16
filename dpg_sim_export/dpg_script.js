@@ -90,6 +90,18 @@ function fetchEvents() {
 		)
 }
 
+function fetchActions() {
+	fetch("./Data/EN/Actions.csv")
+		.then(response => response.text())
+		.then
+		((data) => 
+			{
+				godotFunctions.SendActions(JSON.stringify(CSVToArray(data, ",")));
+				//console.log(JSON.stringify(CSVToArray(data, ",")));
+			}
+		)
+}
+
 function CSVToArray(strData, strDelimiter) 
 {
 	var column = 0;

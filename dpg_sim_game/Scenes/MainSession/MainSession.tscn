@@ -46,6 +46,16 @@ buttonText = "TEAM"
 sPressed = ExtResource( 6 )
 sReleased = ExtResource( 7 )
 
+[node name="Actions_Button" parent="." instance=ExtResource( 5 )]
+margin_left = 410.0
+margin_top = 559.0
+margin_right = 582.0
+margin_bottom = 613.0
+icon = ExtResource( 7 )
+buttonText = "ACTIONS"
+sPressed = ExtResource( 6 )
+sReleased = ExtResource( 7 )
+
 [node name="ProjectProgress" type="TextureProgress" parent="."]
 margin_left = 240.0
 margin_top = 562.0
@@ -68,4 +78,31 @@ text = "99/9999"
 align = 1
 valign = 1
 
+[node name="ActionProgress" type="TextureProgress" parent="."]
+visible = false
+margin_left = 416.0
+margin_top = 562.0
+margin_right = 576.0
+margin_bottom = 610.0
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 9 )
+nine_patch_stretch = true
+stretch_margin_left = 4
+stretch_margin_top = 4
+stretch_margin_right = 4
+stretch_margin_bottom = 6
+
+[node name="ActionProgressLabel" type="Label" parent="ActionProgress"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "99/9999"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
 [connection signal="buttonPressed" from="Team_Button" to="." method="_on_Team_Button_buttonPressed"]
+[connection signal="buttonPressed" from="Actions_Button" to="." method="_on_Actions_Button_buttonPressed"]

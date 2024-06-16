@@ -7,6 +7,9 @@ var mainConfig : Dictionary
 var scenarios = []
 var projects = []
 var events = []
+var actions = []
+
+var actionsActive = [false, false, false]
 
 var activeScenarioIndex = -1
 var curPhaseIndex = -1

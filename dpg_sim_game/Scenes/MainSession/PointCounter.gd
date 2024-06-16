@@ -21,6 +21,11 @@ func AddPoint(isGood):
 		bad += 1
 	UpdateText()
 
+func CleanPoint():
+	if bad > 0:
+		bad -= 1
+		UpdateText()
+
 func UpdateText():
 	$GoodPoints.text = str(good)
 	$BadPoints.text = str(bad)

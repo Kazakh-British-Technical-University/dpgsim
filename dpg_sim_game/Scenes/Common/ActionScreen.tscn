@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Buttons/ActionOption.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Common/ActionScreen.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Buttons/MM_Button.tscn" type="PackedScene" id=3]
+
+[node name="ActionScreen" type="Control"]
+margin_right = 640.0
+margin_bottom = 640.0
+script = ExtResource( 2 )
+
+[node name="ActionOption1" parent="." instance=ExtResource( 1 )]
+margin_left = 109.0
+margin_top = 150.0
+margin_right = 531.0
+margin_bottom = 246.0
+
+[node name="ActionOption2" parent="." instance=ExtResource( 1 )]
+margin_left = 109.0
+margin_top = 270.0
+margin_right = 531.0
+margin_bottom = 366.0
+index = 1
+
+[node name="ActionOption3" parent="." instance=ExtResource( 1 )]
+margin_left = 109.0
+margin_top = 390.0
+margin_right = 531.0
+margin_bottom = 486.0
+index = 2
+
+[node name="Back_Button" parent="." instance=ExtResource( 3 )]
+margin_left = 153.0
+margin_top = 510.0
+margin_right = 488.0
+margin_bottom = 578.0
+buttonText = "BACK"
+
+[connection signal="buttonPressed" from="Back_Button" to="." method="_on_Back_Button_buttonPressed"]
