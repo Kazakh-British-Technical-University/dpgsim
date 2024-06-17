@@ -10,6 +10,11 @@ margin_right = 640.0
 margin_bottom = 640.0
 script = ExtResource( 2 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.607843, 0.670588, 0.698039, 0.611765 )
+
 [node name="MM_Button" parent="." instance=ExtResource( 3 )]
 margin_left = 151.0
 margin_top = 430.0

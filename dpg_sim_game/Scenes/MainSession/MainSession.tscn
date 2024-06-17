@@ -56,6 +56,16 @@ buttonText = "ACTIONS"
 sPressed = ExtResource( 6 )
 sReleased = ExtResource( 7 )
 
+[node name="Project_Button" parent="." instance=ExtResource( 5 )]
+margin_left = 234.0
+margin_top = 559.0
+margin_right = 406.0
+margin_bottom = 613.0
+icon = ExtResource( 7 )
+buttonText = "PROJECT"
+sPressed = ExtResource( 6 )
+sReleased = ExtResource( 7 )
+
 [node name="ProjectProgress" type="TextureProgress" parent="."]
 margin_left = 240.0
 margin_top = 562.0
@@ -106,3 +116,4 @@ __meta__ = {
 
 [connection signal="buttonPressed" from="Team_Button" to="." method="_on_Team_Button_buttonPressed"]
 [connection signal="buttonPressed" from="Actions_Button" to="." method="_on_Actions_Button_buttonPressed"]
+[connection signal="buttonPressed" from="Project_Button" to="." method="_on_Project_Button_buttonPressed"]

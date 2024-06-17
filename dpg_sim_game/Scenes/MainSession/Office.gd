@@ -3,7 +3,7 @@ extends Node2D
 var seats = []
 
 func Start():
-	for i in range(2, 12):
+	for i in range(2, 11):
 		var mini = get_node("Worker" + str(i)) as Sprite
 		mini.visible = false
 		seats.append(mini)
@@ -27,6 +27,9 @@ var team : Dictionary
 var teamSize = 0
 var maxTeamSize = 0
 func UpdateMinis():
+	spawnPoints.clear()
+	spawnPoints.append($Worker1.global_position)
+	$Worker11.visible = false
 	for seat in seats:
 		seat.visible = false
 	
@@ -43,10 +46,13 @@ func UpdateMinis():
 				teamSize += 1
 				team[key] -= 1
 				actualTeamSize -= 1
+	if global.curPhaseIndex >= 3 and team["Management"] > 1:
+		AddMiniWorker("Management", $Worker11)
 
 func AddMiniWorker(worker, spot):
 	spot.texture = load("res://Sprites/MainSession/Worker" + worker + ".png")
 	spot.visible = true
+	spawnPoints.append(spot.global_position)
 
 ###################################################
 var particle = preload("res://Scenes/MainSession/PointParticle.tscn")
@@ -55,13 +61,10 @@ var queue = []
 var cleanQueue = []
 
 var rng = RandomNumberGenerator.new()
-var width = 100
-var height = 100
+var spawnPoints = []
 
 func _ready():
 	rng.randomize()
-	width = $Room.texture.get_width()
-	height = $Room.texture.get_height()
 
 var t = 0
 var pointPeriod = 0.05
@@ -100,9 +103,7 @@ func SpawnParticle(point, clean):
 		add_child(newParticle)
 	
 	if not clean:
-		var x : float = rng.randf_range(-0.45, 0.45) * float(width)
-		var y : float = rng.randf_range(-0.45, 0.45) * float(height)
-		newParticle.global_position = Vector2(x, y) + global_position
+		newParticle.global_position = spawnPoints[rng.randi_range(0, spawnPoints.size()-1)]
 		newParticle.Launch(point)
 	else:
 		newParticle.Clean(point)

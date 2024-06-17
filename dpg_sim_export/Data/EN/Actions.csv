@@ -1,4 +1,5 @@
-ID,Title,Description,TimeCost
-0,Reduce inconsistencies,,14
-1,Reduce tech debt,,14
-2,Reduce market rejection,,14
+ID,Title,Description,TimeCost,StartingPhase
+0,Customer research,,14,3
+1,Debugging,,14,5
+2,New creatives,,14,7
+3,Product overhaul,,14,8

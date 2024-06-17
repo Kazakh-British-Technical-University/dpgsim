@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://web/WebInterface.gd" type="Script" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://Sounds/tick.wav" type="AudioStream" id=20]
 [ext_resource path="res://Sounds/Cash-register-sound.mp3" type="AudioStream" id=21]
 [ext_resource path="res://Scenes/Common/EventManager.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/MainMenu/PauseMenu.tscn" type="PackedScene" id=23]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
@@ -62,11 +63,15 @@ sPressed = ExtResource( 6 )
 sReleased = ExtResource( 5 )
 
 [node name="Tooltip" parent="." instance=ExtResource( 4 )]
+visible = false
 
 [node name="WinScreen" parent="." instance=ExtResource( 14 )]
 visible = false
 
 [node name="EventManager" parent="." instance=ExtResource( 22 )]
+visible = false
+
+[node name="PauseMenu" parent="." instance=ExtResource( 23 )]
 visible = false
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
@@ -92,4 +97,4 @@ stream = ExtResource( 20 )
 [node name="Ching" type="AudioStreamPlayer2D" parent="Sounds"]
 stream = ExtResource( 21 )
 
-[connection signal="buttonPressed" from="MM_Button" to="." method="_on_MM_Button_buttonPressed"]
+[connection signal="buttonPressed" from="MM_Button" to="." method="PauseGame" binds= [ true ]]

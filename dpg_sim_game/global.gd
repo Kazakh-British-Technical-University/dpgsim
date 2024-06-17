@@ -10,6 +10,15 @@ var events = []
 var actions = []
 
 var actionsActive = [false, false, false]
+var regionsActive = [
+	false,
+	false,
+	false,
+	false,
+	false,
+	false,
+	false
+	]
 
 var activeScenarioIndex = -1
 var curPhaseIndex = -1

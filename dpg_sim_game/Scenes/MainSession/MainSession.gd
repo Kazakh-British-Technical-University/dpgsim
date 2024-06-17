@@ -13,6 +13,7 @@ func Start():
 	$Office.Start()
 	$Team_Button.Start()
 	$Actions_Button.Start()
+	$Project_Button.Start()
 	
 	$FitCounter.text = trans.local("FIT_PTS")
 	$DevCounter.text = trans.local("DEV_PTS")
@@ -25,6 +26,9 @@ func Start():
 
 func StartProject():
 	$Team_Button.visible = global.curPhaseIndex > 1
+	$Actions_Button.visible = global.curPhaseIndex > 2
+	$ProjectProgress.visible = true
+	
 	curDays = 0
 	SetProjectProgress()
 	$Office.StartProject()
@@ -81,35 +85,57 @@ func ResetCounters():
 func SetProjectProgress():
 	$ProjectProgress.value = float(curDays) / float(global.curProject["TimeCost"]) * 100.0
 	$ProjectProgress/ProjectProgressLabel.text = str(curDays) + "/" + global.curProject["TimeCost"]
+	if curDays == int(global.curProject["TimeCost"]):
+		$ProjectProgress.visible = false
+		$Project_Button.visible = true
 
 func SetActionProgress(i):
 	$ActionProgress.value = float(actionDays) / float(global.actions[i]["TimeCost"]) * 100.0
 	$ActionProgress/ActionProgressLabel.text = str(actionDays) + "/" + str(global.actions[i]["TimeCost"])
 	if actionDays == int(global.actions[i]["TimeCost"]):
-		global.actionsActive[i] = false
+		global.actionsActive[0] = false
+		global.actionsActive[1] = false
+		global.actionsActive[2] = false
 		actionDays = 0
 		$ActionProgress.visible = false
 		$Actions_Button.visible = true
+		$Project_Button.visible = curDays >= int(global.curProject["TimeCost"])
 
 var curDays = 0
 var actionDays = 0
+var curAction
 func CheckTime():
 	GenPoints()
+	var index = -1
 	for i in range(3):
 		if global.actionsActive[i]:
-			$ActionProgress.visible = true
-			$Actions_Button.visible = false
-			actionDays += 1
-			SetActionProgress(i)
-			return
-	curDays += 1
-	global.game.CheckEvents(curDays)
-	if curDays == int(global.curProject["TimeCost"]):
-		global.game.Overtime()
-	SetProjectProgress()
+			if index < 0:
+				index = i
+			else:
+				index = -2
+				break
+	if index == -1: # no actions are active
+			curDays += 1
+			global.game.CheckEvents(curDays)
+			if curDays == int(global.curProject["TimeCost"]):
+				global.game.Overtime()
+			SetProjectProgress()
+	else:
+		if index < 0: # all actions are active
+			index = 3
+		$ActionProgress.visible = true
+		$Actions_Button.visible = false
+		$Project_Button.visible = false
+		actionDays += 1
+		SetActionProgress(index)
+
 
 func _on_Team_Button_buttonPressed():
 	global.game.OpenTeamScreen(true)
 
 func _on_Actions_Button_buttonPressed():
 	global.game.OpenActionScreen(true)
+
+func _on_Project_Button_buttonPressed():
+	$Project_Button.visible = false
+	global.game.ProjectComplete()

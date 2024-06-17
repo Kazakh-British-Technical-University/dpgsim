@@ -1,7 +1,6 @@
 extends Control
 
 func StartPhase():
-	ShowButton(false)
 	$PhaseTitle.text = trans.local(global.mainConfig["Phases"][global.curPhaseIndex]["PhaseName"])
 	get_node("Steps/PhaseStep" + str(global.curPhaseIndex+1)).ActiveStep()
 
@@ -22,7 +21,6 @@ func ShowButton(hide):
 
 func _on_Button_pressed():
 	global.game.soundManager.PlaySFX("Boop")
-	ShowButton(false)
 	global.game.ProjectComplete()
 
 var t = 0

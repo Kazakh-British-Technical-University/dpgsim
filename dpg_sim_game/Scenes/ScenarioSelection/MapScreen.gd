@@ -8,6 +8,12 @@ func Start():
 	$ScenarioList/Back_Button.Start()
 	$ScenarioList/Start_Button.Start()
 	_on_Back_Button_buttonPressed()
+	for regionInd in range(7):
+		for i in range(global.scenarios.size()):
+			if (global.scenarios[i]["MapRegion"] == regionInd):
+				global.regionsActive[regionInd] = true
+				break
+	global.game.gameTooltip.SetTooltip(trans.local("MAP_POPUP_TITLE"), trans.local("MAP_POPUP_DESC"), null)
 
 func OpenScenarioList(region):
 	$Map.visible = false

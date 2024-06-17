@@ -82,6 +82,14 @@ func ConnectToWeb():
 	externalator.addGodotFunction('SendEvents',_events_callback)
 	externalator.addGodotFunction('SendActions',_actions_callback)
 
+func LoadFiles():
+	LoadTranslations()
+	LoadMainConfig()
+	LoadScenarios()
+	LoadProjects()
+	LoadEvents()
+	LoadActions()
+
 func LoadTranslations():
 	window.fetchTrans()
 

@@ -5,4 +5,4 @@ func Start():
 	$MM_Button.Start()
 
 func _on_MM_Button_buttonPressed():
-	global.game._on_MM_Button_buttonPressed()
+	global.game.ExitGame()

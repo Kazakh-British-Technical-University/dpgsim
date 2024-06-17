@@ -10,8 +10,12 @@
 [ext_resource path="res://Sprites/UI/buttonLongPressed.png" type="Texture" id=8]
 
 [node name="Tooltip" type="Node2D"]
-visible = false
 script = ExtResource( 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_right = 640.0
+margin_bottom = 640.0
+color = Color( 0, 0, 0, 0.352941 )
 
 [node name="CloseButton" type="Button" parent="."]
 anchor_right = 1.0

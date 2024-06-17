@@ -10,21 +10,14 @@ func _ready():
 	global.game = self
 	$WebInterface.ConnectToWeb()
 	yield(get_tree().create_timer(0.1),"timeout")
-	LoadFiles()
+	$WebInterface.LoadFiles()
 	yield(get_tree().create_timer(1),"timeout")
 	$MainMenu.visible = true
 	$MainMenu.Start()
+	$PauseMenu.Start()
 	$MM_Button.Start()
 	dateCounter.connect("dayTick", $MainSession, "CheckTime")
 	dateCounter.connect("dayTick", $Header, "CheckTime")
-
-func LoadFiles():
-	$WebInterface.LoadTranslations()
-	$WebInterface.LoadMainConfig()
-	$WebInterface.LoadScenarios()
-	$WebInterface.LoadProjects()
-	$WebInterface.LoadEvents()
-	$WebInterface.LoadActions()
 
 func StartScenario():
 	$MapScreen.visible = false
@@ -40,6 +33,7 @@ func StartScenario():
 func StartNextPhase():
 	$Header/PhaseHUD.StartPhase()
 	$Projects.Start()
+	yield(get_tree().create_timer(0.1),"timeout")
 	$Projects.visible = true
 
 func StartProject():
@@ -55,6 +49,7 @@ func ProjectComplete():
 	PauseTimer(true)
 	global.ApplyInsights()
 	$MainSession.visible = false
+	$Header/PhaseHUD.ShowButton(false)
 	if global.curPhaseIndex == 1:
 		##################################################
 		# print("name your product")
@@ -65,22 +60,21 @@ func ProjectComplete():
 	else:
 		Win()
 
+var timerPaused = true
 func PauseTimer(pause):
+	timerPaused = pause
 	if pause:
 		dateCounter.timerOn = false
 	else:
 		dateCounter.t = 0
 		dateCounter.timerOn = true
 
-func HireWorker(quantity):
-	$Header/Money.AddBurn(int(global.mainConfig["Salary"]) * quantity)
-	$MainSession/Office.UpdateMinis()
-
 func GameOver():
 	PauseTimer(true)
 	$MainSession/Office.ClearQueue()
 	$Header/PhaseHUD.ShowButton(false)
-	var callback = funcref(self, "_on_MM_Button_buttonPressed")
+	gameTooltip.closeIsProceed = true
+	var callback = funcref(self, "ExitGame")
 	gameTooltip.SetTooltip(trans.local("GAME_OVER"), trans.local("GAME_OVER_DESCR"), callback)
 
 func Win():
@@ -113,13 +107,28 @@ func _on_Start_Button_buttonPressed():
 	$MapScreen.visible = true
 	$MapScreen.Start()
 
-func _on_MM_Button_buttonPressed():
+func PauseGame(pause):
+	if not timerPaused:
+		if pause:
+			dateCounter.timerOn = false
+		else:
+			dateCounter.t = 0
+			dateCounter.timerOn = true
+	$PauseMenu.visible = pause
+
+func ExitGame():
 	PauseTimer(true)
 	global.ResetGame()
 	$Header/PhaseHUD.ResetPhases()
 	for child in get_children():
 		child.visible = false
+	$PauseMenu.visible = false
 	$MainMenu.visible = true
+	gameTooltip.closeIsProceed = false
+
+func HireWorker(quantity):
+	$Header/Money.AddBurn(int(global.mainConfig["Salary"]) * quantity)
+	$MainSession/Office.UpdateMinis()
 
 func OpenTeamScreen(open):
 	PauseTimer(open)
