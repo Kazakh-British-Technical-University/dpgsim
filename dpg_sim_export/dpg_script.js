@@ -54,33 +54,8 @@ function fetchScenario(path)
 		)
 }
 
-function fetchTrans() {
-	fetch("./Data/Translations.csv")
-		.then(response => response.text())
-		.then
-		((data) => 
-			{
-				godotFunctions.SendTrans(JSON.stringify(CSVToArray(data, ",")));
-				//console.log(JSON.stringify(CSVToArray(data, ",")));
-			}
-		)
-}
-
-async function fetchLocalizedData(filename, lang) {
-	let folder = ""
-	switch (lang) {
-		case 0:
-			folder = "EN";
-			break;
-		case 1:
-			folder = "RU";
-			break;
-		case 2:
-			folder = "KZ";
-			break;
-		
-	}
-	let path = "./Data/" + folder + "/" + filename + ".csv";
+async function fetchLocalizedData(filename) {
+	let path = "./Data/" + lang + "/" + filename + ".csv";
 	let response = await fetch(path);
 	if (response.ok) {
 		let data = await response.text();
@@ -93,6 +68,9 @@ async function fetchLocalizedData(filename, lang) {
 				break;
 			case "Actions":
 				godotFunctions.SendActions(JSON.stringify(CSVToArray(data, ",")), true);
+				break;
+			case "System":
+				godotFunctions.SendTrans(JSON.stringify(CSVToArray(data, ",")));
 				break;
 		}
 	} else {
@@ -233,9 +211,14 @@ function fetchImage(path) {
 		)
 }
 
+let lang = getURLparam("lang");
+if (!lang) {
+	lang = "en";
+}
+
 function getURLparam(name) 
 {
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams(queryString);
-	godotFunctions.SetLanguage(urlParams.get(name));
+	return urlParams.get(name);
 }

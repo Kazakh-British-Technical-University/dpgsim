@@ -28,7 +28,7 @@ func _ProcessTrans(args):
 	var parsed = JSON.parse(str(args[0])).result
 	if (parsed != null):
 		for i in range(1, parsed["Lines"].size()):
-			trans.dict[parsed["Lines"][i]["0"]] = [parsed["Lines"][i]["1"],parsed["Lines"][i]["2"],parsed["Lines"][i]["3"]]
+			trans.dict[parsed["Lines"][i]["0"]] = parsed["Lines"][i]["1"]
 	else:
 		print("CSV parse error: Data/Translations.csv")
 
@@ -99,16 +99,12 @@ func ConnectToWeb():
 	externalator.addGodotFunction('SendActions',_actions_callback)
 
 func LoadFiles():
-	LoadTranslations()
 	LoadMainConfig()
 	LoadScenarios()
 	LoadProjects()
 	LoadEvents()
 	LoadActions()
 	LoadLocalizedFiles()
-
-func LoadTranslations():
-	window.fetchTrans()
 
 func LoadMainConfig():
 	window.fetchMainConfig()
@@ -126,6 +122,7 @@ func LoadActions():
 	window.fetchActions()
 
 func LoadLocalizedFiles():
-	window.fetchLocalizedData("Projects", trans.curLang)
-	window.fetchLocalizedData("Events", trans.curLang)
-	window.fetchLocalizedData("Actions", trans.curLang)
+	window.fetchLocalizedData("Projects")
+	window.fetchLocalizedData("Events")
+	window.fetchLocalizedData("Actions")
+	window.fetchLocalizedData("System")
