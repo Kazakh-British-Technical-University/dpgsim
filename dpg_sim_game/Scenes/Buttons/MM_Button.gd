@@ -46,5 +46,5 @@ func _process(delta):
 		rect_rotation = 2 * sin(4 * PI * t / 0.25)
 	else:
 		rect_rotation = 0
-	if t > 2:
+	if t > 1:
 		t = 0

@@ -18,7 +18,7 @@ margin_bottom = 77.0
 [node name="Money" parent="." instance=ExtResource( 2 )]
 margin_left = 122.0
 margin_top = 11.0
-margin_right = 302.0
+margin_right = 325.0
 margin_bottom = 75.0
 
 [node name="PhaseHUD" parent="." instance=ExtResource( 4 )]

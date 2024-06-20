@@ -54,7 +54,26 @@ func SetupTooltip(option):
 func ApplyOutcome():
 	global.game.PauseTimer(false)
 	visible = false
+	var param = curEvent[selectedOption + " option outcome value (param)"]
+	var value = int(curEvent[selectedOption + " option outcome value (value)"])
+	if param.count("money") > 0:
+		global.game.AddMoney(value)
+	if param.count("product insights") > 0:
+		if value > 0:
+			global.productP += value
+		else:
+			global.productN -= value
+	if param.count("dev insights") > 0:
+		if value > 0:
+			global.techP += value
+		else:
+			global.techN -= value
+	if param.count("market insights") > 0:
+		if value > 0:
+			global.marketP += value
+		else:
+			global.marketN -= value
+	if param.count("team insights") > 0:
+		global.teamInsight += value
 	
-	if curEvent[selectedOption + " option outcome value (param)"].count("money") > 0:
-		global.game.AddMoney(int(curEvent[selectedOption + " option outcome value (value)"]))
 

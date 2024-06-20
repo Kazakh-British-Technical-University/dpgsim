@@ -4,12 +4,13 @@ var total = 0
 var burn : int = 0
 var maxBurn = 0
 var costPos : Vector2 
+var purple = Color(131.0/255,82.0/255,120.0/255)
 func Start():
 	costPos = $Cost.rect_position
 	$Total.text = trans.local("DPGS") + ": "
 	$Burn.text = trans.local("RATE") + ": "
 	burn = global.mainConfig["Salary"]
-	$TotalMoney.add_color_override("font_color", Color.black)
+	$TotalMoney.add_color_override("font_color", purple)
 	_UpdateText()
 
 func SetMoney(_total):

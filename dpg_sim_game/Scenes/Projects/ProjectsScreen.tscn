@@ -9,25 +9,25 @@ margin_bottom = 640.0
 script = ExtResource( 1 )
 
 [node name="ProjectOption1" parent="." instance=ExtResource( 2 )]
-margin_left = 131.0
-margin_top = 131.0
-margin_right = 297.0
-margin_bottom = 338.0
+margin_left = 150.0
+margin_top = 176.0
+margin_right = 278.0
+margin_bottom = 335.0
 
 [node name="ProjectOption2" parent="." instance=ExtResource( 2 )]
-margin_left = 353.0
-margin_top = 131.0
-margin_right = 519.0
-margin_bottom = 338.0
+margin_left = 371.0
+margin_top = 176.0
+margin_right = 499.0
+margin_bottom = 335.0
 
 [node name="ProjectOption3" parent="." instance=ExtResource( 2 )]
-margin_left = 132.0
-margin_top = 389.0
-margin_right = 298.0
-margin_bottom = 596.0
+margin_left = 150.0
+margin_top = 393.0
+margin_right = 278.0
+margin_bottom = 552.0
 
 [node name="ProjectOption4" parent="." instance=ExtResource( 2 )]
-margin_left = 353.0
-margin_top = 389.0
-margin_right = 519.0
-margin_bottom = 596.0
+margin_left = 371.0
+margin_top = 393.0
+margin_right = 499.0
+margin_bottom = 552.0
