@@ -1,18 +1,17 @@
-extends Node2D
+extends Control
 
 export var numProjects = 4
-var projectOption = preload("res://Scenes/Projects/ProjectOption.tscn")
+onready var projectOptions = [$ProjectOption1, $ProjectOption2, $ProjectOption3, $ProjectOption4]
 
 func Start():
-	for child in $Buttons.get_children():
-		child.queue_free()
-	
 	var randInds = []
 	var projectInds = global.curPhase()
 	for i in range(projectInds.size()):
 		randInds.append(i)
 	
 	numProjects = min(4, projectInds.size())
+	for i in range(4):
+		projectOptions[i].visible = i < numProjects
 	
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
@@ -21,7 +20,4 @@ func Start():
 		var ind = rng.randi_range(0, randInds.size()-1)
 		var project = global.projects[projectInds[randInds[ind]]]
 		randInds.remove(ind)
-		
-		var newProject = projectOption.instance()
-		newProject.InitProjectButton(project)
-		$Buttons.add_child(newProject)
+		projectOptions[i].InitProjectButton(project)

@@ -4,6 +4,9 @@ var data : Dictionary
 func InitProjectButton(project):
 	data = project
 	$Title.text = trans.local(data["Title"])
+	$Description.text = trans.local(data["Description"])
+	$Money.text = trans.local(data["MoneyCost"])
+	$Time.text = trans.local(data["TimeCost"])
 
 func _on_ProjectOption_pressed():
 	global.game.soundManager.PlaySFX("Tick")

@@ -3,6 +3,9 @@ extends Node
 var externalator_initated = false
 var game : MainGame
 
+var sfxOn = true
+var musicOn = true
+
 var mainConfig : Dictionary
 var scenarios = []
 var projects = []

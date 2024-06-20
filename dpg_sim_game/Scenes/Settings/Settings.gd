@@ -6,16 +6,14 @@ func Start():
 	$Back.Start()
 	UpdateSettings()
 
-var musicOn = true
-var sfxOn = true
 func UpdateSettings():
 	$Music/Label.text = trans.local("MUSIC") + ": "
-	if musicOn:
+	if global.musicOn:
 		$Music/Label.text += trans.local("ON")
 	else:
 		$Music/Label.text += trans.local("OFF")
 	$SFX/Label.text = trans.local("SFX") + ": "
-	if sfxOn:
+	if global.sfxOn:
 		$SFX/Label.text += trans.local("ON")
 	else:
 		$SFX/Label.text += trans.local("OFF")
@@ -23,14 +21,14 @@ func UpdateSettings():
 
 
 func _on_Music_buttonPressed():
-	musicOn = not musicOn
+	global.musicOn = not global.musicOn
 	UpdateSettings()
-	global.game.soundManager.MusicOn(musicOn)
+	global.game.soundManager.MusicOn(global.musicOn)
 
 func _on_SFX_buttonPressed():
-	sfxOn = not sfxOn
+	global.sfxOn = not global.sfxOn
 	UpdateSettings()
-	global.game.soundManager.SfxOn(sfxOn)
+	global.game.soundManager.SfxOn(global.sfxOn)
 
 func _on_Back_buttonPressed():
 	visible = false
