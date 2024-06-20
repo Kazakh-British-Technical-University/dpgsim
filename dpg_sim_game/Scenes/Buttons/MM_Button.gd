@@ -30,3 +30,21 @@ func _on_MM_Button_button_up():
 	yield(get_tree().create_timer(0.05),"timeout")
 	emit_signal("buttonPressed")
 
+var shaking = false
+func StartShaking():
+	rect_pivot_offset = rect_size / 2
+	shaking = true
+
+var t = 0
+func _process(delta):
+	if not shaking:
+		t = 0
+		rect_rotation = 0
+		return
+	t += delta
+	if t < 0.25:
+		rect_rotation = 2 * sin(4 * PI * t / 0.25)
+	else:
+		rect_rotation = 0
+	if t > 2:
+		t = 0

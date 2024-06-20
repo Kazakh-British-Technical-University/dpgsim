@@ -62,13 +62,13 @@ buttonText = ""
 sPressed = ExtResource( 6 )
 sReleased = ExtResource( 5 )
 
+[node name="EventManager" parent="." instance=ExtResource( 22 )]
+visible = false
+
 [node name="Tooltip" parent="." instance=ExtResource( 4 )]
 visible = false
 
 [node name="WinScreen" parent="." instance=ExtResource( 14 )]
-visible = false
-
-[node name="EventManager" parent="." instance=ExtResource( 22 )]
 visible = false
 
 [node name="PauseMenu" parent="." instance=ExtResource( 23 )]

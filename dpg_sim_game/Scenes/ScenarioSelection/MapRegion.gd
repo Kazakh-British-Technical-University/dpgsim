@@ -16,6 +16,7 @@ func _process(delta):
 	modulate.a = (sin(PI * t) + 0.5) * 0.3
 
 func _on_MapRegion_pressed():
+	blinking = true
 	if not global.regionsActive[regionIndex]:
 		return
 	modulate.a = 0

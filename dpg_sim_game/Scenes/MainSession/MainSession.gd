@@ -14,6 +14,7 @@ func Start():
 	$Team_Button.Start()
 	$Actions_Button.Start()
 	$Project_Button.Start()
+	$Project_Button.StartShaking()
 	
 	$FitCounter.text = trans.local("FIT_PTS")
 	$DevCounter.text = trans.local("DEV_PTS")
@@ -27,6 +28,7 @@ func Start():
 func StartProject():
 	$Team_Button.visible = global.curPhaseIndex > 1
 	$Actions_Button.visible = global.curPhaseIndex > 2
+	$Project_Button.visible = false
 	$ProjectProgress.visible = true
 	
 	curDays = 0

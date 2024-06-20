@@ -37,10 +37,14 @@ func _ProcessProjects(args):
 	if (parsed != null):
 		var keys = parsed["Lines"][0]
 		for i in range(1, parsed["Lines"].size()):
-			var project : Dictionary
-			for j in range(keys.size()):
-				project[keys[str(j)]] = parsed["Lines"][i][str(j)]
-			global.projects.append(project)
+			if not bool(args[1]):
+				var project : Dictionary
+				for j in range(keys.size()):
+					project[keys[str(j)]] = parsed["Lines"][i][str(j)]
+				global.projects.append(project)
+			else:
+				global.projects[i-1]["Title"] = parsed["Lines"][i]["1"]
+				global.projects[i-1]["Description"] = parsed["Lines"][i]["2"]
 	else:
 		print("CSV parse error: Projects.csv")
 
@@ -49,10 +53,18 @@ func _ProcessEvents(args):
 	if (parsed != null):
 		var keys = parsed["Lines"][0]
 		for i in range(1, parsed["Lines"].size()):
-			var event : Dictionary
-			for j in range(keys.size()):
-				event[keys[str(j)]] = parsed["Lines"][i][str(j)]
-			global.events.append(event)
+			if not bool(args[1]):
+				var event : Dictionary
+				for j in range(keys.size()):
+					event[keys[str(j)]] = parsed["Lines"][i][str(j)]
+				global.events.append(event)
+			else:
+				global.events[i-1]["Title"] = parsed["Lines"][i]["1"]
+				global.events[i-1]["Description"] = parsed["Lines"][i]["2"]
+				global.events[i-1]["First option"] = parsed["Lines"][i]["3"]
+				global.events[i-1]["First option tooltip"] = parsed["Lines"][i]["4"]
+				global.events[i-1]["Second option"] = parsed["Lines"][i]["5"]
+				global.events[i-1]["Second option tooltip"] = parsed["Lines"][i]["6"]
 	else:
 		print("CSV parse error: Events.csv")
 
@@ -61,10 +73,14 @@ func _ProcessActions(args):
 	if (parsed != null):
 		var keys = parsed["Lines"][0]
 		for i in range(1, parsed["Lines"].size()):
-			var action : Dictionary
-			for j in range(keys.size()):
-				action[keys[str(j)]] = parsed["Lines"][i][str(j)]
-			global.actions.append(action)
+			if not bool(args[1]):
+				var action : Dictionary
+				for j in range(keys.size()):
+					action[keys[str(j)]] = parsed["Lines"][i][str(j)]
+				global.actions.append(action)
+			else:
+				global.actions[i-1]["Title"] = parsed["Lines"][i]["1"]
+				global.actions[i-1]["Description"] = parsed["Lines"][i]["2"]
 	else:
 		print("CSV parse error: Actions.csv")
 
@@ -89,6 +105,7 @@ func LoadFiles():
 	LoadProjects()
 	LoadEvents()
 	LoadActions()
+	LoadLocalizedFiles()
 
 func LoadTranslations():
 	window.fetchTrans()
@@ -108,3 +125,7 @@ func LoadEvents():
 func LoadActions():
 	window.fetchActions()
 
+func LoadLocalizedFiles():
+	window.fetchLocalizedData("Projects", trans.curLang)
+	window.fetchLocalizedData("Events", trans.curLang)
+	window.fetchLocalizedData("Actions", trans.curLang)

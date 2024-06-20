@@ -18,7 +18,7 @@ var regionsActive = [
 	false,
 	false,
 	false
-	]
+]
 
 var activeScenarioIndex = -1
 var curPhaseIndex = -1
@@ -33,22 +33,22 @@ var marketN = 0
 var teamInsight = 0
 
 func ApplyInsights():
-	var temp = int(global.curProject["ProductInsights"])
+	var temp = int(curProject["ProductInsights"])
 	if temp > 0:
 		productP += temp
 	else:
 		productN -= temp
-	temp = int(global.curProject["TechInsights"])
+	temp = int(curProject["TechInsights"])
 	if temp > 0:
 		techP += temp
 	else:
 		techN -= temp
-	temp = int(global.curProject["MarketInsights"])
+	temp = int(curProject["MarketInsights"])
 	if temp > 0:
 		marketP += temp
 	else:
 		marketN -= temp
-	teamInsight += int(global.curProject["TeamInsights"])
+	teamInsight += int(curProject["TeamInsights"])
 
 func GetInsight(index, good):
 	var insight = 0.0
@@ -90,10 +90,10 @@ func ResetGame():
 	techN = 0
 	marketP = 0
 	marketN = 0
+	teamInsight = 0
 
 func curPhase():
 	return scenarios[activeScenarioIndex]["PhaseProjects"][curPhaseIndex]
 
 func curScenario():
 	return scenarios[activeScenarioIndex]
-

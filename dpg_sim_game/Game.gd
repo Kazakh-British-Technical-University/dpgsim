@@ -54,6 +54,9 @@ func ProjectComplete():
 		##################################################
 		# print("name your product")
 		pass
+	AdvancePhase()
+
+func AdvancePhase():
 	if global.curPhaseIndex < 8:
 		global.curPhaseIndex += 1
 		StartNextPhase()
@@ -147,3 +150,6 @@ func Overtime():
 
 func CheckEvents(day):
 	$EventManager.CheckEvents(day)
+
+func AddMoney(amount):
+	$Header/Money.AddMoney(amount)

@@ -66,40 +66,71 @@ function fetchTrans() {
 		)
 }
 
-function fetchProjects() {
-	fetch("./Data/EN/Projects.csv")
-		.then(response => response.text())
-		.then
-		((data) => 
-			{
-				godotFunctions.SendProjects(JSON.stringify(CSVToArray(data, ",")));
-				//console.log(JSON.stringify(CSVToArray(data, ",")));
-			}
-		)
+async function fetchLocalizedData(filename, lang) {
+	let folder = ""
+	switch (lang) {
+		case 0:
+			folder = "EN";
+			break;
+		case 1:
+			folder = "RU";
+			break;
+		case 2:
+			folder = "KZ";
+			break;
+		
+	}
+	let path = "./Data/" + folder + "/" + filename + ".csv";
+	let response = await fetch(path);
+	if (response.ok) {
+		let data = await response.text();
+		switch (filename) {
+			case "Projects":
+				godotFunctions.SendProjects(JSON.stringify(CSVToArray(data, ",")), true);
+				break;
+			case "Events":
+				godotFunctions.SendEvents(JSON.stringify(CSVToArray(data, ",")), true);
+				break;
+			case "Actions":
+				godotFunctions.SendActions(JSON.stringify(CSVToArray(data, ",")), true);
+				break;
+		}
+	} else {
+		console.log("File missing: " + path);
+	}
 }
 
-function fetchEvents() {
-	fetch("./Data/EN/Events.csv")
-		.then(response => response.text())
-		.then
-		((data) => 
-			{
-				godotFunctions.SendEvents(JSON.stringify(CSVToArray(data, ",")));
-				//console.log(JSON.stringify(CSVToArray(data, ",")));
-			}
-		)
+async function fetchProjects() {
+	let data
+	let response = await fetch("./Data/Projects.csv");
+	if (response.ok) {
+		data = await response.text();
+		godotFunctions.SendProjects(JSON.stringify(CSVToArray(data, ",")), false);
+	} else {
+		console.log("File missing: ./Data/Projects.csv");
+	}
 }
 
-function fetchActions() {
-	fetch("./Data/EN/Actions.csv")
-		.then(response => response.text())
-		.then
-		((data) => 
-			{
-				godotFunctions.SendActions(JSON.stringify(CSVToArray(data, ",")));
-				//console.log(JSON.stringify(CSVToArray(data, ",")));
-			}
-		)
+async function fetchEvents() {
+	let data
+	let response = await fetch("./Data/Events.csv");
+	if (response.ok) {
+		data = await response.text();
+		godotFunctions.SendEvents(JSON.stringify(CSVToArray(data, ",")), false);
+	} else {
+		console.log("File missing: ./Data/Events.csv");
+	}
+}
+
+async function fetchActions() {
+	let data
+	let response = await fetch("./Data/Actions.csv");
+	if (response.ok) {
+		data = await response.text();
+		godotFunctions.SendActions(JSON.stringify(CSVToArray(data, ",")), false);
+	} else {
+		console.log("File missing: ./Data/Actions.csv");
+	}
 }
 
 function CSVToArray(strData, strDelimiter) 

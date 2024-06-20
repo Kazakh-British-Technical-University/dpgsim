@@ -16,6 +16,13 @@ func SetMoney(_total):
 	total = int(_total)
 	_UpdateText()
 
+func AddMoney(amount):
+	if amount > 0:
+		total += amount
+		_UpdateText()
+	else:
+		Spend(-amount)
+
 func AddBurn(_burn):
 	burn += _burn
 	_UpdateText()

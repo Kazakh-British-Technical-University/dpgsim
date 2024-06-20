@@ -4,7 +4,10 @@ var curLang = 0
 var dict : Dictionary
 func local(line : String):
 	if (dict.has(line)):
-		return dict[line][curLang]
+		if len(dict[line][curLang]) > 0:
+			return dict[line][curLang]
+		else:
+			return dict[line][0]
 	else:
 		if len(line) > 0:
 			return line

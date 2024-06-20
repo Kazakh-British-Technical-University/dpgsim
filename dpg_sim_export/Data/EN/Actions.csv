@@ -1,5 +1,5 @@
-ID,Title,Description,TimeCost,StartingPhase
-0,Customer research,,14,3
-1,Debugging,,14,5
-2,New creatives,,14,7
-3,Product overhaul,,14,8
+ID,Title,Description
+0,Customer research,Reduces inconsistencies
+1,Debugging,Reduces tech debt
+2,New creatives,Reduces market rejection
+3,Product overhaul,"Reduces inconsistencies, tech debt, and market rejection"
