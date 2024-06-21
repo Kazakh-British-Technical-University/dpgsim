@@ -60,5 +60,13 @@ text = "99"
 align = 1
 valign = 1
 
+[node name="DetailsButton" type="Button" parent="."]
+margin_left = 4.0
+margin_top = 21.0
+margin_right = 66.0
+margin_bottom = 115.0
+flat = true
+
 [connection signal="buttonPressed" from="Plus_Button" to="." method="_on_Plus_Button_buttonPressed"]
 [connection signal="buttonPressed" from="Minus_Button" to="." method="_on_Minus_Button_buttonPressed"]
+[connection signal="pressed" from="DetailsButton" to="." method="_on_DetailsButton_pressed"]

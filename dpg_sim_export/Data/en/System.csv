@@ -1,5 +1,4 @@
 ﻿key,translation
-built-in:,
 START,Start
 SETTINGS,Settings
 CREDITS,Credits
@@ -19,13 +18,6 @@ NEXT_PHASE,Next phase
 FINISH_GAME,Finish game
 SKIP,Skip
 TEAM,Team
-TEAM_MANAGEMENT,Management
-TEAM_DEVELOPMENT,Development
-TEAM_DESIGN,Design
-TEAM_PRODUCT,Product
-TEAM_MARKETING,Marketing
-TEAM_QA,QA
-TEAM_SUPPORT,Support
 TEAM_SIZE,Team size
 ACTIONS,Actions
 PROJECT,Project
@@ -40,10 +32,6 @@ ON,On
 OFF,Off
 CONTINUE,Continue
 EXIT,Exit
-MAP_POPUP_TITLE,World map
-MAP_POPUP_DESC,Select a region to start creating your product
-SCENARIO_POPUP_TITLE,Welcome!
-SCENARIO_POPUP_DESC,Session description goes here…
 RESEARCH,Research phase
 PROTOTYPING,Prototyping phase
 TEAM_RECRUIT,Team recruitment phase
@@ -53,6 +41,17 @@ DEVELOPMENT,Development phase
 DPG_STATUS_APP,DPG status application
 RELEASE,Release phase
 OPERATION,Operation phase
+MAP_POPUP_TITLE,World map
+MAP_POPUP_DESC,Select a region to start creating your product
+SCENARIO_POPUP_TITLE,Welcome!
+SCENARIO_POPUP_DESC,Session description goes here…
+,
+,
+,
+,
+,
+,
+,
 ,
 ,
 scenarios:,

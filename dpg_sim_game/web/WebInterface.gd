@@ -8,6 +8,7 @@ var _trans_callback = JavaScript.create_callback(self, "_ProcessTrans")
 var _projects_callback = JavaScript.create_callback(self, "_ProcessProjects")
 var _events_callback = JavaScript.create_callback(self, "_ProcessEvents")
 var _actions_callback = JavaScript.create_callback(self, "_ProcessActions")
+var _team_callback = JavaScript.create_callback(self, "_ProcessTeam")
 
 # JS callbacks
 func _ParseMainConfig(args):
@@ -15,14 +16,14 @@ func _ParseMainConfig(args):
 	if (parsed != null):
 		global.mainConfig = parsed
 	else:
-		print("JSON parse error")
+		print("JSON parse error: Main Config")
 
 func _ParseScenarios(args):
 	var parsed = JSON.parse(str(args[0])).result
 	if (parsed != null):
 		global.scenarios.append(parsed)
 	else:
-		print("JSON parse error")
+		print("JSON parse error: Scenario")
 
 func _ProcessTrans(args):
 	var parsed = JSON.parse(str(args[0])).result
@@ -30,7 +31,7 @@ func _ProcessTrans(args):
 		for i in range(1, parsed["Lines"].size()):
 			trans.dict[parsed["Lines"][i]["0"]] = parsed["Lines"][i]["1"]
 	else:
-		print("CSV parse error: Data/Translations.csv")
+		print("CSV parse error: System.csv")
 
 func _ProcessProjects(args):
 	var parsed = JSON.parse(str(args[0])).result
@@ -84,6 +85,14 @@ func _ProcessActions(args):
 	else:
 		print("CSV parse error: Actions.csv")
 
+func _ProcessTeam(args):
+	var parsed = JSON.parse(str(args[0])).result
+	if (parsed != null):
+		for i in range(1, parsed["Lines"].size()):
+			global.teamDetails[parsed["Lines"][i]["0"]] = parsed["Lines"][i]["1"]
+	else:
+		print("CSV parse error: Team.csv")
+
 
 # public functions
 func ConnectToWeb():
@@ -97,6 +106,7 @@ func ConnectToWeb():
 	externalator.addGodotFunction('SendProjects',_projects_callback)
 	externalator.addGodotFunction('SendEvents',_events_callback)
 	externalator.addGodotFunction('SendActions',_actions_callback)
+	externalator.addGodotFunction('SendTeam',_team_callback)
 
 func LoadFiles():
 	LoadMainConfig()
@@ -122,7 +132,8 @@ func LoadActions():
 	window.fetchActions()
 
 func LoadLocalizedFiles():
+	window.fetchLocalizedData("System")
 	window.fetchLocalizedData("Projects")
 	window.fetchLocalizedData("Events")
 	window.fetchLocalizedData("Actions")
-	window.fetchLocalizedData("System")
+	window.fetchLocalizedData("Team")

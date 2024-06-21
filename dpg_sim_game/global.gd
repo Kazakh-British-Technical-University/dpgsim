@@ -11,6 +11,7 @@ var scenarios = []
 var projects = []
 var events = []
 var actions = []
+var teamDetails : Dictionary
 
 var actionsActive = [false, false, false]
 var regionsActive = [

@@ -72,6 +72,9 @@ async function fetchLocalizedData(filename) {
 			case "System":
 				godotFunctions.SendTrans(JSON.stringify(CSVToArray(data, ",")));
 				break;
+			case "Team":
+				godotFunctions.SendTeam(JSON.stringify(CSVToArray(data, ",")));
+				break;
 		}
 	} else {
 		console.log("File missing: " + path);

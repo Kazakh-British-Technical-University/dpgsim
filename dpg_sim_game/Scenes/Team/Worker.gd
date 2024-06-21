@@ -1,7 +1,7 @@
 extends Label
 
 func Start():
-	text = trans.local("TEAM_" + name.to_upper())
+	text = name
 	match name:
 		"Management":
 			$BgDefault/Portrait.texture = load("res://Sprites/Portraits/portrait01Transaprent.png")
@@ -30,3 +30,9 @@ func _on_Minus_Button_buttonPressed():
 
 func UpdateQuantity():
 	$Quantity.text = str(get_parent().team[name])
+
+
+func _on_DetailsButton_pressed():
+	global.game.soundManager.PlaySFX("Boop")
+	global.game.gameTooltip.SetTooltip(name, global.teamDetails[name], null)
+
