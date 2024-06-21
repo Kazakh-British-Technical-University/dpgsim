@@ -3,10 +3,10 @@
   "NPR": 20,
   "PGR_limit": 80,
   "NPR_limit": 60,
-  "InsightMultiplier": 10,
-  "Salary":50,
+  "InsightMultiplier": 5,
+  "Salary":60,
   "TeamBonus": 1,
-  "DayLength": 0.1,
+  "DayLength": 0.4,
   "TeamInsightBurnReductionPercent": 5,
   "Phases": [
     {

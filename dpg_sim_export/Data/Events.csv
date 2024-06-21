@@ -1,5 +1,8 @@
-﻿ID,Image,First option outcome status,First option outcome value (param),First option outcome value (value),Second option outcome status,Second option outcome value (param),Second option outcome value (value),Condition trigger type,Condition trigger value,Default weight,Phase,FromStart,Day
-E000001,,Good,money,500,Good,money,500,,,,1,TRUE,2
-E000002,,Good,product insights,1,Good,money,300,,,,3,TRUE,15
-E000003,,Bad,money,300,Bad,money,200,,,,5,FALSE,20
-E000004,,Good,money,500,Good,"product insights, dev insights, market insights",1,,,,7,TRUE,10
+ID,Image,First option outcome status,First option outcome value (param),First option outcome value (value),Second option outcome status,Second option outcome value (param),Second option outcome value (value),Condition trigger type,Condition trigger value,Default weight,Phase,FromStart,Day
+1,,Good,money,500,Good,money,500,,,,1,TRUE,2
+2,,Good,product insights,1,Good,money,300,,,,3,TRUE,15
+3,,Bad,money,300,Bad,money,200,,,,5,FALSE,20
+4,,Good,money,500,Good,"product insights, dev insights, market insights",1,,,,7,TRUE,10
+5,,Bad,money,300,Bad,money,200,,,,5,FALSE,20
+6,,Good,money,300,Bad,money,200,,,,5,FALSE,20
+7,,Good,money,300,Bad,money,200,,,,5,FALSE,20,
