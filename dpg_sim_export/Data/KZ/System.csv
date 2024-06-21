@@ -29,8 +29,8 @@ TEAM_SUPPORT,Support
 TEAM_SIZE,Team size
 ACTIONS,Actions
 PROJECT,Project
-GAME_OVER,"This is it..."
-GAME_OVER_DESCR,"You have spend all available funds with no delivery. Statistically speaking it's a common situation. Great thing - it is a game. Just try again!"
+GAME_OVER,Game over
+GAME_OVER_DESCR,You ran out of money…
 YOU_WIN,Congratulations! Your product was successful!
 RESTART,Play again
 CREDITS_LIST,"Game design by Aleksandr Mezin
