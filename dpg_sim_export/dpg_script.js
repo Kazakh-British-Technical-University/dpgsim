@@ -54,6 +54,20 @@ function fetchScenario(path)
 		)
 }
 
+function fetchCredits() 
+{
+	let path = "./Data/" + lang + "/Credits.txt";
+	fetch(path)
+		.then(response => response.text())
+		.then
+		((data) => 
+			{
+				//console.log("JS: " + data);
+				godotFunctions.SendCredits(data);
+			}
+		)
+}
+
 async function fetchLocalizedData(filename) {
 	let path = "./Data/" + lang + "/" + filename + ".csv";
 	let response = await fetch(path);

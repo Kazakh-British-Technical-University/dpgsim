@@ -9,21 +9,6 @@ margin_right = 640.0
 margin_bottom = 640.0
 script = ExtResource( 3 )
 
-[node name="CreditsList" type="Label" parent="."]
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_top = -39.0
-margin_bottom = 180.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 1 )
-text = "Game design by Aleksandr Mezin
-Developed by Almaskhan Baimyshev
-Art by Elena
-Music by Stephen Bennett from fesliyanstudios.com"
-align = 1
-autowrap = true
-
 [node name="MM_Button" parent="." instance=ExtResource( 2 )]
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -32,5 +17,33 @@ margin_top = -126.0
 margin_right = 488.0
 margin_bottom = -58.0
 buttonText = "BACK"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 17.0
+margin_top = 293.0
+margin_right = 629.0
+margin_bottom = 504.0
+scroll_horizontal_enabled = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 600.0
+margin_bottom = 245.0
+
+[node name="CreditsList" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_right = 600.0
+margin_bottom = 245.0
+rect_min_size = Vector2( 600, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "1
+2
+3
+4
+5
+6
+7
+8"
+align = 1
+autowrap = true
 
 [connection signal="buttonPressed" from="MM_Button" to="." method="_on_MM_Button_buttonPressed"]

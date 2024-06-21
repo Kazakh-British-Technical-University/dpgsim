@@ -9,6 +9,7 @@ var _projects_callback = JavaScript.create_callback(self, "_ProcessProjects")
 var _events_callback = JavaScript.create_callback(self, "_ProcessEvents")
 var _actions_callback = JavaScript.create_callback(self, "_ProcessActions")
 var _team_callback = JavaScript.create_callback(self, "_ProcessTeam")
+var _credits_callback = JavaScript.create_callback(self, "_ProcessCredits")
 
 # JS callbacks
 func _ParseMainConfig(args):
@@ -93,6 +94,9 @@ func _ProcessTeam(args):
 	else:
 		print("CSV parse error: Team.csv")
 
+func _ProcessCredits(args):
+	trans.dict["CREDITS_LIST"] = str(args[0])
+
 
 # public functions
 func ConnectToWeb():
@@ -107,29 +111,16 @@ func ConnectToWeb():
 	externalator.addGodotFunction('SendEvents',_events_callback)
 	externalator.addGodotFunction('SendActions',_actions_callback)
 	externalator.addGodotFunction('SendTeam',_team_callback)
+	externalator.addGodotFunction('SendCredits',_credits_callback)
 
 func LoadFiles():
-	LoadMainConfig()
-	LoadScenarios()
-	LoadProjects()
-	LoadEvents()
-	LoadActions()
-	LoadLocalizedFiles()
-
-func LoadMainConfig():
 	window.fetchMainConfig()
-
-func LoadScenarios():
 	window.getScenarios()
-
-func LoadProjects():
 	window.fetchProjects()
-
-func LoadEvents():
 	window.fetchEvents()
-
-func LoadActions():
 	window.fetchActions()
+	window.fetchCredits()
+	LoadLocalizedFiles()
 
 func LoadLocalizedFiles():
 	window.fetchLocalizedData("System")

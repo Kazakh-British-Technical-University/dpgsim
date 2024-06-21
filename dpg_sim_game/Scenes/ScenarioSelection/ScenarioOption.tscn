@@ -9,8 +9,8 @@
 
 [node name="ScenarioOption" type="Button"]
 margin_right = 563.0
-margin_bottom = 132.0
-rect_min_size = Vector2( 563, 132 )
+margin_bottom = 136.0
+rect_min_size = Vector2( 563, 136 )
 custom_styles/focus = SubResource( 1 )
 flat = true
 script = ExtResource( 2 )
@@ -18,7 +18,7 @@ selectedColor = Color( 0.117647, 0.737255, 0.45098, 1 )
 
 [node name="ScenarioFrame" type="Sprite" parent="."]
 modulate = Color( 0.835294, 0.866667, 0.870588, 1 )
-position = Vector2( 282, 66 )
+position = Vector2( 282, 69 )
 texture = ExtResource( 3 )
 
 [node name="sdgIcon" type="Node2D" parent="."]
