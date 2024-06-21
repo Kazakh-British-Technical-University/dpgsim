@@ -5,4 +5,6 @@ ID,Image,First option outcome status,First option outcome value (param),First op
 4,,Good,money,500,Good,"product insights, dev insights, market insights",1,,,,7,TRUE,10
 5,,Bad,money,300,Bad,money,200,,,,5,FALSE,20
 6,,Good,money,300,Bad,money,200,,,,5,FALSE,20
-7,,Good,money,300,Bad,money,200,,,,5,FALSE,20,
+7,,Good,money,300,Bad,money,200,,,,5,FALSE,20
+8,,Good,money,300,Bad,money,200,,,,5,FALSE,20
+9,,Good,money,300,Bad,money,200,,,,5,FALSE,20
