@@ -43,7 +43,7 @@ func _on_Back_Button_buttonPressed():
 		buttonsList.clear()
 
 func _on_Start_Button_buttonPressed():
-	var desc = trans.local(global.curScenario()["Description"]) + "\n"
+	var desc = trans.local(global.curScenario()["Description"]) + "\n\n"
 	desc += trans.local("BUDGET") + ": " + str(global.curScenario()["Money"])
 	var callback = funcref(global.game, "StartScenario")
 	global.game.gameTooltip.SetTooltip(trans.local(global.curScenario()["Title"]), desc, callback)

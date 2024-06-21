@@ -105,7 +105,7 @@ func ConnectToWeb():
 	global.externalator_initated = true
 	
 	externalator.addGodotFunction('SendMainConfig', _mainConfigCallback)
-	externalator.addGodotFunction('SendScenarios', _scenarioCallback)
+	externalator.addGodotFunction('SendScenario', _scenarioCallback)
 	externalator.addGodotFunction('SendTrans',_trans_callback)
 	externalator.addGodotFunction('SendProjects',_projects_callback)
 	externalator.addGodotFunction('SendEvents',_events_callback)
@@ -115,7 +115,7 @@ func ConnectToWeb():
 
 func LoadFiles():
 	window.fetchMainConfig()
-	window.getScenarios()
+	window.fetchScenarios()
 	window.fetchProjects()
 	window.fetchEvents()
 	window.fetchActions()

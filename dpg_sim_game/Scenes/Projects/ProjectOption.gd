@@ -10,7 +10,7 @@ func InitProjectButton(project):
 func _on_ProjectOption_pressed():
 	global.game.soundManager.PlaySFX("Tick")
 	global.curProject = data
-	var desc = trans.local(data["Description"]) + "\n"
+	var desc = trans.local(data["Description"]) + "\n\n"
 	desc += trans.local("COST") + ": " + data["MoneyCost"] + "\n"
 	desc += trans.local("TIME") + ": " + data["TimeCost"]
 	var callback = funcref(global.game, "StartProject")

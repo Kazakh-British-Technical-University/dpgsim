@@ -5,6 +5,18 @@ window.externalator = {
 	}
 }
 
+let lang = getURLparam("lang");
+if (!lang) {
+	lang = "en";
+}
+
+function getURLparam(name) 
+{
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+	return urlParams.get(name);
+}
+
 function fetchMainConfig() 
 {
 	fetch("./Data/MainConfig.txt")
@@ -18,38 +30,43 @@ function fetchMainConfig()
 		)
 }
 
-function getScenarios() 
-{
-	fetch("./Data/ScenarioList.txt")
-		.then(response => response.json())
-		.then
-		((data) => 
-			{
-				for (let index = 0; index < data.ScenarioFiles.length; ++index) 
-				{
-					//console.log(files[index]);
-					fetchScenario("./Data/"+data.ScenarioFiles[index]);
-				}
-			}
-		)
-	/*$.getJSON("./Data/Scenarios/", files => {
-		for (let index = 0; index < files.length; ++index) 
+async function fetchScenarios() {
+	let data
+	let response = await fetch("./Data/" + lang + "/Scenarios.csv");
+	if (response.ok) {
+		data = await response.text();
+		let obj = CSVToArray(data, ",");
+		for (const item of obj.Lines)
 		{
-			//console.log(files[index]);
-			fetchScenario("./Data/Scenarios/"+files[index]);
+			if (item[0] != "ID") 
+			{
+				let path = "./Data/Scenarios/" + item[3];
+				fetch(path)
+				.then(response => response.json())
+				.then
+				((file) => 
+					{
+						file.Title = item[1];
+						file.Description = item[2];
+						//console.log("JS: " + JSON.stringify(file));
+						godotFunctions.SendScenario(JSON.stringify(file));
+					}
+				)
+			}
 		}
-	});*/
+	} else {
+		console.log("File missing: Scenarios.csv");
+	}
 }
-
-function fetchScenario(path) 
+async function fetchScenario(path) 
 {
 	fetch(path)
 		.then(response => response.text())
 		.then
 		((data) => 
 			{
-				//console.log("JS: " + data);
-				godotFunctions.SendScenarios(data);
+				console.log("JS: " + data);
+				//godotFunctions.SendScenarios(data);
 			}
 		)
 }
@@ -226,16 +243,4 @@ function fetchImage(path) {
 				godotFunctions.SendImage(data);
 			}
 		)
-}
-
-let lang = getURLparam("lang");
-if (!lang) {
-	lang = "en";
-}
-
-function getURLparam(name) 
-{
-	const queryString = window.location.search;
-	const urlParams = new URLSearchParams(queryString);
-	return urlParams.get(name);
 }

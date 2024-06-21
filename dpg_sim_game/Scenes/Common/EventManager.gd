@@ -6,7 +6,7 @@ func CheckEvents(day):
 	for event in global.events:
 		if len(event["Day"]) == 0:
 			continue
-		if int(event["Phase"]) == global.curPhaseIndex + 1:
+		if int(event["Phase"]) == global.curPhaseIndex + 1 and global.curScenario()["ScenarioEvents"].has(float(event["ID"])):
 			if event["FromStart"] == "TRUE":
 				if int(event["Day"]) == day:
 					ShowEvent(event)

@@ -1,6 +1,0 @@
-{
-	"ScenarioFiles":
-	[
-		"Scenarios/Scenario_SchoolEngagement.txt"	
-	]
-}

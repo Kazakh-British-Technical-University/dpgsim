@@ -45,17 +45,3 @@ MAP_POPUP_TITLE,World map
 MAP_POPUP_DESC,Select a region to start creating your product
 SCENARIO_POPUP_TITLE,Welcome!
 SCENARIO_POPUP_DESC,Session description goes here…
-,
-,
-,
-,
-,
-,
-,
-,
-,
-scenarios:,
-COL_RENT_TITLE,Collective rent
-COL_RENT_DESCR,It is so hard to rent a flat in a big city! Here you will create a website to address this issue.
-SCHOOL_APP_TITLE,School engagement app
-SCHOOL_APP_DESCR,"In this scenario, you will develop an app to engage students in their studies."
