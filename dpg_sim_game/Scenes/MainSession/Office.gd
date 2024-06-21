@@ -7,6 +7,7 @@ func Start():
 		var mini = get_node("Worker" + str(i)) as Sprite
 		mini.visible = false
 		seats.append(mini)
+	$Worker11.visible = false
 
 func StartProject():
 	if global.curPhaseIndex < 7:

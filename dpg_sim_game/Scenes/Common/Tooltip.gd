@@ -15,12 +15,11 @@ func _on_MM_Button_buttonPressed():
 	visible = false
 	if callback != null:
 		callback.call_func()
-		callback = null
 
 func _on_CloseButton_pressed():
+	global.game.soundManager.PlaySFX("Tick")
 	if closeIsProceed:
+		closeIsProceed = false
 		_on_MM_Button_buttonPressed()
 		return
-	global.game.soundManager.PlaySFX("Tick")
 	visible = false
-	callback = null

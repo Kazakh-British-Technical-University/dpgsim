@@ -29,14 +29,10 @@ TEAM_SUPPORT,Support
 TEAM_SIZE,Team size
 ACTIONS,Actions
 PROJECT,Project
-GAME_OVER,"This is it..."
-GAME_OVER_DESCR,"You have spend all available funds with no delivery. Statistically speaking it's a common situation. Great thing - it is a game. Just try again!"
+GAME_OVER,This is it...
+GAME_OVER_DESCR,You have spend all available funds with no delivery. Statistically speaking it's a common situation. Great thing - it is a game. Just try again!
 YOU_WIN,Congratulations! Your product was successful!
 RESTART,Play again
-CREDITS_LIST,"Game design by Aleksandr Mezin
-Developed by Almaskhan Baimyshev
-Art by Elena
-Music by Stephen Bennett from fesliyanstudios.com"
 SCORES,Scores
 SFX,Sound effects
 MUSIC,Music
@@ -46,7 +42,8 @@ CONTINUE,Continue
 EXIT,Exit
 MAP_POPUP_TITLE,World map
 MAP_POPUP_DESC,Select a region to start creating your product
-,
+SCENARIO_POPUP_TITLE,Welcome!
+SCENARIO_POPUP_DESC,Session description goes here…
 RESEARCH,Research phase
 PROTOTYPING,Prototyping phase
 TEAM_RECRUIT,Team recruitment phase

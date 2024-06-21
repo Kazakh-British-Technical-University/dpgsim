@@ -25,12 +25,17 @@ func Start():
 	PGR_limit = float(global.mainConfig["PGR_limit"])
 	NPR_limit = float(global.mainConfig["NPR_limit"])
 
+func FirstStart():
+	$Team_Button.visible = false
+	$ProjectProgress.visible = false
+	$Actions_Button.visible = false
+	$Project_Button.visible = true
+
 func StartProject():
 	$Team_Button.visible = global.curPhaseIndex > 1
 	$Actions_Button.visible = global.curPhaseIndex > 2
 	$Project_Button.visible = false
 	$ProjectProgress.visible = true
-	
 	curDays = 0
 	SetProjectProgress()
 	$Office.StartProject()

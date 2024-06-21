@@ -23,6 +23,7 @@ margin_bottom = 138.0
 text = "Fit points"
 
 [node name="DevCounter" parent="." instance=ExtResource( 2 )]
+visible = false
 margin_left = 264.0
 margin_top = 119.0
 margin_right = 366.0
@@ -30,6 +31,7 @@ margin_bottom = 138.0
 text = "Dev points"
 
 [node name="MarketCounter" parent="." instance=ExtResource( 2 )]
+visible = false
 margin_left = 422.0
 margin_top = 119.0
 margin_right = 524.0
@@ -93,9 +95,9 @@ valign = 1
 [node name="ActionProgress" type="TextureProgress" parent="."]
 visible = false
 margin_left = 416.0
-margin_top = 562.0
+margin_top = 573.0
 margin_right = 576.0
-margin_bottom = 610.0
+margin_bottom = 621.0
 texture_under = ExtResource( 8 )
 texture_progress = ExtResource( 9 )
 nine_patch_stretch = true
@@ -120,14 +122,16 @@ __meta__ = {
 
 [node name="ProductName" type="Label" parent="."]
 visible = false
+margin_left = 24.0
 margin_top = 82.0
-margin_right = 640.0
+margin_right = 616.0
 margin_bottom = 116.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 11 )
 text = "Awesome product"
 align = 1
 valign = 1
+autowrap = true
 
 [connection signal="buttonPressed" from="Team_Button" to="." method="_on_Team_Button_buttonPressed"]
 [connection signal="buttonPressed" from="Actions_Button" to="." method="_on_Actions_Button_buttonPressed"]

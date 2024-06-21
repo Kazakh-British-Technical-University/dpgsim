@@ -23,12 +23,16 @@ func StartScenario():
 	$MapScreen.visible = false
 	global.curPhaseIndex = 0
 	$Header.Start()
+	$Header/Money.SetMoney(global.curScenario()["Money"])
+	$Header/PhaseHUD.StartPhase()
+	$Header.visible = true
 	$TeamScreen.Start()
 	$MainSession.Start()
 	$MainSession.ResetCounters()
-	$Header/Money.SetMoney(global.curScenario()["Money"])
-	$Header.visible = true
-	StartNextPhase()
+	$MainSession.FirstStart()
+	$MainSession.visible = true
+	global.curPhaseIndex = -1
+	gameTooltip.SetTooltip(trans.local("SCENARIO_POPUP_TITLE"), trans.local("SCENARIO_POPUP_DESC"), null)
 
 func StartNextPhase():
 	$Header/PhaseHUD.StartPhase()
@@ -46,9 +50,12 @@ func StartProject():
 	$MainSession.visible = true
 
 func ProjectComplete():
+	$MainSession.visible = false
+	if global.curPhaseIndex == -1:
+		AdvancePhase()
+		return
 	PauseTimer(true)
 	global.ApplyInsights()
-	$MainSession.visible = false
 	$Header/PhaseHUD.ShowButton(false)
 	if global.curPhaseIndex == 1:
 		##################################################
@@ -127,7 +134,6 @@ func ExitGame():
 		child.visible = false
 	$PauseMenu.visible = false
 	$MainMenu.visible = true
-	gameTooltip.closeIsProceed = false
 
 func HireWorker(quantity):
 	$Header/Money.AddBurn(int(global.mainConfig["Salary"]) * quantity)

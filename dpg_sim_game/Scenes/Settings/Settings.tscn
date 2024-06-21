@@ -10,23 +10,23 @@ script = ExtResource( 1 )
 
 [node name="Music" parent="." instance=ExtResource( 2 )]
 margin_left = 153.0
-margin_top = 233.0
+margin_top = 314.0
 margin_right = 488.0
-margin_bottom = 301.0
+margin_bottom = 382.0
 buttonText = "MUSIC"
 
 [node name="SFX" parent="." instance=ExtResource( 2 )]
 margin_left = 153.0
-margin_top = 329.0
+margin_top = 410.0
 margin_right = 488.0
-margin_bottom = 397.0
+margin_bottom = 478.0
 buttonText = "SFX"
 
 [node name="Back" parent="." instance=ExtResource( 2 )]
 margin_left = 153.0
-margin_top = 433.0
+margin_top = 514.0
 margin_right = 488.0
-margin_bottom = 501.0
+margin_bottom = 582.0
 buttonText = "BACK"
 
 [connection signal="buttonPressed" from="Music" to="." method="_on_Music_buttonPressed"]
