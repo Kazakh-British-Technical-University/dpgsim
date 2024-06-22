@@ -6,7 +6,7 @@
   "InsightMultiplier": 5,
   "Salary":60,
   "TeamBonus": 1,
-  "DayLength": 0.4,
+  "DayLength": 0.3,
   "TeamInsightBurnReductionPercent": 5,
   "Phases": [
     {

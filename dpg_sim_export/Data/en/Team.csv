@@ -1,8 +1,8 @@
 ﻿Title,Description
-Management,Description of team member
-Development,Description of team member
-Design,Description of team member
-Product,Description of team member
-Marketing,Description of team member
-QA,Description of team member
-Support,Description of team member
+"Management","Managers increase a number of employees you can have. But each additional manager is less effective."
+"Development","Developers generates more Development Points. And a technical debt if unchecked."
+"Design","Designers help to create a better looking product with better user experience (UX)."
+"Product","Product managers are crucial to make more consistent products and to maintain focus."
+"Marketing","Marketing specialists are essential to make your product pop. They are directly responsible for Market Points "
+"QA","Quality Assurance (QA) help your product to be less buggy and more reliable."
+"Support","Without a support specialists anytime users will discover any issues with the product they will just leave or bother developers directly."

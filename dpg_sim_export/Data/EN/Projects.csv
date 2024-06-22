@@ -1,37 +1,37 @@
 ID,Title,Description
-0,Limited research,"Just a simple research. Web searching, AI asking and putting it all together in a dataset."
-1,Customer focus research,Who is your main customer? Who will benefit from your service? How can you deliver a value?
-2,Technical focus research,How to make what you wana make? What technologies would you use? How can they work together?
-3,Full scale research,You throw all your resources and efforts to make your product the best fit possible. It will help in a long run... probably.
-4,Essential prototype,This prototipe will just show that your idea works. It is ugly. It is buggy. But it proves the very basic concept.
-5,Service prototype,"This isn't a technical prototype. You have your landing page up and running, and you should do everything else by hand with every client."
-6,Technical prototype,"Now you know, that everything is working on the technical side. User experience? Never heard about this."
-7,Product MVP,This MVP proves everything and you can ship it to selected audience. It is well designed. Well built. And it took time and effort to make it this early.
-8,Mission only,Now your crew knows why are you doing what you are doing.
-9,Values and Strategy,Values will help your team to make important decisions. Strategy will navigate them on which decisions they should make.
-10,Values and Mission,Values will help your team to make important decisions. Mission will give them purpose to make these decisions.
+0,"Limited research","Just a simple research. Web searching, AI asking and putting it all together in a dataset."
+1,"Customer focus research","Who is your main customer? Who will benefit from your service? How can you deliver a value?"
+2,"Technical focus research","How to make what you wana make? What technologies would you use? How can they work together?"
+3,"Full scale research","You throw all your resources and efforts to make your product the best fit possible. It will help in a long run... probably."
+4,"Essential prototype","This prototipe will just show that your idea works. It is ugly. It is buggy. But it proves the very basic concept."
+5,"Service prototype","This isn't a technical prototype. You have your landing page up and running, and you should do everything else by hand with every client."
+6,"Technical prototype","Now you know, that everything is working on the technical side. User experience? Never heard about this."
+7,"Product MVP","This MVP proves everything and you can ship it to selected audience. It is well designed. Well built. And it took time and effort to make it this early."
+8,"Mission only","Now your crew knows why are you doing what you are doing."
+9,"Values and Strategy","Values will help your team to make important decisions. Strategy will navigate them on which decisions they should make."
+10,"Values and Mission","Values will help your team to make important decisions. Mission will give them purpose to make these decisions."
 11,"Values, Mission and Strategy","You have done it all. Now your team knows why, how, and which decisions they should make. It invokes confidence."
-12,Internal testing,Your team and friends are enough to test your product. There is no need to gather the audience.
-13,Medium focus group testing,Your testing group consists of a few dozens of people both from your audience and new ones. It will help to catch criticals in your product.
-14,Real-world testing,It is relatively good idea to just put your product online and acquire some users to simply use it. If you are ready to rapidly fix all appearing problems.
-15,Cascade testing with user groups,"Full-scale testing with several stages, each bigger. You have prepared and made it all"
-16,Website building,"You definitely need a website. Anything else? Probaply, not."
-17,Social media setup,Who needs a website when you can make it all with a proper social media account?
-18,Website and Social Media,"It is often easier to gather audience via social media, but they should be landed somewhere."
-19,Full marketing commitment,"Social media, website, community hub, press releases, and contacts with influencers. You should have it all to succeed."
-20,Single server,Simple backand will be more then enough. So why bother and spend additional money on an ifrastructure? What could possibly go wrong?
-21,Cloud infrastructure,"Why should we bother to make our own server if we can use a cloud? It is a little bit more expensive, but definitely much more convenient."
-22,Multiple servers,We know how to make it on our own with all the redundancy we need to provide a consistent service to our clients.
-23,DevOPS team with an infrastructure,Infrastructure needs to be carfully planned and maintained. So we need to hire a DevOPS team to help use make this project.
-24,Self application,Just prepare all the documents and send it according to instructions on a DPG website.
-25,Contact DPG office to assist,"We can make it with the DPG office, if they are able to help."
-26,Address SDG relevance only,You have checked if your product is SDG relevant or not. If it is - so why bother? It will work anyway.
-27,DPG indicator checklist,"You have your checklist, so you go thugh all 9 indicators and prepare properly your application."
-28,,
-29,,
-30,,
-31,,
-32,,
-33,,
-34,,
-35,,
+12,"Internal testing","Your team and friends are enough to test your product. There is no need to gather the audience."
+13,"Medium focus group testing","Your testing group consists of a few dozens of people both from your audience and new ones. It will help to catch criticals in your product."
+14,"Real-world testing","It is relatively good idea to just put your product online and acquire some users to simply use it. If you are ready to rapidly fix all appearing problems."
+15,"Cascade testing with user groups","Full-scale testing with several stages, each bigger. You have prepared and made it all"
+16,"Website building","You definitely need a website. Anything else? Probaply, not."
+17,"Social media setup","Who needs a website when you can make it all with a proper social media account?"
+18,"Website and Social Media","It is often easier to gather audience via social media, but they should be landed somewhere."
+19,"Full marketing commitment","Social media, website, community hub, press releases, and contacts with influencers. You should have it all to succeed."
+20,"Single server","Simple backand will be more then enough. So why bother and spend additional money on an ifrastructure? What could possibly go wrong?"
+21,"Cloud infrastructure","Why should we bother to make our own server if we can use a cloud? It is a little bit more expensive, but definitely much more convenient."
+22,"Multiple servers","We know how to make it on our own with all the redundancy we need to provide a consistent service to our clients."
+23,"DevOPS team with an infrastructure","Infrastructure needs to be carfully planned and maintained. So we need to hire a DevOPS team to help use make this project."
+24,"Self application","Just prepare all the documents and send it according to instructions on a DPG website."
+25,"Contact DPG office to assist","We can make it with the DPG office, if they are able to help."
+26,"Address SDG relevance only","You have checked if your product is SDG relevant or not. If it is - so why bother? It will work anyway."
+27,"DPG indicator checklist","You have your checklist, so you go thugh all 9 indicators and prepare properly your application."
+28,"Release marketing campaign","Your team is fully focused on a marketing campaign for the release. The technical side of things is not in focus."
+29,"Release event","Just throw a release event to attract an audience. They will watch the stream and then they will use your product."
+30,"Some release preparations","You clearly have not enough time to make it all, but you can address the majore issues and prepare the campaign on a decent level."
+31,"Full scale release preparations","Your team is working on the release, giving attention to everything. It will take time. But since you have one, you can afford it."
+32,"Essential support only","We don't have enough resources for the full scale support, so we will do only bare essentials."
+33,"Phone and email customer support","We will conduct a customer support via both phone and email."
+34,"Support with LiveOPS","We will not only make a support up and running, but also establish regular events and activities for our clients (LiveOPS)."
+35,"Outsourced support","We no need our team to make a customer support. Let's hire an outsource company to make it for us!"

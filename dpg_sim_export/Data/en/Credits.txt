@@ -1,20 +1,34 @@
-Game design by Aleksandr Mezin
-Developed by Almaskhan Baimyshev
-Art by Elena
-Music by Stephen Bennett from fesliyanstudios.com
-Game design by Aleksandr Mezin
-Developed by Almaskhan Baimyshev
-Art by Elena
-Music by Stephen Bennett from fesliyanstudios.com
-Game design by Aleksandr Mezin
-Developed by Almaskhan Baimyshev
-Art by Elena
-Music by Stephen Bennett from fesliyanstudios.com
-Game design by Aleksandr Mezin
-Developed by Almaskhan Baimyshev
-Art by Elena
-Music by Stephen Bennett from fesliyanstudios.com
-Game design by Aleksandr Mezin
-Developed by Almaskhan Baimyshev
-Art by Elena
-Music by Stephen Bennett from fesliyanstudios.com
+DPG Simulator is made by Gamelab KBTU team
+in Kazakh-British Technical University
+in collaboration with UNICEF Kazakhstan
+
+Producer
+Aleksandr Mezin
+
+Project coordination
+Alexandra Knysheva
+
+Code
+Almaskhan Baimyshev
+
+Art
+Elena Medvedchikova
+
+Game design
+Aleksandr Mezin
+
+Sound design
+Almaskhan Baimyshev
+
+Story
+Aleksandr Mezin
+
+Music
+Stephen Bennett from fesliyanstudios.com
+
+Technical support
+Dmitry Tuchashvilli
+Nazym Zhumabayeva
+
+Translation
+Roman Litvinov
