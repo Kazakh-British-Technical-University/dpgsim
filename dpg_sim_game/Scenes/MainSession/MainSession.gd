@@ -30,10 +30,31 @@ func FirstStart():
 	$ProjectProgress.visible = false
 	$Actions_Button.visible = false
 	$Project_Button.visible = true
+	$Office.ResetOffice()
 
 func StartProject():
 	$Team_Button.visible = global.curPhaseIndex > 1
+	if global.curPhaseIndex == 2:
+		global.game.PauseTimer(true)
+		global.game.gameTooltip.closeIsProceed = true
+		global.game.gameTooltip.SetTooltip(
+			trans.local("TEAM_POPUP_TITLE"),
+			trans.local("TEAM_POPUP_DESC"),
+			funcref(self, "Unpause"))
+		$Team_Button.StartShaking()
+		$Team_Button.stopShakingOnPress = true
+	
 	$Actions_Button.visible = global.curPhaseIndex > 2
+	if global.curPhaseIndex == 3:
+		global.game.PauseTimer(true)
+		global.game.gameTooltip.closeIsProceed = true
+		global.game.gameTooltip.SetTooltip(
+			trans.local("ACTIONS_POPUP_TITLE"),
+			trans.local("ACTIONS_POPUP_DESC"),
+			funcref(self, "Unpause"))
+		$Actions_Button.StartShaking()
+		$Actions_Button.stopShakingOnPress = true
+	
 	$Project_Button.visible = false
 	$ProjectProgress.visible = true
 	curDays = 0
@@ -146,3 +167,6 @@ func _on_Actions_Button_buttonPressed():
 func _on_Project_Button_buttonPressed():
 	$Project_Button.visible = false
 	global.game.ProjectComplete()
+
+func Unpause():
+	global.game.PauseTimer(false)

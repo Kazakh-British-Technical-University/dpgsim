@@ -26,9 +26,9 @@ position = Vector2( 22, 20 )
 
 [node name="Title" type="Label" parent="."]
 margin_left = 130.0
-margin_top = 21.0
-margin_right = 410.0
-margin_bottom = 58.0
+margin_top = 12.0
+margin_right = 550.0
+margin_bottom = 49.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 4 )
 text = "School engagement app"
@@ -36,9 +36,9 @@ valign = 1
 
 [node name="Description" type="Label" parent="."]
 margin_left = 131.0
-margin_top = 48.0
-margin_right = 411.0
-margin_bottom = 108.0
+margin_top = 47.0
+margin_right = 549.0
+margin_bottom = 121.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 5 )
 text = "In this scenario, you will develop an app to engage students in their studies."

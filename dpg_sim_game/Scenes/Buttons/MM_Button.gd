@@ -27,10 +27,13 @@ func _on_MM_Button_button_up():
 	global.game.soundManager.PlaySFX("KeyUp")
 	icon = sReleased
 	$Label.rect_position -= Vector2.DOWN * pressedOffset
+	if stopShakingOnPress:
+		shaking = false
 	yield(get_tree().create_timer(0.05),"timeout")
 	emit_signal("buttonPressed")
 
 var shaking = false
+var stopShakingOnPress = false
 func StartShaking():
 	rect_pivot_offset = rect_size / 2
 	shaking = true

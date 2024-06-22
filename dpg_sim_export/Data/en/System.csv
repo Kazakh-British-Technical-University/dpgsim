@@ -22,8 +22,8 @@ TEAM_SIZE,Team size
 ACTIONS,Actions
 PROJECT,Project
 GAME_OVER,This is it...
-GAME_OVER_DESCR,"You have spend all available funds with no delivery. Statistically speaking it's a common situation. Great thing - it is a game. Just try again!"
-YOU_WIN,"Congratulations! You managed to "
+GAME_OVER_DESCR,You have spend all available funds with no delivery. Statistically speaking it's a common situation. Great thing - it is a game. Just try again!
+YOU_WIN,Congratulations! You managed to 
 RESTART,Play again
 SCORES,Scores
 SFX,Sound effects
@@ -41,7 +41,11 @@ DEVELOPMENT,Development phase
 DPG_STATUS_APP,DPG status application
 RELEASE,Release phase
 OPERATION,Operation phase
-MAP_POPUP_TITLE,"Select a region"
-MAP_POPUP_DESC,"Each region will contain several scenarios. But for now there is only one. Select the highlighted region to start your journey!"
-SCENARIO_POPUP_TITLE,"Here we go!"
-SCENARIO_POPUP_DESC,"Select your first project to start the development of your product. Funds are limited. Green points are good. Red points are bad."
+MAP_POPUP_TITLE,Select a region
+MAP_POPUP_DESC,Each region will contain several scenarios. But for now there is only one. Select the highlighted region to start your journey!
+SCENARIO_POPUP_TITLE,Here we go!
+SCENARIO_POPUP_DESC,Select your first project to start the development of your product. Funds are limited. Green points are good. Red points are bad.
+TEAM_POPUP_TITLE,
+TEAM_POPUP_DESC,
+ACTIONS_POPUP_TITLE,
+ACTIONS_POPUP_DESC,

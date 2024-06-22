@@ -13,6 +13,8 @@ func SetTooltip(title, body, _callback):
 
 func _on_MM_Button_buttonPressed():
 	visible = false
+	if closeIsProceed:
+		closeIsProceed = false
 	if callback != null:
 		callback.call_func()
 

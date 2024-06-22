@@ -2,6 +2,9 @@ extends Node2D
 
 var seats = []
 
+func ResetOffice():
+	$Stage.texture = load("res://Sprites/MainSession/stage1.png")
+
 func Start():
 	for i in range(2, 11):
 		var mini = get_node("Worker" + str(i)) as Sprite
