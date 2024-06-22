@@ -120,6 +120,7 @@ func LoadFiles():
 	window.fetchEvents()
 	window.fetchActions()
 	window.fetchCredits()
+	yield(get_tree().create_timer(0.5),"timeout")
 	LoadLocalizedFiles()
 
 func LoadLocalizedFiles():

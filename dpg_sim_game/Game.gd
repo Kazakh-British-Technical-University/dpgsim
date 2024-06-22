@@ -11,7 +11,7 @@ func _ready():
 	$WebInterface.ConnectToWeb()
 	yield(get_tree().create_timer(0.1),"timeout")
 	$WebInterface.LoadFiles()
-	yield(get_tree().create_timer(1),"timeout")
+	yield(get_tree().create_timer(1.5),"timeout")
 	$MainMenu.visible = true
 	$MainMenu.Start()
 	$PauseMenu.Start()
