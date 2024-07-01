@@ -74,7 +74,7 @@ visible = false
 [node name="PauseMenu" parent="." instance=ExtResource( 23 )]
 visible = false
 
-[node name="Music" type="AudioStreamPlayer2D" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
 volume_db = -20.0
 autoplay = true
@@ -82,19 +82,19 @@ autoplay = true
 [node name="Sounds" type="Node2D" parent="."]
 script = ExtResource( 18 )
 
-[node name="KeyUp" type="AudioStreamPlayer2D" parent="Sounds"]
+[node name="KeyUp" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 16 )
 
-[node name="KeyDown" type="AudioStreamPlayer2D" parent="Sounds"]
+[node name="KeyDown" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 17 )
 
-[node name="Boop" type="AudioStreamPlayer2D" parent="Sounds"]
+[node name="Boop" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 19 )
 
-[node name="Tick" type="AudioStreamPlayer2D" parent="Sounds"]
+[node name="Tick" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 20 )
 
-[node name="Ching" type="AudioStreamPlayer2D" parent="Sounds"]
+[node name="Ching" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 21 )
 
 [connection signal="buttonPressed" from="MM_Button" to="." method="PauseGame" binds= [ true ]]
