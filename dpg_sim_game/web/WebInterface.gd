@@ -129,3 +129,7 @@ func LoadLocalizedFiles():
 	window.fetchLocalizedData("Events")
 	window.fetchLocalizedData("Actions")
 	window.fetchLocalizedData("Team")
+
+func ChangeLanguage(newLang):
+	window.changeLanguage(newLang)
+	LoadLocalizedFiles()

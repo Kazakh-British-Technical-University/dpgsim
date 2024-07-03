@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Sprites/logo.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Buttons/MM_Button.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/Settings/Settings.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/DPG_logo.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Map/map_blurred.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/MainMenu/LanguageOption.gd" type="Script" id=8]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -56,6 +57,14 @@ visible = false
 
 [node name="Settings" parent="." instance=ExtResource( 5 )]
 visible = false
+
+[node name="LanguageOption" type="OptionButton" parent="."]
+margin_left = 509.0
+margin_top = 610.0
+margin_right = 628.0
+margin_bottom = 630.0
+text = "Language"
+script = ExtResource( 8 )
 
 [connection signal="buttonPressed" from="Settings_Button" to="." method="_on_Settings_Button_buttonPressed"]
 [connection signal="buttonPressed" from="Credits_Button" to="." method="_on_Credits_Button_buttonPressed"]

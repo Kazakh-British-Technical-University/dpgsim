@@ -17,6 +17,11 @@ function getURLparam(name)
 	return urlParams.get(name);
 }
 
+function changeLanguage(newLang)
+{
+	lang = newLang;
+}
+
 function fetchMainConfig() 
 {
 	fetch("./Data/MainConfig.txt")
