@@ -119,7 +119,7 @@ func _on_Start_Button_buttonPressed():
 
 func _on_language_changed(lang):
 	$WebInterface.ChangeLanguage(lang)
-	yield(get_tree().create_timer(1.5),"timeout")
+	yield(get_tree().create_timer(0.5),"timeout")
 	var _reload = get_tree().reload_current_scene()
 
 func PauseGame(pause):

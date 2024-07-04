@@ -12,6 +12,8 @@ var projects = []
 var events = []
 var actions = []
 var teamDetails : Dictionary
+var languages : Dictionary
+var currentLanguage : String
 
 var actionsActive = [false, false, false]
 var regionsActive = [
