@@ -1,14 +1,11 @@
 class_name LanguageOption
 extends OptionButton
 
-export var usedFont = preload("res://Fonts/Font_Regular32.tres")
-
 signal language_changed(lang)
 
 func Start():
 	AddAvailableLanguages()
 	SetCurrentLanguage()
-	# SetTheme()
 	connect("item_selected", self, "_on_item_selected")
 	connect("language_changed", global.game, "_on_language_changed")
 
@@ -25,11 +22,6 @@ func SetCurrentLanguage():
 			continue
 		select(i)
 		return
-
-# func SetTheme():
-# 	theme = Theme.new()
-# 	theme.default_font = DynamicFont.new()
-# 	theme.default_font.font_data = usedFont;
 
 func _on_item_selected(index):
 	emit_signal("language_changed", get_item_metadata(index))

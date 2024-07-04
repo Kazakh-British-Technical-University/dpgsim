@@ -144,4 +144,4 @@ func LoadLocalizedFiles():
 func ChangeLanguage(newLang):
 	window.changeLanguage(newLang)
 	global.currentLanguage = newLang;
-	LoadLocalizedFiles()
+	global.externalator_initated = false; # deinitialize to get callbacks aftrer language change
