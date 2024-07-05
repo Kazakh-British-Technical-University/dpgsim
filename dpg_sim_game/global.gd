@@ -98,6 +98,13 @@ func ResetGame():
 	marketN = 0
 	teamInsight = 0
 
+func ResetLocalizedFiles():
+	scenarios = []
+	projects = []
+	events = []
+	actions = []
+
+
 func curPhase():
 	return scenarios[activeScenarioIndex]["PhaseProjects"][curPhaseIndex]
 

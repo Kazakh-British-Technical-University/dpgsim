@@ -145,3 +145,4 @@ func ChangeLanguage(newLang):
 	window.changeLanguage(newLang)
 	global.currentLanguage = newLang;
 	global.externalator_initated = false; # deinitialize to get callbacks aftrer language change
+	global.ResetLocalizedFiles()
