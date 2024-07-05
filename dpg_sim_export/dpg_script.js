@@ -25,7 +25,7 @@ function changeLanguage(newLang)
 function fetchLanguages()
 {
 	let data
-	fetch("./Data/Languages.csv")
+	fetch("./Data/Languages.csv", {cache: "reload"})
 		.then(response => response.text())
 		.then((data) => 
 			godotFunctions.SendLanguages(JSON.stringify(CSVToArray(data, ",")))
@@ -34,7 +34,7 @@ function fetchLanguages()
 
 function fetchMainConfig() 
 {
-	fetch("./Data/MainConfig.txt")
+	fetch("./Data/MainConfig.txt", {cache: "reload"})
 		.then(response => response.text())
 		.then
 		((data) => 
@@ -47,7 +47,7 @@ function fetchMainConfig()
 
 async function fetchScenarios() {
 	let data
-	let response = await fetch("./Data/" + lang + "/Scenarios.csv");
+	let response = await fetch("./Data/" + lang + "/Scenarios.csv", {cache: "reload"});
 	if (response.ok) {
 		data = await response.text();
 		let obj = CSVToArray(data, ",");
@@ -56,7 +56,7 @@ async function fetchScenarios() {
 			if (item[0] != "ID") 
 			{
 				let path = "./Data/Scenarios/" + item[3];
-				fetch(path)
+				fetch(path, {cache: "reload"})
 				.then(response => response.json())
 				.then
 				((file) => 
@@ -75,7 +75,7 @@ async function fetchScenarios() {
 }
 async function fetchScenario(path) 
 {
-	fetch(path)
+	fetch(path, {cache: "reload"})
 		.then(response => response.text())
 		.then
 		((data) => 
@@ -89,7 +89,7 @@ async function fetchScenario(path)
 function fetchCredits() 
 {
 	let path = "./Data/" + lang + "/Credits.txt";
-	fetch(path)
+	fetch(path, {cache: "reload"})
 		.then(response => response.text())
 		.then
 		((data) => 
@@ -102,7 +102,7 @@ function fetchCredits()
 
 async function fetchLocalizedData(filename) {
 	let path = "./Data/" + lang + "/" + filename + ".csv";
-	let response = await fetch(path);
+	let response = await fetch(path, {cache: "reload"});
 	if (response.ok) {
 		let data = await response.text();
 		switch (filename) {
@@ -129,7 +129,7 @@ async function fetchLocalizedData(filename) {
 
 async function fetchProjects() {
 	let data
-	let response = await fetch("./Data/Projects.csv");
+	let response = await fetch("./Data/Projects.csv", {cache: "reload"});
 	if (response.ok) {
 		data = await response.text();
 		godotFunctions.SendProjects(JSON.stringify(CSVToArray(data, ",")), false);
@@ -140,7 +140,7 @@ async function fetchProjects() {
 
 async function fetchEvents() {
 	let data
-	let response = await fetch("./Data/Events.csv");
+	let response = await fetch("./Data/Events.csv", {cache: "reload"});
 	if (response.ok) {
 		data = await response.text();
 		godotFunctions.SendEvents(JSON.stringify(CSVToArray(data, ",")), false);
@@ -151,7 +151,7 @@ async function fetchEvents() {
 
 async function fetchActions() {
 	let data
-	let response = await fetch("./Data/Actions.csv");
+	let response = await fetch("./Data/Actions.csv", {cache: "reload"});
 	if (response.ok) {
 		data = await response.text();
 		godotFunctions.SendActions(JSON.stringify(CSVToArray(data, ",")), false);
@@ -250,7 +250,7 @@ function CSVToArray(strData, strDelimiter)
 }
 
 function fetchImage(path) {
-	fetch(path)
+	fetch(path, {cache: "reload"})
 		.then(response => response.arrayBuffer())
 		.then
 		((data) => 
