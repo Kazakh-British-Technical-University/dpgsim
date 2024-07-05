@@ -131,6 +131,8 @@ func ExitGame():
 	global.ResetGame()
 	$Header/PhaseHUD.ResetPhases()
 	for child in get_children():
+		if !(child is CanvasItem):
+			continue
 		child.visible = false
 	$PauseMenu.visible = false
 	$MainMenu.visible = true
