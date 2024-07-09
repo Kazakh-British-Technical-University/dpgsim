@@ -101,10 +101,10 @@ func _ProcessCredits(args):
 func _ProcessLanguages(args):
 	var parsed = JSON.parse(str(args[0])).result
 	if (parsed == null):
-		print("CSV parse error: Languages.csv")
+		print("JSON parse error: Languages")
 		return
-	for i in range(1, parsed["Lines"].size()):
-		global.languages[parsed["Lines"][i]["1"]] = parsed["Lines"][i]["0"]
+	for i in range(0, parsed.size()):
+		global.languages[parsed[i]["Path"]] = parsed[i]["Name"]
 
 
 # public functions

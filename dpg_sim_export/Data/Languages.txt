@@ -1,0 +1,10 @@
+﻿[
+  {
+    "Name": "English",
+    "Path": "EN"
+  },
+  {
+    "Name": "Русский",
+    "Path": "RU"
+  }
+]

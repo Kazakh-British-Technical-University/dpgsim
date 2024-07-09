@@ -25,11 +25,9 @@ function changeLanguage(newLang)
 function fetchLanguages()
 {
 	let data
-	fetch("./Data/Languages.csv", {cache: "reload"})
+	fetch("./Data/Languages.txt", {cache: "reload"})
 		.then(response => response.text())
-		.then((data) => 
-			godotFunctions.SendLanguages(JSON.stringify(CSVToArray(data, ",")))
-		)
+		.then((data) => godotFunctions.SendLanguages(data))
 }
 
 function fetchMainConfig() 
