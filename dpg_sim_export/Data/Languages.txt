@@ -1,10 +1,10 @@
 ﻿[
   {
     "Name": "English",
-    "Path": "EN"
+    "Path": "en"
   },
   {
     "Name": "Русский",
-    "Path": "RU"
+    "Path": "ru"
   }
 ]

@@ -5,9 +5,34 @@ window.externalator = {
 	}
 }
 
-let lang = getURLparam("lang");
-if (!lang) {
-	lang = "en";
+let availableLanguages;
+let lang;
+
+async function getAvailableLanguages()
+{
+	return fetch("./Data/Languages.txt", {cache: "reload"})
+		.then((response) => response.json())
+		.then((responseJson) =>{return responseJson});
+}
+
+function getPrefferedLanguage()
+{
+	let result = getURLparam("lang");
+	if (result) return result 
+		
+
+	let availableLanguagePaths = availableLanguages.map(function (item) { return item["Path"].toLowerCase() })
+	// TODO: Add non-exact match (like en-US)
+	navigator.languages.every(language => {
+		if (availableLanguagePaths.includes(language)) 
+		{
+			result = language;
+			return false;
+		}
+	});
+	if (result) return result
+
+	return availableLanguagePaths[0]
 }
 
 function getURLparam(name) 
@@ -22,12 +47,11 @@ function changeLanguage(newLang)
 	lang = newLang;
 }
 
-function fetchLanguages()
+async function fetchLanguages()
 {
-	let data
-	fetch("./Data/Languages.txt", {cache: "reload"})
-		.then(response => response.text())
-		.then((data) => godotFunctions.SendLanguages(data))
+	availableLanguages = await getAvailableLanguages();
+	if (!lang) lang = getPrefferedLanguage();
+	godotFunctions.SendLanguages(JSON.stringify(availableLanguages), lang)
 }
 
 function fetchMainConfig() 

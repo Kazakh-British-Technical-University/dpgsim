@@ -106,6 +106,8 @@ func _ProcessLanguages(args):
 	for i in range(0, parsed.size()):
 		global.languages[parsed[i]["Path"]] = parsed[i]["Name"]
 
+	global.currentLanguage = args[1]
+
 
 # public functions
 func ConnectToWeb():
@@ -124,14 +126,15 @@ func ConnectToWeb():
 	externalator.addGodotFunction('SendLanguages',_languages_callback)
 
 func LoadFiles():
+	window.fetchLanguages()
+	yield(get_tree().create_timer(0.5),"timeout")
+
 	window.fetchMainConfig()
 	window.fetchScenarios()
 	window.fetchProjects()
 	window.fetchEvents()
 	window.fetchActions()
 	window.fetchCredits()
-	window.fetchLanguages()
-	yield(get_tree().create_timer(0.5),"timeout")
 	LoadLocalizedFiles()
 
 func LoadLocalizedFiles():
