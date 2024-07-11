@@ -15,23 +15,37 @@ async function getAvailableLanguages()
 		.then((responseJson) =>{return responseJson});
 }
 
-function getPrefferedLanguage()
+function getPreferredLanguage()
 {
+	// Check URL parameters
 	let result = getURLparam("lang");
 	if (result) return result 
 		
-
+	// Check preferred browser languages (direct)
 	let availableLanguagePaths = availableLanguages.map(function (item) { return item["Path"].toLowerCase() })
-	// TODO: Add non-exact match (like en-US)
-	navigator.languages.every(language => {
-		if (availableLanguagePaths.includes(language)) 
+	navigator.languages.every(browserLanguage => {
+		if (availableLanguagePaths.includes(browserLanguage)) 
 		{
-			result = language;
+			result = browserLanguage;
 			return false;
 		}
 	});
 	if (result) return result
 
+	// Check preferred browser languages (indirect, like en = en-US, en-UK, etc.)
+	navigator.languages.every(browserLanguage => {
+		availableLanguagePaths.every(language => {
+			if (browserLanguage.startsWith(language))
+			{
+				result = language;
+				return false;
+			}
+		})
+		if (result) return false
+	});
+	if (result) return result
+
+	// Set default
 	return availableLanguagePaths[0]
 }
 
@@ -50,7 +64,7 @@ function changeLanguage(newLang)
 async function fetchLanguages()
 {
 	availableLanguages = await getAvailableLanguages();
-	if (!lang) lang = getPrefferedLanguage();
+	if (!lang) lang = getPreferredLanguage();
 	godotFunctions.SendLanguages(JSON.stringify(availableLanguages), lang)
 }
 

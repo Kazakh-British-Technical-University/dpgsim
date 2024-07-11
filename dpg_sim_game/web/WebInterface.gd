@@ -127,7 +127,7 @@ func ConnectToWeb():
 
 func LoadFiles():
 	window.fetchLanguages()
-	yield(get_tree().create_timer(0.5),"timeout")
+	yield(get_tree().create_timer(0.5),"timeout") # TODO: Convert to callback
 
 	window.fetchMainConfig()
 	window.fetchScenarios()
