@@ -10,6 +10,7 @@ var _events_callback = JavaScript.create_callback(self, "_ProcessEvents")
 var _actions_callback = JavaScript.create_callback(self, "_ProcessActions")
 var _team_callback = JavaScript.create_callback(self, "_ProcessTeam")
 var _credits_callback = JavaScript.create_callback(self, "_ProcessCredits")
+var _languages_callback = JavaScript.create_callback(self, "_ProcessLanguages")
 
 # JS callbacks
 func _ParseMainConfig(args):
@@ -97,6 +98,16 @@ func _ProcessTeam(args):
 func _ProcessCredits(args):
 	trans.dict["CREDITS_LIST"] = str(args[0])
 
+func _ProcessLanguages(args):
+	var parsed = JSON.parse(str(args[0])).result
+	if (parsed == null):
+		print("JSON parse error: Languages")
+		return
+	for i in range(0, parsed.size()):
+		global.languageIconIndexes[parsed[i]["Path"]] = parsed[i]["IconIndex"]
+
+	global.currentLanguage = args[1]
+
 
 # public functions
 func ConnectToWeb():
@@ -112,15 +123,18 @@ func ConnectToWeb():
 	externalator.addGodotFunction('SendActions',_actions_callback)
 	externalator.addGodotFunction('SendTeam',_team_callback)
 	externalator.addGodotFunction('SendCredits',_credits_callback)
+	externalator.addGodotFunction('SendLanguages',_languages_callback)
 
 func LoadFiles():
+	window.fetchLanguages()
+	yield(get_tree().create_timer(0.5),"timeout") # TODO: Convert to callback
+
 	window.fetchMainConfig()
 	window.fetchScenarios()
 	window.fetchProjects()
 	window.fetchEvents()
 	window.fetchActions()
 	window.fetchCredits()
-	yield(get_tree().create_timer(0.5),"timeout")
 	LoadLocalizedFiles()
 
 func LoadLocalizedFiles():
@@ -129,3 +143,9 @@ func LoadLocalizedFiles():
 	window.fetchLocalizedData("Events")
 	window.fetchLocalizedData("Actions")
 	window.fetchLocalizedData("Team")
+
+func ChangeLanguage(newLang):
+	window.changeLanguage(newLang)
+	global.currentLanguage = newLang;
+	global.externalator_initated = false; # deinitialize to get callbacks aftrer language change
+	global.ResetLocalizedFiles()

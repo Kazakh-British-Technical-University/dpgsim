@@ -13,6 +13,9 @@ var events = []
 var actions = []
 var teamDetails : Dictionary
 
+var languageIconIndexes : Dictionary
+var currentLanguage : String
+
 var actionsActive = [false, false, false]
 var regionsActive = [
 	false,
@@ -95,6 +98,13 @@ func ResetGame():
 	marketP = 0
 	marketN = 0
 	teamInsight = 0
+
+func ResetLocalizedFiles():
+	scenarios = []
+	projects = []
+	events = []
+	actions = []
+
 
 func curPhase():
 	return scenarios[activeScenarioIndex]["PhaseProjects"][curPhaseIndex]

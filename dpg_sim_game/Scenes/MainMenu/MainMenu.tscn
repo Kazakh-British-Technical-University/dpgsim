@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Sprites/logo.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Buttons/MM_Button.tscn" type="PackedScene" id=2]
@@ -7,8 +7,11 @@
 [ext_resource path="res://Scenes/Settings/Settings.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Sprites/DPG_logo.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Map/map_blurred.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Buttons/LanguageButtonGroup.tscn" type="PackedScene" id=8]
 
 [sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="ButtonGroup" id=2]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource( 3 )
@@ -29,25 +32,25 @@ texture = ExtResource( 6 )
 
 [node name="Start_Button" parent="." instance=ExtResource( 2 )]
 margin_left = 153.0
-margin_top = 314.0
+margin_top = 300.0
 margin_right = 488.0
-margin_bottom = 382.0
+margin_bottom = 368.0
 custom_styles/focus = SubResource( 1 )
 buttonText = "START"
 
 [node name="Settings_Button" parent="." instance=ExtResource( 2 )]
 margin_left = 153.0
-margin_top = 410.0
+margin_top = 390.0
 margin_right = 488.0
-margin_bottom = 478.0
+margin_bottom = 448.0
 custom_styles/focus = SubResource( 1 )
 buttonText = "SETTINGS"
 
 [node name="Credits_Button" parent="." instance=ExtResource( 2 )]
 margin_left = 153.0
-margin_top = 514.0
+margin_top = 480.0
 margin_right = 488.0
-margin_bottom = 582.0
+margin_bottom = 528.0
 custom_styles/focus = SubResource( 1 )
 buttonText = "CREDITS"
 
@@ -56,6 +59,16 @@ visible = false
 
 [node name="Settings" parent="." instance=ExtResource( 5 )]
 visible = false
+
+[node name="LanguageRadio" parent="." instance=ExtResource( 8 )]
+margin_left = 320.0
+margin_top = 620.0
+margin_right = 320.0
+margin_bottom = 620.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+group = SubResource( 2 )
 
 [connection signal="buttonPressed" from="Settings_Button" to="." method="_on_Settings_Button_buttonPressed"]
 [connection signal="buttonPressed" from="Credits_Button" to="." method="_on_Credits_Button_buttonPressed"]
