@@ -50,9 +50,6 @@ func SetCurrentLanguage():
 		button.pressed = true
 		break
 
+# TODO: check if selected the same button
 func _on_item_selected():
 	emit_signal("language_changed", group.get_pressed_button().get_meta("Language"))
-
-
-func _on_LanguageRadio_toggled(button_pressed:bool):
-	pass # Replace with function body.
