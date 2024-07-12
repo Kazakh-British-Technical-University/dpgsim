@@ -5,7 +5,7 @@ func Start():
 	$Start_Button.Start()
 	$Settings_Button.Start()
 	$Credits_Button.Start()
-	$LanguageOption.Start()
+	$LanguageRadio.Start()
 
 func _on_Credits_Button_buttonPressed():
 	$Credits.visible = true

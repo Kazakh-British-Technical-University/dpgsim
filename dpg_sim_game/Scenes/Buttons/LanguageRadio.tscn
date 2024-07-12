@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/UI/countryFlags.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/HUD/phase_square.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Buttons/LanguageRadio.gd" type="Script" id=4]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 199, 46, 64, 43 )
+
+[node name="LanguageRadio" type="TextureButton"]
+margin_right = 64.0
+margin_bottom = 43.0
+toggle_mode = true
+texture_normal = SubResource( 1 )
+script = ExtResource( 4 )
+
+[node name="Outline" type="TextureRect" parent="."]
+visible = false
+margin_right = 64.0
+margin_bottom = 43.0
+texture = ExtResource( 3 )
+expand = true
+
+[connection signal="toggled" from="." to="." method="_on_LanguageRadio_toggled"]

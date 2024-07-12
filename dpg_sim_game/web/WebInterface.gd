@@ -104,7 +104,7 @@ func _ProcessLanguages(args):
 		print("JSON parse error: Languages")
 		return
 	for i in range(0, parsed.size()):
-		global.languages[parsed[i]["Path"]] = parsed[i]["Name"]
+		global.languageIconIndexes[parsed[i]["Path"]] = parsed[i]["IconIndex"]
 
 	global.currentLanguage = args[1]
 

@@ -14,11 +14,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scenes/Common/Tooltip.gd"
 }, {
-"base": "OptionButton",
-"class": "LanguageOption",
-"language": "GDScript",
-"path": "res://Scenes/MainMenu/LanguageOption.gd"
-}, {
 "base": "Node2D",
 "class": "MainGame",
 "language": "GDScript",
@@ -36,7 +31,6 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "GameTooltip": "",
-"LanguageOption": "",
 "MainGame": "",
 "PointCounter": "",
 "PointParticle": ""

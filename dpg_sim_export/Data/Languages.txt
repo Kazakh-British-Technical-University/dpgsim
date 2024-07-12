@@ -1,10 +1,12 @@
 ﻿[
   {
     "Name": "English",
-    "Path": "en"
+    "Path": "en",
+    "IconIndex": 82
   },
   {
     "Name": "Русский",
-    "Path": "ru"
+    "Path": "ru",
+    "IconIndex": 200
   }
 ]

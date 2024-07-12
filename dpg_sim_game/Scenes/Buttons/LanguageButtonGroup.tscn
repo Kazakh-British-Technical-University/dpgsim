@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Buttons/LanguageButtonGroup.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/UI/countryFlags.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Buttons/LanguageRadio.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Buttons/LanguageButtonGroup.tres" type="ButtonGroup" id=4]
+
+[node name="LanguageButtonGroup" type="HBoxContainer"]
+script = ExtResource( 1 )
+buttonScene = ExtResource( 3 )
+group = ExtResource( 4 )
+flagsAtlas = ExtResource( 2 )
+atlasRowLength = 13
+flagSize = Vector2( 64, 43 )
+atlasPadding = 2
