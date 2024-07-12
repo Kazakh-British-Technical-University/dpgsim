@@ -3,10 +3,5 @@
     "Name": "English",
     "Path": "en",
     "IconIndex": 82
-  },
-  {
-    "Name": "Русский",
-    "Path": "ru",
-    "IconIndex": 200
   }
 ]
