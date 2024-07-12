@@ -16,6 +16,7 @@ func ShowMainMenu(show):
 	$Start_Button.visible = show
 	$Settings_Button.visible = show
 	$Credits_Button.visible = show
+	$LanguageRadio.visible = show
 
 func _on_Settings_Button_buttonPressed():
 	$Settings.Start()

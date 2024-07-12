@@ -32,25 +32,25 @@ texture = ExtResource( 6 )
 
 [node name="Start_Button" parent="." instance=ExtResource( 2 )]
 margin_left = 153.0
-margin_top = 314.0
+margin_top = 300.0
 margin_right = 488.0
-margin_bottom = 382.0
+margin_bottom = 368.0
 custom_styles/focus = SubResource( 1 )
 buttonText = "START"
 
 [node name="Settings_Button" parent="." instance=ExtResource( 2 )]
 margin_left = 153.0
-margin_top = 410.0
+margin_top = 390.0
 margin_right = 488.0
-margin_bottom = 478.0
+margin_bottom = 448.0
 custom_styles/focus = SubResource( 1 )
 buttonText = "SETTINGS"
 
 [node name="Credits_Button" parent="." instance=ExtResource( 2 )]
 margin_left = 153.0
-margin_top = 514.0
+margin_top = 480.0
 margin_right = 488.0
-margin_bottom = 582.0
+margin_bottom = 528.0
 custom_styles/focus = SubResource( 1 )
 buttonText = "CREDITS"
 
@@ -61,6 +61,13 @@ visible = false
 visible = false
 
 [node name="LanguageRadio" parent="." instance=ExtResource( 8 )]
+margin_left = 320.0
+margin_top = 620.0
+margin_right = 320.0
+margin_bottom = 620.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
 group = SubResource( 2 )
 
 [connection signal="buttonPressed" from="Settings_Button" to="." method="_on_Settings_Button_buttonPressed"]
