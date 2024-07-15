@@ -45,7 +45,7 @@ MAP_POPUP_TITLE,Select a region
 MAP_POPUP_DESC,Each region will contain several scenarios. But for now there is only one. Select the highlighted region to start your journey!
 SCENARIO_POPUP_TITLE,Here we go!
 SCENARIO_POPUP_DESC,Select your first project to start the development of your product. Funds are limited. Green points are good. Red points are bad.
-TEAM_POPUP_TITLE,
-TEAM_POPUP_DESC,
-ACTIONS_POPUP_TITLE,
-ACTIONS_POPUP_DESC,
+TEAM_POPUP_TITLE,Team
+TEAM_POPUP_DESC,Hire new team members. They will increase funds burn rate, but will help you get more points.
+ACTIONS_POPUP_TITLE,Actions
+ACTIONS_POPUP_DESC,Actions will help you reduce red points, but will take time to complete, pausing project development.
