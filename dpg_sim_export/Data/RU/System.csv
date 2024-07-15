@@ -1,49 +1,49 @@
 ﻿key,translation
-START,Начать
-SETTINGS,Настройки
-CREDITS,Создатели
-BACK,Назад
-PROCEED,Продолжить
-DATE,Дата
-DPGS,ЦОБ
-RATE,Уровень
-BUDGET,Бюджет
-COST,Цена
-TIME,Время
-FIT_PTS,Очки Соотв.
-DEV_PTS,Очки Разраб.
-MARKET_PTS,Очки Рынка
-PROJECT_PROGRESS,Прогресс Проекта
-NEXT_PHASE,След. Этап
-FINISH_GAME,Закончить Игру
-SKIP,Пропустить
-TEAM,Команда
-TEAM_SIZE,Размер команды
-ACTIONS,Действия
-PROJECT,Проект
-GAME_OVER,Вот и всё...
-GAME_OVER_DESCR,Вы потратили все доступные средства, но продукт остался не готовым. По статистике, это обычная ситуация. Хорошо, что это просто игра. Прсто попробуйте еще раз!
-YOU_WIN,Поздравляем! Ваш продукт оказался успешен!
-RESTART,Начать заново
-SCORES,Очки
-SFX,Звуки
-MUSIC,Музыка
-ON,Вкл
-OFF,Выкл
-CONTINUE,Продолжить
-EXIT,Выйти
-RESEARCH,Фаза Исследования
-PROTOTYPING,Фаза Прототипирования
-TEAM_RECRUIT,Фаза Создания Команды
-MVP,Фаза MVP
-MARKET_VAL,Фаза Проверки Рынка
-DEVELOPMENT,Фаза Разработки
-DPG_STATUS_APP,Заявление на статус ИНВ
-RELEASE,Фаза Релиза
-OPERATION,Фаза Операции
-MAP_POPUP_TITLE,Карта Мира
-MAP_POPUP_DESC,Выберите регион, в котором вы начнете делать свой продукт.
-TEAM_POPUP_TITLE,
-TEAM_POPUP_DESC,
-ACTIONS_POPUP_TITLE,
-ACTIONS_POPUP_DESC,
+START,"Начать"
+SETTINGS,"Настройки"
+CREDITS,"Создатели"
+BACK,"Назад"
+PROCEED,"Продолжить"
+DATE,"Дата"
+DPGS,"ЦОБ"
+RATE,"Уровень"
+BUDGET,"Бюджет"
+COST,"Цена"
+TIME,"Время"
+FIT_PTS,"Очки Соотв."
+DEV_PTS,"Очки Разраб."
+MARKET_PTS,"Очки Рынка"
+PROJECT_PROGRESS,"Прогресс Проекта"
+NEXT_PHASE,"След. Этап"
+FINISH_GAME,"Закончить Игру"
+SKIP,"Пропустить"
+TEAM,"Команда"
+TEAM_SIZE,"Размер команды"
+ACTIONS,"Действия"
+PROJECT,"Проект"
+GAME_OVER,"Вот и всё..."
+GAME_OVER_DESCR,"Вы потратили все доступные средства, но продукт остался не готовым. По статистике, это обычная ситуация. Хорошо, что это просто игра. Прсто попробуйте еще раз!"
+YOU_WIN,"Поздравляем! Ваш продукт оказался успешен!"
+RESTART,"Начать заново"
+SCORES,"Очки"
+SFX,"Звуки"
+MUSIC,"Музыка"
+ON,"Вкл"
+OFF,"Выкл"
+CONTINUE,"Продолжить"
+EXIT,"Выйти"
+RESEARCH,"Фаза Исследования"
+PROTOTYPING,"Фаза Прототипирования"
+TEAM_RECRUIT,"Фаза Создания Команды"
+MVP,"Фаза MVP"
+MARKET_VAL,"Фаза Проверки Рынка"
+DEVELOPMENT,"Фаза Разработки"
+DPG_STATUS_APP,"Заявление на статус ИНВ"
+RELEASE,"Фаза Релиза"
+OPERATION,"Фаза Операции"
+MAP_POPUP_TITLE,"Карта Мира"
+MAP_POPUP_DESC,"Выберите регион, в котором вы начнете делать свой продукт."
+TEAM_POPUP_TITLE,"Placehoder"
+TEAM_POPUP_DESC,"Placehoder"
+ACTIONS_POPUP_TITLE,"Placehoder"
+ACTIONS_POPUP_DESC,"Placehoder"
