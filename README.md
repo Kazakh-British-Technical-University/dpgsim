@@ -5,6 +5,21 @@ In the physical world, we already have different public goods - things that are 
 
 Balance strategies, finances, size of the team, and development process to not become bankrupt and release your product to help those in need.
 
+# Contribution
+DPG Simulator itself is designed as a DPG. You can contribute by fixing bugs and issues, adding localizations for other languages, and adding custom scenarios (comming soon).
+
+Before starting the contribution, be sure to check Issues page. If needed, create a new issue, discuss it with the community and then make a pull request.
+
+## Localization
+All localization files are located under <b>dpg_sim_export/Data/[YourLanguage]</b> and appear as .csv or .txt files. List of available languages is located at <b>dpg_sim_export/Data/Languages.txt</b>.
+
+To add a new language duplicate "EN" folder and rename it as a code for new language ([Language codes](https://meta.wikimedia.org/wiki/Template:List_of_language_names_ordered_by_code)). In every file translate everything that is within quotation marks to a new language. Then add a new entry to <b>Languages.txt</b> file.
+* Name : Local name of the language
+* Path : Name of the created folder
+* IconIndex : index of flag associated with language. You need to open <b>dpg_sim_game/Sprites/UI/countryFlags.png</b> and calculate the index of the flag. Starting from 0 left to right and up to down. (eg.: UK is 82, Russia is 200)
+
+## Custom scenarios (coming soon)
+
 # Screenshots
 <img src="https://raw.githubusercontent.com/Kazakh-British-Technical-University/dpgsim/main/screenshots/dpg-sim-1.png" width="512"/>
 <img src="https://raw.githubusercontent.com/Kazakh-British-Technical-University/dpgsim/main/screenshots/dpg-sim-2.png" width="512"/>
