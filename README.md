@@ -5,8 +5,18 @@ In the physical world, we already have different public goods - things that are 
 
 Balance strategies, finances, size of the team, and development process to not become bankrupt and release your product to help those in need.
 
+# Start locally
+The game build and data is found in <b>dpg_sim_export</b> folder. To run it you will need to deploy this folder to a web-server of your choice.
+
+To deploy it on your machine you can use:
+* Visual Studio Code with [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
+* [http-server](https://www.npmjs.com/package/http-server) npm package
+* Tools like [XAMPP](https://www.apachefriends.org/)
+
 # Contribution
 DPG Simulator itself is designed as a DPG. You can contribute by fixing bugs and addressing issues, adding localizations for other languages, and adding custom scenarios (comming soon).
+
+In order to fix any issues with internal game files, you can open the project located at <b>dpg_sim_game/project.godot</b> in Godot. This project uses [Godot version 3.5.3](https://godotengine.org/download/archive/3.5.3-stable/)
 
 Before starting the contribution, be sure to check Issues page. If needed, create a new issue, discuss it with the community and then make a pull request.
 
