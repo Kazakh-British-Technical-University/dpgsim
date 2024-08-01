@@ -6,7 +6,7 @@ In the physical world, we already have different public goods - things that are 
 Balance strategies, finances, size of the team, and development process to not become bankrupt and release your product to help those in need.
 
 # Contribution
-DPG Simulator itself is designed as a DPG. You can contribute by fixing bugs and issues, adding localizations for other languages, and adding custom scenarios (comming soon).
+DPG Simulator itself is designed as a DPG. You can contribute by fixing bugs and addressing issues, adding localizations for other languages, and adding custom scenarios (comming soon).
 
 Before starting the contribution, be sure to check Issues page. If needed, create a new issue, discuss it with the community and then make a pull request.
 
