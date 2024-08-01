@@ -13,6 +13,8 @@ To deploy it on your machine you can use:
 * [http-server](https://www.npmjs.com/package/http-server) npm package
 * Tools like [XAMPP](https://www.apachefriends.org/)
 
+After that, go to the internet browser of your choice and go to the deployed ip address (eg.: 127.0.0.1:8080)
+
 # Contribution
 DPG Simulator itself is designed as a DPG. You can contribute by fixing bugs and addressing issues, adding localizations for other languages, and adding custom scenarios (comming soon).
 
