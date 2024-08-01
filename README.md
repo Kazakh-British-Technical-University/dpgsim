@@ -1,4 +1,4 @@
-# DPG Simulator
+# [DPG Simulator](https://gamelab-kbtu.itch.io/dpg-simulator)
 DPG Simulator is a tycoon game that gives players control over a small company willing to make Digital Public Good.
 
 In the physical world, we already have different public goods - things that are accessible to anyone and are beneficial to society, like docs, roads, and parks. Digital Public Goods come in the form of software, data sets, AI models, or content, that is free and open-source and contribute to sustainable development goals.
