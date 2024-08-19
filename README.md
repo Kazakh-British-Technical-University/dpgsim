@@ -8,10 +8,21 @@ Balance strategies, finances, size of the team, and development process to not b
 # Start locally
 The game build and data is found in <b>dpg_sim_export</b> folder. To run it you will need to deploy this folder to a web-server of your choice.
 
-To deploy it on your machine you can use:
-* Visual Studio Code with [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
-* [http-server](https://www.npmjs.com/package/http-server) npm package
-* Tools like [XAMPP](https://www.apachefriends.org/)
+To deploy it on your machine you can use [http-server](https://www.npmjs.com/package/http-server) npm package or any other tool for server deployment.
+
+## To use with npm http-server:
+Install http-server:
+```
+npm install --global http-server
+```
+Go to the project folder:
+```
+cd [path to repo]/dpg_sim_export
+```
+Start http-server:
+```
+http-server
+```
 
 After that, go to the internet browser of your choice and go to the deployed ip address (eg.: 127.0.0.1:8080)
 
