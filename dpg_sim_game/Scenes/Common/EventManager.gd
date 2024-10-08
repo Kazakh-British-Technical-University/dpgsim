@@ -3,10 +3,11 @@ extends ColorRect
 var curEvent
 
 func CheckEvents(day):
-	for event in global.events:
+	for eventID in global.events:
+		var event = global.events[eventID]
 		if len(event["Day"]) == 0:
 			continue
-		if int(event["Phase"]) == global.curPhaseIndex + 1 and global.curScenario()["ScenarioEvents"].has(float(event["ID"])):
+		if int(event["Phase"]) == global.curPhaseIndex + 1 and global.curScenario()["ScenarioEvents"].has(event["ID"]):
 			if event["FromStart"] == "TRUE":
 				if int(event["Day"]) == day:
 					ShowEvent(event)

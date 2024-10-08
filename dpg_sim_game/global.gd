@@ -9,7 +9,7 @@ var musicOn = true
 var mainConfig : Dictionary
 var scenarios = []
 var projects = []
-var events = []
+var events : Dictionary
 var actions = []
 var teamDetails : Dictionary
 
@@ -102,7 +102,7 @@ func ResetGame():
 func ResetLocalizedFiles():
 	scenarios = []
 	projects = []
-	events = []
+	events.clear()
 	actions = []
 
 

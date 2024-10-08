@@ -1,4 +1,4 @@
 ID,Image,First option outcome status,First option outcome value (param),First option outcome value (value),Second option outcome status,Second option outcome value (param),Second option outcome value (value),Condition trigger type,Condition trigger value,Default weight,Phase,FromStart,Day
-1,,Good,money,500,Good,money,500,,,,2,TRUE,15
-2,,Good,product insights,1,Good,money,300,,,,3,TRUE,15
-3,,Bad,money,-300,Bad,money,-200,,,,4,FALSE,15
+E1,,Good,money,500,Good,money,500,,,,2,TRUE,15
+E2,,Good,product insights,1,Good,money,300,,,,3,TRUE,15
+E3,,Bad,money,-300,Bad,money,-200,,,,4,FALSE,15

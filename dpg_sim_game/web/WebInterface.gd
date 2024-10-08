@@ -60,14 +60,18 @@ func _ProcessEvents(args):
 				var event : Dictionary
 				for j in range(keys.size()):
 					event[keys[str(j)]] = parsed["Lines"][i][str(j)]
-				global.events.append(event)
+				
+				global.events[event["ID"]] = event
 			else:
-				global.events[i-1]["Title"] = parsed["Lines"][i]["1"]
-				global.events[i-1]["Description"] = parsed["Lines"][i]["2"]
-				global.events[i-1]["First option"] = parsed["Lines"][i]["3"]
-				global.events[i-1]["First option tooltip"] = parsed["Lines"][i]["4"]
-				global.events[i-1]["Second option"] = parsed["Lines"][i]["5"]
-				global.events[i-1]["Second option tooltip"] = parsed["Lines"][i]["6"]
+				var event = global.events[parsed["Lines"][i]["0"]]
+				event["Title"] = parsed["Lines"][i]["1"]
+				event["Description"] = parsed["Lines"][i]["2"]
+				event["First option"] = parsed["Lines"][i]["3"]
+				event["First option tooltip"] = parsed["Lines"][i]["4"]
+				event["Second option"] = parsed["Lines"][i]["5"]
+				event["Second option tooltip"] = parsed["Lines"][i]["6"]
+				
+				global.events[event["ID"]] = event
 	else:
 		print("CSV parse error: Events.csv")
 
