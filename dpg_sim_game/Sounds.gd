@@ -14,6 +14,8 @@ func PlaySFX(type):
 			$Tick.play()
 		"Ching":
 			$Ching.play()
+		"Ding":
+			$Ding.play()
 
 func StopAllSounds():
 	for sfx in get_children():

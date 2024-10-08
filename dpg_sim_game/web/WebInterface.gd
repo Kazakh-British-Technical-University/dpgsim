@@ -44,10 +44,14 @@ func _ProcessProjects(args):
 				var project : Dictionary
 				for j in range(keys.size()):
 					project[keys[str(j)]] = parsed["Lines"][i][str(j)]
-				global.projects.append(project)
+					
+				global.projects[project["ID"]] = project
 			else:
-				global.projects[i-1]["Title"] = parsed["Lines"][i]["1"]
-				global.projects[i-1]["Description"] = parsed["Lines"][i]["2"]
+				var project = global.projects[parsed["Lines"][i]["0"]]
+				project["Title"] = parsed["Lines"][i]["1"]
+				project["Description"] = parsed["Lines"][i]["2"]
+				
+				global.projects[project["ID"]] = project
 	else:
 		print("CSV parse error: Projects.csv")
 

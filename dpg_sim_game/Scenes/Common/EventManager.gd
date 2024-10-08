@@ -16,6 +16,7 @@ func CheckEvents(day):
 					ShowEvent(event)
 
 func ShowEvent(event):
+	global.game.soundManager.PlaySFX("Ding")
 	global.game.PauseTimer(true)
 	curEvent = event
 	visible = true
