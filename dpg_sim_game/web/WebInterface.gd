@@ -12,6 +12,9 @@ var _team_callback = JavaScript.create_callback(self, "_ProcessTeam")
 var _credits_callback = JavaScript.create_callback(self, "_ProcessCredits")
 var _languages_callback = JavaScript.create_callback(self, "_ProcessLanguages")
 
+# callback signals
+signal language_processed
+
 # JS callbacks
 func _ParseMainConfig(args):
 	var parsed = JSON.parse(str(args[0])).result
@@ -116,6 +119,8 @@ func _ProcessLanguages(args):
 
 	global.currentLanguage = args[1]
 
+	emit_signal("language_processed")
+
 
 # public functions
 func ConnectToWeb():
@@ -135,7 +140,7 @@ func ConnectToWeb():
 
 func LoadFiles():
 	window.fetchLanguages()
-	yield(get_tree().create_timer(0.5),"timeout") # TODO: Convert to callback
+	yield(self,"language_processed")
 
 	window.fetchMainConfig()
 	window.fetchScenarios()

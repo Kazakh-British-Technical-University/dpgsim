@@ -9,8 +9,7 @@ onready var soundManager = $Sounds
 func _ready():
 	global.game = self
 	$WebInterface.ConnectToWeb()
-	yield(get_tree().create_timer(0.1),"timeout")
-	$WebInterface.LoadFiles()
+	yield($WebInterface.LoadFiles(), "completed")
 	yield(get_tree().create_timer(1.5),"timeout")
 	$MainMenu.visible = true
 	$MainMenu.Start()
