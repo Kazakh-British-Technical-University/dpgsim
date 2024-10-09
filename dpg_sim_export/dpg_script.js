@@ -109,18 +109,18 @@ async function fetchScenarios() {
 		console.log("File missing: Scenarios.csv");
 	}
 }
-async function fetchScenario(path) 
-{
-	fetch(path, {cache: "reload"})
-		.then(response => response.text())
-		.then
-		((data) => 
-			{
-				console.log("JS: " + data);
-				//godotFunctions.SendScenarios(data);
-			}
-		)
-}
+// async function fetchScenario(path) 
+// {
+// 	fetch(path, {cache: "reload"})
+// 		.then(response => response.text())
+// 		.then
+// 		((data) => 
+// 			{
+// 				console.log("JS: " + data);
+// 				//godotFunctions.SendScenarios(data);
+// 			}
+// 		)
+// }
 
 function fetchCredits() 
 {
@@ -131,7 +131,7 @@ function fetchCredits()
 		((data) => 
 			{
 				//console.log("JS: " + data);
-				godotFunctions.SendCredits(data);
+				godotFunctions.SendCreditsLocalization(data);
 			}
 		)
 }
@@ -142,20 +142,20 @@ async function fetchLocalizedData(filename) {
 	if (response.ok) {
 		let data = await response.text();
 		switch (filename) {
+			case "System":
+				godotFunctions.SendSystemLocalization(JSON.stringify(CSVToArray(data, ",")));
+				break;
 			case "Projects":
-				godotFunctions.SendProjects(JSON.stringify(CSVToArray(data, ",")), true);
+				godotFunctions.SendProjectsLocalization(JSON.stringify(CSVToArray(data, ",")));
 				break;
 			case "Events":
-				godotFunctions.SendEvents(JSON.stringify(CSVToArray(data, ",")), true);
+				godotFunctions.SendEventsLocalization(JSON.stringify(CSVToArray(data, ",")));
 				break;
 			case "Actions":
-				godotFunctions.SendActions(JSON.stringify(CSVToArray(data, ",")), true);
-				break;
-			case "System":
-				godotFunctions.SendTrans(JSON.stringify(CSVToArray(data, ",")));
+				godotFunctions.SendActionsLocalization(JSON.stringify(CSVToArray(data, ",")));
 				break;
 			case "Team":
-				godotFunctions.SendTeam(JSON.stringify(CSVToArray(data, ",")));
+				godotFunctions.SendTeamLocalization(JSON.stringify(CSVToArray(data, ",")));
 				break;
 		}
 	} else {
@@ -168,7 +168,7 @@ async function fetchProjects() {
 	let response = await fetch("./Data/Projects.csv", {cache: "reload"});
 	if (response.ok) {
 		data = await response.text();
-		godotFunctions.SendProjects(JSON.stringify(CSVToArray(data, ",")), false);
+		godotFunctions.SendProjects(JSON.stringify(CSVToArray(data, ",")));
 	} else {
 		console.log("File missing: ./Data/Projects.csv");
 	}
@@ -179,7 +179,7 @@ async function fetchEvents() {
 	let response = await fetch("./Data/Events.csv", {cache: "reload"});
 	if (response.ok) {
 		data = await response.text();
-		godotFunctions.SendEvents(JSON.stringify(CSVToArray(data, ",")), false);
+		godotFunctions.SendEvents(JSON.stringify(CSVToArray(data, ",")));
 	} else {
 		console.log("File missing: ./Data/Events.csv");
 	}
@@ -190,7 +190,7 @@ async function fetchActions() {
 	let response = await fetch("./Data/Actions.csv", {cache: "reload"});
 	if (response.ok) {
 		data = await response.text();
-		godotFunctions.SendActions(JSON.stringify(CSVToArray(data, ",")), false);
+		godotFunctions.SendActions(JSON.stringify(CSVToArray(data, ",")));
 	} else {
 		console.log("File missing: ./Data/Actions.csv");
 	}
