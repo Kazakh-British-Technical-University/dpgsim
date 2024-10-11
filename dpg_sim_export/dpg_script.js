@@ -81,6 +81,7 @@ function fetchMainConfig()
 		)
 }
 
+// TODO: Convert from "get all scenarios from localization" to "get all scenarios from special list"
 async function fetchScenarios() {
 	let data
 	let response = await fetch("./Data/" + lang + "/Scenarios.csv", {cache: "reload"});

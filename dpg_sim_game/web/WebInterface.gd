@@ -16,16 +16,10 @@ var _actionsLocalization_callback = JavaScript.create_callback(self, "_ProcessAc
 var _teamLocalization_callback = JavaScript.create_callback(self, "_ProcessTeamLocalization")
 var _creditsLocalization_callback = JavaScript.create_callback(self, "_ProcessCreditsLocalization")
 
-# callback signals
+# file loading wait fields
 signal language_processed
-# signal mainConfig_processed
-# signal scenario_processed
-# signal system_processed
-# signal projects_processed
-# signal events_processed
-# signal actions_processed
-# signal team_processed
-# signal credits_processed
+var data_load_progress: float = 0
+var localization_load_progress: float = 0
 
 # JS callbacks
 func _ProcessLanguages(args):
@@ -44,6 +38,7 @@ func _ParseMainConfig(args):
 	assert(parsed != null, "JSON parse error: Main Config")
 
 	global.mainConfig = parsed
+	data_load_progress += 1
 
 
 func _ParseScenarios(args):
@@ -51,6 +46,8 @@ func _ParseScenarios(args):
 	assert(parsed != null, "JSON parse error: Scenario")
 
 	global.scenarios.append(parsed)
+	
+	data_load_progress += 1
 
 
 func _ProcessProjects(args):
@@ -65,8 +62,10 @@ func _ProcessProjects(args):
 			
 		global.projects[project["ID"]] = project
 
+	data_load_progress += 1
 
-func _ProcessEvnets(args):
+
+func _ProcessEvents(args):
 	var parsed = JSON.parse(str(args[0])).result
 	assert(parsed != null, "CSV parse error: Events.csv")
 
@@ -77,6 +76,8 @@ func _ProcessEvnets(args):
 			event[keys[str(j)]] = parsed["Lines"][i][str(j)]
 		
 		global.events[event["ID"]] = event
+	
+	data_load_progress += 1
 
 
 func _ProcessActions(args):
@@ -90,6 +91,8 @@ func _ProcessActions(args):
 			action[keys[str(j)]] = parsed["Lines"][i][str(j)]
 		global.actions.append(action)
 
+	data_load_progress += 1
+
 
 # JS callbacks (Localization)
 func _ProcessSystemLocalization(args):
@@ -98,6 +101,8 @@ func _ProcessSystemLocalization(args):
 
 	for i in range(1, parsed["Lines"].size()):
 		trans.dict[parsed["Lines"][i]["0"]] = parsed["Lines"][i]["1"]
+
+	localization_load_progress += 1
 
 
 func _ProcessProjectsLocalization(args):
@@ -110,6 +115,8 @@ func _ProcessProjectsLocalization(args):
 		project["Description"] = parsed["Lines"][i]["2"]
 		
 		global.projects[project["ID"]] = project
+
+	localization_load_progress += 1
 
 
 func _ProcessEventsLocalization(args):
@@ -127,6 +134,8 @@ func _ProcessEventsLocalization(args):
 		
 		global.events[event["ID"]] = event
 
+	localization_load_progress += 1
+
 
 func _ProcessActionsLocalization(args):
 	var parsed = JSON.parse(str(args[0])).result
@@ -136,6 +145,7 @@ func _ProcessActionsLocalization(args):
 		global.actions[i-1]["Title"] = parsed["Lines"][i]["1"]
 		global.actions[i-1]["Description"] = parsed["Lines"][i]["2"]
 
+	localization_load_progress += 1
 
 func _ProcessTeamLocalization(args):
 	var parsed = JSON.parse(str(args[0])).result
@@ -144,9 +154,12 @@ func _ProcessTeamLocalization(args):
 	for i in range(1, parsed["Lines"].size()):
 		global.teamDetails[parsed["Lines"][i]["0"]] = parsed["Lines"][i]["1"]
 
+	localization_load_progress += 1
 
-func _ProcessCreditsLocalizatiob(args):
+
+func _ProcessCreditsLocalization(args):
 	trans.dict["CREDITS_LIST"] = str(args[0])
+	localization_load_progress += 1
 
 
 # public functions
@@ -157,10 +170,10 @@ func ConnectToWeb():
 	
 	externalator.addGodotFunction('SendMainConfig', _mainConfigCallback)
 	externalator.addGodotFunction('SendScenario', _scenarioCallback)
-	externalator.addGodotFunction('SendProjects',_projects_callback)
-	externalator.addGodotFunction('SendEvents',_events_callback)
-	externalator.addGodotFunction('SendActions',_actions_callback)
-	externalator.addGodotFunction('SendLanguages',_languages_callback)
+	externalator.addGodotFunction('SendProjects', _projects_callback)
+	externalator.addGodotFunction('SendEvents', _events_callback)
+	externalator.addGodotFunction('SendActions', _actions_callback)
+	externalator.addGodotFunction('SendLanguages', _languages_callback)
 
 	externalator.addGodotFunction('SendSystemLocalization', _systemLocalization_callback)
 	externalator.addGodotFunction('SendProjectsLocalization', _projectsLocalization_callback)
@@ -169,19 +182,39 @@ func ConnectToWeb():
 	externalator.addGodotFunction('SendTeamLocalization', _teamLocalization_callback)
 	externalator.addGodotFunction('SendCreditsLocalization', _creditsLocalization_callback)
 
+	# wait 1 frame for JS execution
+	yield(get_tree(), "idle_frame")
+
 func LoadFiles():
+	yield(LoadLanguages(),"completed")
+	yield(LoadData(), "completed")
+	yield(LoadLocalization(), "completed")
+
+
+func LoadLanguages():
 	window.fetchLanguages()
 	yield(self,"language_processed")
+
+
+func LoadData():
+	data_load_progress = 0
 
 	window.fetchMainConfig()
 	window.fetchScenarios()
 	window.fetchProjects()
 	window.fetchEvents()
 	window.fetchActions()
-	
-	LoadLocalization()
+
+	# TODO: Find WHO DOES NOT LOAD
+	# number of async operations waiting for callbacks
+	var operations = 5
+	while data_load_progress < operations:
+		yield(get_tree(), "idle_frame")
+
 
 func LoadLocalization():
+	localization_load_progress = 0
+
 	window.fetchLocalizedData("System")
 	window.fetchLocalizedData("Projects")
 	window.fetchLocalizedData("Events")
@@ -189,8 +222,16 @@ func LoadLocalization():
 	window.fetchLocalizedData("Team")
 	window.fetchCredits()
 
+	# number of async operations waiting for callbacks
+	var operations = 6
+	while localization_load_progress < operations:
+		yield(get_tree(), "idle_frame")
+
 func ChangeLanguage(newLang):
 	window.changeLanguage(newLang)
 	global.currentLanguage = newLang;
 	global.externalator_initated = false; # deinitialize to get callbacks aftrer language change
 	global.ResetLocalizedFiles()
+
+	# wait 1 frame for JS execution
+	yield(get_tree(), "idle_frame")
