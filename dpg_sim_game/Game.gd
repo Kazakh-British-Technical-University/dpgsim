@@ -8,10 +8,9 @@ onready var soundManager = $Sounds
 
 func _ready():
 	global.game = self
-	$WebInterface.ConnectToWeb()
-	yield(get_tree().create_timer(0.1),"timeout")
-	$WebInterface.LoadFiles()
-	yield(get_tree().create_timer(1.5),"timeout")
+	yield($WebInterface.ConnectToWeb(), "completed")
+	yield($WebInterface.LoadFiles(), "completed")
+
 	$MainMenu.visible = true
 	$MainMenu.Start()
 	$PauseMenu.Start()
@@ -118,8 +117,7 @@ func _on_Start_Button_buttonPressed():
 	$MapScreen.Start()
 
 func _on_language_changed(lang):
-	$WebInterface.ChangeLanguage(lang)
-	yield(get_tree().create_timer(0.5),"timeout")
+	yield($WebInterface.ChangeLanguage(lang), "completed")
 	var _reload = get_tree().reload_current_scene()
 
 func PauseGame(pause):
