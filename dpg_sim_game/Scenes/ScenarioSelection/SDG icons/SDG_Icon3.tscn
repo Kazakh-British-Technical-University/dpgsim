@@ -7,7 +7,7 @@
 [sub_resource type="AtlasTexture" id=1]
 resource_local_to_scene = true
 atlas = ExtResource( 1 )
-region = Rect2( 139, 1, 44, 45 )
+region = Rect2( 93, 1, 44, 45 )
 
 [node name="SDG_Icon" type="Node2D"]
 
@@ -18,19 +18,19 @@ texture = SubResource( 1 )
 region_rect = Rect2( -10, 40, 70, 20 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 41.0
+margin_left = 26.0
 margin_top = 6.0
 margin_right = 85.0
 margin_bottom = 27.0
 custom_fonts/font = ExtResource( 3 )
-text = "QUALITY
-EDUCATION"
+text = "GOOD HEALTH
+AND WELL-BEING"
 
 [node name="Number" type="Label" parent="."]
-margin_left = 11.0
-margin_top = -4.0
-margin_right = 34.0
-margin_bottom = 42.0
+margin_left = 5.0
+margin_top = 2.0
+margin_right = 28.0
+margin_bottom = 48.0
 custom_colors/font_color = Color( 1, 1, 1, 0.635294 )
 custom_fonts/font = ExtResource( 2 )
-text = "4"
+text = "3"

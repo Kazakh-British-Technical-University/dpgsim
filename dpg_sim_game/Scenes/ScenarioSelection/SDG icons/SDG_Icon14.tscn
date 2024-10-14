@@ -7,7 +7,7 @@
 [sub_resource type="AtlasTexture" id=1]
 resource_local_to_scene = true
 atlas = ExtResource( 1 )
-region = Rect2( 139, 1, 44, 45 )
+region = Rect2( 47, 142, 44, 45 )
 
 [node name="SDG_Icon" type="Node2D"]
 
@@ -18,19 +18,27 @@ texture = SubResource( 1 )
 region_rect = Rect2( -10, 40, 70, 20 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 41.0
-margin_top = 6.0
-margin_right = 85.0
-margin_bottom = 27.0
+margin_left = 11.0
+margin_top = 10.0
+margin_right = 80.0
+margin_bottom = 19.0
 custom_fonts/font = ExtResource( 3 )
-text = "QUALITY
-EDUCATION"
+text = "LIFE BELOW WATER"
 
 [node name="Number" type="Label" parent="."]
-margin_left = 11.0
-margin_top = -4.0
-margin_right = 34.0
-margin_bottom = 42.0
+margin_left = 47.0
+margin_top = 46.0
+margin_right = 70.0
+margin_bottom = 92.0
+custom_colors/font_color = Color( 1, 1, 1, 0.635294 )
+custom_fonts/font = ExtResource( 2 )
+text = "1"
+
+[node name="Number2" type="Label" parent="."]
+margin_left = 63.0
+margin_top = 46.0
+margin_right = 86.0
+margin_bottom = 92.0
 custom_colors/font_color = Color( 1, 1, 1, 0.635294 )
 custom_fonts/font = ExtResource( 2 )
 text = "4"
