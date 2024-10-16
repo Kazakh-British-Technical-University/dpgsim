@@ -10,27 +10,27 @@ func CheckEvents(day):
 		if int(event["Phase"]) == global.curPhaseIndex + 1 and global.curScenario()["ScenarioEvents"].has(event["ID"]):
 			if event["FromStart"] == "TRUE":
 				if int(event["Day"]) == day:
-					ShowEvent(event)
+					_ShowEvent(event)
 			else:
 				if day == int(global.curProject["TimeCost"]) - int(event["Day"]):
-					ShowEvent(event)
+					_ShowEvent(event)
 
-func ShowEvent(event):
+func _ShowEvent(event):
 	global.game.soundManager.PlaySFX("Ding")
 	global.game.PauseTimer(true)
 	curEvent = event
 	visible = true
 	$Title.text = curEvent["Title"]
 	$Body.text = curEvent["Description"]
-	SetupOption($A_Button, "First")
+	_SetupOption($A_Button, "First")
 	
 	if len(curEvent["Second option"]) > 0:
-		SetupOption($B_Button, "Second")
+		_SetupOption($B_Button, "Second")
 		$B_Button.visible = true
 	else:
 		$B_Button.visible = false
 
-func SetupOption(button, number):
+func _SetupOption(button, number):
 	button.Start()
 	button.SetText(curEvent[number + " option"])
 	if curEvent[number + " option outcome status"] == "Good":
@@ -40,20 +40,20 @@ func SetupOption(button, number):
 
 var selectedOption = ""
 func _on_A_Button_buttonPressed():
-	SetupTooltip("First")
+	_SetupTooltip("First")
 
 func _on_B_Button_buttonPressed():
-	SetupTooltip("Second")
+	_SetupTooltip("Second")
 
-func SetupTooltip(option):
+func _SetupTooltip(option):
 	selectedOption = option
 	global.game.gameTooltip.SetTooltip(
 		curEvent[selectedOption + " option"],
 		curEvent[selectedOption + " option tooltip"],
-		funcref(self, "ApplyOutcome")
+		funcref(self, "_ApplyOutcome")
 	)
 
-func ApplyOutcome():
+func _ApplyOutcome():
 	global.game.PauseTimer(false)
 	visible = false
 	var param = curEvent[selectedOption + " option outcome value (param)"]
