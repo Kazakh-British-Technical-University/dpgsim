@@ -1,3 +1,4 @@
+class_name TeamScreen
 extends Node2D
 
 onready var allTeams = [$Management,$Development,$Design,$Product,$Marketing,$QA,$Support]

@@ -1,6 +1,8 @@
 extends ColorRect
+class_name EventManager
 
 var curEvent
+var completed_events: Array
 
 func CheckEvents(day):
 	for eventID in global.events:
