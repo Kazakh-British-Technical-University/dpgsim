@@ -1,3 +1,4 @@
+class_name Money
 extends Control
 
 var total = 0
