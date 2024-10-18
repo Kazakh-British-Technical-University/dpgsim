@@ -2,18 +2,18 @@ class_name EventPredicateFactory
 extends Reference
 
 enum PredicateType {
-    TIME,
-    ACTION,
-    MONEY,
-    FIT_POINTS,
-    INCONSISTENCY_POINTS,
-    DEV_POINTS,
-    TECH_DEPT_POINTS,
-    MARKET_POINTS,
-    REJECTION_POINTS,
-    TEAM_SIZE,
-    SESSION_STAGE,
-    EVENT
+    TIME = 1,
+    ACTION = 2,
+    MONEY = 3,
+    FIT_POINTS = 4,
+    INCONSISTENCY_POINTS = 5,
+    DEV_POINTS = 6,
+    TECH_DEPT_POINTS = 7,
+    MARKET_POINTS = 8,
+    REJECTION_POINTS = 9,
+    TEAM_SIZE = 10,
+    SESSION_STAGE = 11,
+    EVENT = 12
 }
 
 
@@ -66,7 +66,7 @@ func create_predicate(predicate_type: int, parameter: String) -> EventPredicate:
         PredicateType.EVENT:
             var separator = "|"
             var params = parameter.split(separator)
-            return ParentEventPredicate.new(params[0].to_int(), params[1].to_int(), _game)
+            return ParentEventPredicate.new(params[0], params[1].to_int(), _game)
 
         _:
             assert(false, "Unsupported predicate type")
@@ -242,12 +242,13 @@ class StagePredicate:
         return _game.global.curPhaseIndex
 
 
+## TODO: Implement completed_events
 ## A particular event was triggered
 class ParentEventPredicate:
 
     extends EventPredicate
 
-    var _parent_event_id: int
+    var _parent_event_id: String
     var _delay_weeks: int
     var _game: MainGame
 
@@ -255,7 +256,7 @@ class ParentEventPredicate:
     var _parent_event_triggered_day: int
 
 
-    func _init(parent_event_id: int, delay_weeks: int, game: MainGame):
+    func _init(parent_event_id: String, delay_weeks: int, game: MainGame):
         _parent_event_id = parent_event_id
         _delay_weeks = delay_weeks
         _game = game

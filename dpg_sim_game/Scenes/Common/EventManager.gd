@@ -15,7 +15,7 @@ func Start():
 	event_predicate_factory = EventPredicateFactory.new(global.game)
 
 	var scenario_events = []
-	for event in global.events:
+	for event in global.events.values():
 		if (global.curScenario()["ScenarioEvents"].has(event["ID"])):
 			scenario_events.append(event)
 
@@ -28,6 +28,14 @@ func Start():
 	event_scheduler.populate_event_pool(scenario_events)
 
 	event_scheduler.connect("event_started", self, "_ShowEvent")
+
+
+func Reset():
+	event_scheduler = null
+	event_predicate_factory = null
+	completed_events = []
+	curEvent = null
+
 
 
 func CheckEvents(day):

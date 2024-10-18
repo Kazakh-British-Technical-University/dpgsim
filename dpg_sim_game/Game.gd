@@ -29,6 +29,7 @@ func StartScenario():
 	$MainSession.Start()
 	$MainSession.ResetCounters()
 	$MainSession.FirstStart()
+	$EventManager.Start()
 	$MainSession.visible = true
 	global.curPhaseIndex = -1
 	gameTooltip.SetTooltip(trans.local("SCENARIO_POPUP_TITLE"), trans.local("SCENARIO_POPUP_DESC"), null)
@@ -133,6 +134,7 @@ func ExitGame():
 	PauseTimer(true)
 	global.ResetGame()
 	$Header/PhaseHUD.ResetPhases()
+	$EventManager.Reset()
 	for child in get_children():
 		if !(child is CanvasItem):
 			continue

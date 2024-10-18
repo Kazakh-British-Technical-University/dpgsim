@@ -45,7 +45,7 @@ func _check_events():
         remove_pool.append(event)
 
     for event in remove_pool:
-        _event_pool.remove(event)
+        _event_pool.erase(event)
         
 
 func _check_event_condition(event) -> bool:
