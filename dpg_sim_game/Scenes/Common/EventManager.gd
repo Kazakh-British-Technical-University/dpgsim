@@ -4,18 +4,46 @@ class_name EventManager
 var curEvent
 var completed_events: Array
 
+
+var event_scheduler: EventScheduler
+var event_predicate_factory: EventPredicateFactory
+
+
+func Start():
+	event_scheduler = EventScheduler.new()
+
+	event_predicate_factory = EventPredicateFactory.new(global.game)
+
+	var scenario_events = []
+	for event in global.events:
+		if (global.curScenario()["ScenarioEvents"].has(event["ID"])):
+			scenario_events.append(event)
+
+	for event in scenario_events:
+		event["Predicate"] = event_predicate_factory.create_predicate(
+			event["Condition trigger type"].to_int(),
+			event["Condition trigger value"]
+		)
+
+	event_scheduler.populate_event_pool(scenario_events)
+
+	event_scheduler.connect("event_started", self, "_ShowEvent")
+
+
 func CheckEvents(day):
-	for eventID in global.events:
-		var event = global.events[eventID]
-		if len(event["Day"]) == 0:
-			continue
-		if int(event["Phase"]) == global.curPhaseIndex + 1 and global.curScenario()["ScenarioEvents"].has(event["ID"]):
-			if event["FromStart"] == "TRUE":
-				if int(event["Day"]) == day:
-					_ShowEvent(event)
-			else:
-				if day == int(global.curProject["TimeCost"]) - int(event["Day"]):
-					_ShowEvent(event)
+	event_scheduler.check_day_for_events(day)
+	# for eventID in global.events:
+	# 	var event = global.events[eventID]
+	# 	if len(event["Day"]) == 0:
+	# 		continue
+	# 	if int(event["Phase"]) == global.curPhaseIndex + 1 and global.curScenario()["ScenarioEvents"].has(event["ID"]):
+	# 		if event["FromStart"] == "TRUE":
+	# 			if int(event["Day"]) == day:
+	# 				_ShowEvent(event)
+	# 		else:
+	# 			if day == int(global.curProject["TimeCost"]) - int(event["Day"]):
+	# 				_ShowEvent(event)
+
 
 func _ShowEvent(event):
 	global.game.soundManager.PlaySFX("Ding")
