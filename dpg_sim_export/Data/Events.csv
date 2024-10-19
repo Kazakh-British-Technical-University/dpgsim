@@ -1,4 +1,46 @@
 ID,Image,First option outcome status,First option outcome value (param),First option outcome value (value),Second option outcome status,Second option outcome value (param),Second option outcome value (value),Condition trigger type,Condition trigger value,Default weight,Phase,FromStart,Day
-E1,,Good,money,500,Good,money,500,,,,2,TRUE,15
-E2,,Good,product insights,1,Good,money,300,,,,3,TRUE,15
-E3,,Bad,money,-300,Bad,money,-200,,,,4,FALSE,15
+E1,,Good,money,500,Good,money,500,,,,1,TRUE,15
+E2,,Good,money,300,Good,money,100,,,,2,TRUE,15
+E3,,Good,dev insights,1,Good,dev insights,3,,,,3,FALSE,15
+E4,,Good,product insights,1,Good,product insights,0,,,,4,TRUE,15
+E5,,Good,market insights,1,Bad,market insights,-1,,,,5,TRUE,15
+E6,,Good,product insights,1,Good,market insights,1,,,,6,TRUE,15
+E7,,Good,product insights,1,Good,market insights,1,,,,7,TRUE,15
+E8,,Good,market insights,1,Bad,market insights,-1,,,,8,TRUE,15
+E9,,Good,product insights,1,Good,product insights,1,,,,9,TRUE,15
+E10,,Good,product insights,1,Bad,product insights,0,,,,1,TRUE,15
+E11,,Good,money,-200,Good,money,0,,,,2,TRUE,15
+E12,,Good,money,-100,Good,dev insights,1,,,,3,TRUE,15
+E13,,Good,product insights,1,Good,product insights,2,,,,4,TRUE,15
+E14,,Good,market insights,1,Good,money,300,,,,5,TRUE,15
+E15,,Good,money,-100,Good,product insights,1,,,,6,TRUE,15
+E16,,Good,market insights,1,Good,dev insights,1,,,,7,TRUE,15
+E17,,Good,product insights,1,Good,money,-200,,,,8,TRUE,15
+E18,,Good,dev insights,1,Good,dev insights,0,,,,9,TRUE,15
+E19,,Good,product insights,1,Good,product insights,1,,,,1,TRUE,15
+E20,,Good,dev insights,1,Good,dev insights,1,,,,2,TRUE,15
+E21,,Good,dev insights,1,Good,money,200,,,,3,TRUE,15
+E22,,Good,product insights,1,Good,product insights,1,,,,4,TRUE,15
+E23,,Good,market insights,1,Good,market insights,1,,,,5,TRUE,15
+E24,,Good,money,100,Good,money,100,,,,6,TRUE,15
+E25,,Good,dev insights,1,Good,dev insights,2,,,,7,TRUE,15
+E26,,Good,money,100,Good,market insights,1,,,,8,TRUE,15
+E27,,Good,market insights,2,Good,market insights,2,,,,9,TRUE,15
+E28,,Good,product insights,1,Good,product insights,1,,,,1,TRUE,15
+E29,,Good,dev insights,1,Good,dev insights,1,,,,2,TRUE,15
+E30,,Good,market insights,1,Good,market insights,2,,,,3,TRUE,15
+E31,,Good,money,300,Good,money,300,,,,4,TRUE,15
+E32,,Good,market insights,1,Good,money,-200,,,,5,TRUE,15
+E33,,Good,money,-100,Good,dev insights,1,,,,6,TRUE,15
+E34,,Good,money,-100,Good,money,200,,,,7,TRUE,15
+E35,,Good,dev insights,1,Good,dev insights,1,,,,8,TRUE,15
+E36,,Good,market insights,1,Good,market insights,1,,,,9,TRUE,15
+E37,,Good,money,200,Good,money,0,,,,1,TRUE,15
+E38,,Bad,dev insights,-1,Good,dev insights,1,,,,2,TRUE,15
+E39,,Good,product insights,1,Bad,product insights,-1,,,,3,TRUE,15
+E40,,Good,dev insights,1,Bad,dev insights,-1,,,,4,TRUE,15
+E41,,Good,money,300,Good,market insignts,1,,,,5,TRUE,15
+E42,,Good,product insights,1,Bad,product insights,-1,,,,6,TRUE,15
+E43,,Good,market insights,1,Bad,market insights,-1,,,,7,TRUE,15
+E44,,Good,product insights,2,Good,product insights,2,,,,8,TRUE,15
+E45,,Good,dev insights,2,Bad,dev insights,-1,,,,9,TRUE,15
