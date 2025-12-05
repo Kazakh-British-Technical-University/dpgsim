@@ -1,36 +1,36 @@
-P0,Initial Research,Collect general data about workplace gender equality trends.
-P1,Target Audience Study,Identify key stakeholders and potential users for your app.
-P2,Technical Feasibility Research,Analyze technologies needed to track gender equality metrics.
-P3,Competitive Analysis,Study existing apps and solutions to find gaps in the market.
-P4,Basic Prototype,Create a simple app prototype to validate core ideas.
-P5,Interactive Prototype,Add initial interactive features for early testing.
-P6,UI/UX Prototype,Focus on design and usability to enhance user experience.
-P7,MVP Development,Develop a minimum viable product with essential functions.
-P8,Define Mission,Clarify your app's mission and objectives.
-P9,Set Values,Establish values that guide decision-making and development.
-P10,Strategy Planning,Create a roadmap for phased app development and launch.
-P11,Mission & Strategy,Combine mission, values, and strategy to guide your team.
-P12,Internal Testing,Test the app with your core team to find immediate issues.
-P13,Small Focus Group,Conduct testing with a small group of users for initial feedback.
-P14,Extended User Testing,Test with a larger audience to uncover more issues.
-P15,Full Beta Testing,Test the app widely to prepare for launch.
-P16,Website Setup,Create a landing page for the app.
-P17,Social Media Setup,Establish social media presence to engage potential users.
-P18,Website & Social Media,Combine both platforms for better audience reach.
-P19,Marketing Strategy,Plan marketing campaigns to attract users.
-P20,Single Server Setup,Deploy backend on a single server to start operations.
-P21,Cloud Infrastructure,Use cloud services for scalability and reliability.
-P22,Multiple Servers,Deploy multiple servers to handle growing user base.
-P23,DevOps Team,Hire DevOps for managing infrastructure efficiently.
-P24,DPG Application,Prepare and submit application for Digital Public Goods status.
-P25,Contact DPG Office,Work with DPG office for support during submission.
-P26,Check SDG Relevance,Ensure your app aligns with SDG 5 requirements.
-P27,DPG Checklist,Follow DPG indicators checklist for successful approval.
-P28,Marketing Campaign,Launch campaigns to generate early awareness.
-P29,Launch Event,Organize an event to officially present your app.
-P30,Prepare Release,Prepare all marketing materials and content for launch.
-P31,Full Release Prep,Coordinate all teams to ensure smooth launch.
-P32,Basic Support,Provide minimal customer support at launch.
-P33,Phone & Email Support,Offer support through phone and email channels.
-P34,Live Support & Events,Host live support sessions and community events.
-P35,Outsourced Support,Hire external team for customer support if necessary.
+P0,Initial Research,"Collect general data about workplace gender equality trends."
+P1,Target Audience Study,"Identify key stakeholders and potential users for your app."
+P2,Technical Feasibility Research,"Analyze technologies needed to track gender equality metrics."
+P3,Competitive Analysis,"Study existing apps and solutions to find gaps in the market."
+P4,Basic Prototype,"Create a simple app prototype to validate core ideas."
+P5,Interactive Prototype,"Add initial interactive features for early testing."
+P6,UI/UX Prototype,"Focus on design and usability to enhance user experience."
+P7,MVP Development,"Develop a minimum viable product with essential functions."
+P8,Define Mission,"Clarify your app's mission and objectives."
+P9,Set Values,"Establish values that guide decision-making and development."
+P10,Strategy Planning,"Create a roadmap for phased app development and launch."
+P11,Mission & Strategy,"Combine mission, values, and strategy to guide your team."
+P12,Internal Testing,"Test the app with your core team to find immediate issues."
+P13,Small Focus Group,"Conduct testing with a small group of users for initial feedback."
+P14,Extended User Testing,"Test with a larger audience to uncover more issues."
+P15,Full Beta Testing,"Test the app widely to prepare for launch."
+P16,Website Setup,"Create a landing page for the app."
+P17,Social Media Setup,"Establish social media presence to engage potential users."
+P18,Website & Social Media,"Combine both platforms for better audience reach."
+P19,Marketing Strategy,"Plan marketing campaigns to attract users."
+P20,Single Server Setup,"Deploy backend on a single server to start operations."
+P21,Cloud Infrastructure,"Use cloud services for scalability and reliability."
+P22,Multiple Servers,"Deploy multiple servers to handle growing user base."
+P23,DevOps Team,"Hire DevOps for managing infrastructure efficiently."
+P24,DPG Application,"Prepare and submit application for Digital Public Goods status."
+P25,Contact DPG Office,"Work with DPG office for support during submission."
+P26,Check SDG Relevance,"Ensure your app aligns with SDG 5 requirements."
+P27,DPG Checklist,"Follow DPG indicators checklist for successful approval."
+P28,Marketing Campaign,"Launch campaigns to generate early awareness."
+P29,Launch Event,"Organize an event to officially present your app."
+P30,Prepare Release,"Prepare all marketing materials and content for launch."
+P31,Full Release Prep,"Coordinate all teams to ensure smooth launch."
+P32,Basic Support,"Provide minimal customer support at launch."
+P33,Phone & Email Support,"Offer support through phone and email channels."
+P34,Live Support & Events,"Host live support sessions and community events."
+P35,Outsourced Support,"Hire external team for customer support if necessary."
