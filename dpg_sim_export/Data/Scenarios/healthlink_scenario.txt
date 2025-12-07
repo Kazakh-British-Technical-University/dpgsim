@@ -1,0 +1,14 @@
+{
+  "SDG": 3,
+  "Money": 15000,
+  "MapRegion": 2,
+  "PhaseProjects": [
+      ["HL_P0","HL_P1","HL_P2","HL_P3"],
+      ["HL_P4","HL_P5","HL_P6","HL_P7"],
+      ["HL_P8","HL_P9","HL_P10","HL_P11"],
+      ["HL_P12","HL_P13","HL_P14","HL_P15"]
+  ],
+  "ScenarioEvents": [
+      "HL_E1","HL_E2","HL_E3","HL_E4"
+  ]
+}
