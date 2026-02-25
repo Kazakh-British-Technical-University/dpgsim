@@ -17,6 +17,7 @@ func Start():
 	total_node.text = trans.local("DPGS") + ": "
 	burn_node.text = trans.local("RATE") + ": "
 	burn = global.mainConfig["Salary"]
+	maxBurn = 0
 	total_money_node.add_color_override("font_color", purple)
 	_UpdateText()
 
