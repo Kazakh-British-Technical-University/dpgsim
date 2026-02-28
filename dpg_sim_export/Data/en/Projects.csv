@@ -35,3 +35,40 @@ P32,Essential support only,"We don't have enough resources for the full scale su
 P33,Phone and email customer support,We will conduct a customer support via both phone and email.
 P34,Support with LiveOPS,"We will not only make a support up and running, but also establish regular events and activities for our clients (LiveOPS)."
 P35,Outsourced support,We no need our team to make a customer support. Let's hire an outsource company to make it for us!
+
+P0,Limited water research, Quick web search about basic water consumption statistics and common conservation tips. Focus on easily accessible data without deep scientific analysis.
+P1,Customer-focused water research, Conduct surveys and interviews with households to understand their water usage habits, concerns, and willingness to change behaviors. Identify pain points in current water tracking methods.
+P2,Technical water research, Study hydrological databases, water footprint calculation methodologies (ISO 14046), and existing water tracking technologies. Research APIs for water data integration.
+P3,Comprehensive water research, Partner with hydrologists and environmental scientists to conduct in-depth research on regional water scarcity, virtual water trade, and behavioral science behind water conservation.
+P4,Essential water calculator prototype,Build a basic calculator that estimates water usage for common activities (shower, laundry, cooking). Ugly interface but functional calculations.
+P5, Service prototype for water audits, Create a landing page where users can request manual water audits. Your team will conduct personalized water usage analysis for each early client.
+P6, Technical water data prototype, Develop a robust backend that integrates with water utility APIs and product water footprint databases. Focus on data accuracy over user experience.
+P7, Product MVP for water tracking, Build a complete mobile app with beautiful design, personalized water saving plans, progress tracking, and community features for selected beta users.
+P8,Water conservation mission, Define clear mission: "Empower everyone to understand and reduce their water footprint for a sustainable water future."
+P9, Values and water strategy, Establish core values (transparency, scientific accuracy, accessibility) and develop strategy for reaching different user segments (households, businesses, farmers).
+P10, Values and water education mission, Combine values of water justice with educational mission to raise awareness about global and local water issues.
+P11, Complete water conservation framework, Develop comprehensive framework including mission, values, strategy, and measurable impact goals for water footprint reduction.
+P12, Internal water usage testing, Your team uses the app to track personal water consumption for one month. Identify basic usability issues and calculation errors.
+P13, Focus group water testing,  Recruit 50 households from different water districts (varying water scarcity levels) to test the app for two weeks and provide detailed feedback.
+P14, Real-world water tracking beta, Release public beta version during drought season. Allow early adopters to use the app while you rapidly fix issues based on real usage data.
+P15, Cascade water testing, Multi-stage testing starting with water-conscious families, expanding to general households, then to small businesses, with adjustments at each stage.
+P16, Water education website, Create informational website explaining water footprint concepts, conservation tips, and showcasing your app's features.
+P17, Social media water campaign, Build presence on platforms popular with eco-conscious users. Share water saving tips, success stories, and conservation challenges.
+P18, Combined digital water platform, Develop both website and social media presence, using website for detailed information and social media for engagement and community building.
+P19, Full water conservation campaign,  Partner with water utilities, environmental NGOs, and local governments. Organize workshops, press coverage, and community events around water conservation.
+P20, Single server setup, Basic server to handle initial user load. Cost-effective but risks downtime during peak usage or data-intensive calculations.
+P21, Cloud infrastructure for water data, Use cloud services that specialize in environmental data. More expensive but scalable and reliable for water calculation processing.
+P22, Multiple regional servers, Deploy servers in different geographic regions to handle local water data efficiently and provide faster response times for regional water calculations.
+P23, DevOps team for water systems, Hire specialized team to manage water data infrastructure, ensure data security for sensitive water usage information, and optimize calculation performance.
+P24, Self DPG water application, Independently prepare and submit application demonstrating how your app contributes to SDG 6 (Clean Water and Sanitation).
+P25, DPG office consultation for water app, Work with DPG advisors who specialize in water-related digital goods to strengthen your application and ensure proper SDG 6 alignment.
+P26, Basic SDG 6 relevance check, Verify that your app addresses clean water and sanitation issues, but don't pursue full DPG certification yet.
+P27, Complete DPG water checklist, Systematically address all 9 DPG indicators specifically for water conservation impact, open licensing, and sustainability.
+P28, World Water Day campaign, Time your launch with World Water Day (March 22). Run intensive marketing campaign highlighting global water issues and your app's solutions.
+P29, Water conservation event launch, Host virtual or physical event featuring water experts, environmental activists, and early users sharing their water saving success stories.
+P30, Minimum viable launch, Release core features for water tracking with basic educational content. Plan to add advanced features based on user feedback.
+P31, Comprehensive water platform launch, Launch with complete feature set including advanced analytics, community features, educational modules, and integration with smart water devices.
+P32, Essential water support, Provide basic FAQ about water calculations and common conservation questions. Minimal investment in support resources.
+P33, Full water conservation support, Offer phone, email, and chat support for technical issues and water conservation advice. Train support team on hydrological basics.
+P34, LiveOps water challenges, Run monthly water saving challenges, host live Q&A sessions with water experts, and organize community conservation events.
+P35, Outsourced water expertise, Partner with environmental organizations to provide expert water conservation advice through your app's support system.
