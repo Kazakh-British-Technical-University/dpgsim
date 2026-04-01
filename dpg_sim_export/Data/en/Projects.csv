@@ -35,3 +35,13 @@ P32,Essential support only,"We don't have enough resources for the full scale su
 P33,Phone and email customer support,We will conduct a customer support via both phone and email.
 P34,Support with LiveOPS,"We will not only make a support up and running, but also establish regular events and activities for our clients (LiveOPS)."
 P35,Outsourced support,We no need our team to make a customer support. Let's hire an outsource company to make it for us!
+P36,Water pollution field assessment,"Visit riverbanks, wells, and rural water points to document real contamination sources and interview locals."
+P37,Sensor technology research sprint,"Study IoT sensors, probe accuracy, data lag, and maintenance needs before committing to a hardware stack."
+P38,Community co-design workshop,"Hold small workshops where residents sketch what features would actually help them monitor water quality daily."
+P39,Full water safety audit roadmap,"Prepare a step-by-step plan describing metrics, test frequency, sensor placement, and response SOPs."
+P40,Low-fidelity monitoring dashboard,"Create simple wireframes showing data charts, alerts, and color-coded water safety indicators."
+P41,Prototype with live sensor feeds,"Connect early sensors to a prototype app and test whether data uploads, syncs, and alerts behave reliably."
+P42,Hybrid monitoring prototype,"Combine manual reporting, sensor data, and photos to explore multi-source verification methods."
+P43,Community-ready MVP,"Ship an MVP that supports local languages, offline mode, and simple water hazard alerts for rural areas."
+P44,Environmental advisor retainer,"Keep a hydrologist or ecologist on call to review water data models and daily anomalies."
+P45,Field training program,"Train volunteers and community leaders to operate sensors, report anomalies, and maintain local water data stations."
