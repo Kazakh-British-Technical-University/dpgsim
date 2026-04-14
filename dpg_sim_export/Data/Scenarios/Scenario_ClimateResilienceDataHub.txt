@@ -1,0 +1,189 @@
+{
+  "SDG": 13,
+  "Money": 1800,
+  "MapRegion": 5,
+  "PhaseProjects": [
+    ["P0", "P1", "P2", "P3"],
+    ["P4", "P5", "P6", "P7"],
+    ["P8", "P9", "P10", "P11"],
+    ["P12", "P13", "P14", "P15"],
+    ["P16", "P17", "P18", "P19"],
+    ["P20", "P21", "P22", "P23"],
+    ["P24", "P25", "P26", "P27"],
+    ["P28", "P29", "P30", "P31"],
+    ["P32", "P33", "P34", "P35"]
+  ],
+  "ScenarioEvents": [
+    "CR1",
+    "CR2",
+    "CR3",
+    "CR4",
+    "CR5",
+    "CR6",
+    "CR7",
+    "CR8",
+    "CR9"
+  ],
+  "CustomScenarioDefinition": {
+    "Title": "Climate Resilience Data Hub",
+    "Category": "Open dataset and decision-support platform for climate resilience",
+    "ScenarioSummary": "You lead a small Digital Public Good studio building an open climate resilience platform that combines public weather records, community observations, and explainable risk indicators for floods, heatwaves, and droughts. Your goal is to help municipalities, schools, NGOs, and residents prepare earlier and make better decisions.",
+    "ImplementationNote": "The current repository stores live event mechanics in Data/Events.csv and event text in Data/en/Events.csv, which are outside the folder allowed by the assignment. To stay fully inside Data/Scenarios, this file includes the original scenario design, event logic, and English content as documented data.",
+    "EventModelAssumption": "Each event is designed to trigger on day 15 of its phase, matching the timing pattern used by the existing scenarios.",
+    "Events": [
+      {
+        "ID": "CR1",
+        "Phase": 1,
+        "FromStart": true,
+        "Day": 15,
+        "TriggerCondition": "Always triggers on day 15 of phase 1.",
+        "Title": "Messy but Valuable Data",
+        "Description": "After your first round of interviews, you discover that flood and heatwave records are scattered across spreadsheets, PDFs, and handwritten local logs. Some teammates want to wait for a perfect official dataset before building anything. Others want to start with community reports and document every gap openly.",
+        "FirstOption": "Launch a lightweight community reporting pilot.",
+        "FirstOutcome": "You collect practical examples quickly and learn which fields matter most in real emergencies, although the team now has extra cleaning work.",
+        "SecondOption": "Pause until official records are standardized.",
+        "SecondOutcome": "The data structure becomes cleaner, but momentum slows and local partners stop sharing rapid feedback.",
+        "SuggestedOutcomeMapping": {
+          "FirstOption": ["product insights +1", "market insights +1"],
+          "SecondOption": ["product insights +1"]
+        }
+      },
+      {
+        "ID": "CR2",
+        "Phase": 2,
+        "FromStart": true,
+        "Day": 15,
+        "TriggerCondition": "Always triggers on day 15 of phase 2.",
+        "Title": "Explainability or Pure Accuracy?",
+        "Description": "Your prototype team has built two early risk models. One is slightly more accurate but hard to explain to city officials. The other is easier to audit and much simpler to justify in public meetings.",
+        "FirstOption": "Release the explainable model first.",
+        "FirstOutcome": "Stakeholders trust the dashboard sooner and give precise feedback because they understand how the scores are produced.",
+        "SecondOption": "Invest in the more complex model.",
+        "SecondOutcome": "The technical result looks impressive, but onboarding partners takes longer because they want stronger evidence and documentation.",
+        "SuggestedOutcomeMapping": {
+          "FirstOption": ["product insights +1", "market insights +1"],
+          "SecondOption": ["dev insights +1", "money -100"]
+        }
+      },
+      {
+        "ID": "CR3",
+        "Phase": 3,
+        "FromStart": true,
+        "Day": 15,
+        "TriggerCondition": "Always triggers on day 15 of phase 3.",
+        "Title": "Volunteer Mapping Team",
+        "Description": "Students, civic technologists, and open-data volunteers offer to label satellite images and clean historical hazard reports. They are motivated, but every group uses a different workflow and naming scheme.",
+        "FirstOption": "Write onboarding guides and data standards first.",
+        "FirstOutcome": "Collaboration starts more slowly, but the shared process improves data quality and saves time later.",
+        "SecondOption": "Let everyone start contributing immediately.",
+        "SecondOutcome": "You receive more data fast, but inconsistent formats create avoidable rework and confusion across the team.",
+        "SuggestedOutcomeMapping": {
+          "FirstOption": ["team insights +1", "dev insights +1"],
+          "SecondOption": ["product insights +1", "dev insights -1"]
+        }
+      },
+      {
+        "ID": "CR4",
+        "Phase": 4,
+        "FromStart": true,
+        "Day": 15,
+        "TriggerCondition": "Always triggers on day 15 of phase 4.",
+        "Title": "Where Should the First Pilot Run?",
+        "Description": "A flood-prone district wants to test your dashboard before monsoon season, while a national NGO suggests a broad remote beta across several regions. You can either optimize for depth in one place or breadth across many places.",
+        "FirstOption": "Pilot with the flood-prone district.",
+        "FirstOutcome": "The focused test produces concrete feedback from emergency planners and helps you improve the most critical features.",
+        "SecondOption": "Run a broad remote beta.",
+        "SecondOutcome": "You reach more users and collect varied ideas, but the feedback is harder to prioritize and some urgent local needs remain hidden.",
+        "SuggestedOutcomeMapping": {
+          "FirstOption": ["product insights +2"],
+          "SecondOption": ["product insights +1", "market insights +1"]
+        }
+      },
+      {
+        "ID": "CR5",
+        "Phase": 5,
+        "FromStart": true,
+        "Day": 15,
+        "TriggerCondition": "Always triggers on day 15 of phase 5.",
+        "Title": "A Heatwave Brings Attention",
+        "Description": "A severe heatwave suddenly pushes climate adaptation into the news. Journalists and community organizers ask whether your team can publish early insights from the platform before the next municipal briefing.",
+        "FirstOption": "Publish a careful public briefing with clear caveats.",
+        "FirstOutcome": "The briefing takes extra effort, but it positions your project as a responsible public resource and attracts trusted partners.",
+        "SecondOption": "Wait until every dataset is fully validated.",
+        "SecondOutcome": "Your standards remain high, but a major opportunity to become part of the public conversation passes by.",
+        "SuggestedOutcomeMapping": {
+          "FirstOption": ["market insights +1", "money +200"],
+          "SecondOption": ["product insights +1"]
+        }
+      },
+      {
+        "ID": "CR6",
+        "Phase": 6,
+        "FromStart": true,
+        "Day": 15,
+        "TriggerCondition": "Always triggers on day 15 of phase 6.",
+        "Title": "Storage Bill Shock",
+        "Description": "As more satellite layers and historical weather archives arrive, your storage and processing costs rise faster than expected. The team must decide how to scale the platform without losing reliability.",
+        "FirstOption": "Apply for cloud credits and archive cold data.",
+        "FirstOutcome": "The platform stays responsive and sustainable, although the migration takes time and technical focus.",
+        "SecondOption": "Keep everything on the current small servers.",
+        "SecondOutcome": "You avoid immediate migration work, but performance drops during heavy analysis periods and confidence in the platform weakens.",
+        "SuggestedOutcomeMapping": {
+          "FirstOption": ["dev insights +1", "money -100"],
+          "SecondOption": ["money +100", "dev insights -1"]
+        }
+      },
+      {
+        "ID": "CR7",
+        "Phase": 7,
+        "FromStart": true,
+        "Day": 15,
+        "TriggerCondition": "Always triggers on day 15 of phase 7.",
+        "Title": "License Review Before DPG Submission",
+        "Description": "Before applying for DPG recognition, one partner suggests keeping the cleaned hazard layers behind a request form. The legal shortcut feels safer, but it would reduce openness and slow reuse.",
+        "FirstOption": "Publish the datasets under an open license with strong documentation.",
+        "FirstOutcome": "Your DPG case becomes stronger and outside teams can build on the data immediately, even though metadata work grows.",
+        "SecondOption": "Restrict the cleaned layers for now.",
+        "SecondOutcome": "The team feels protected in the short term, but civic partners and external contributors become less eager to collaborate.",
+        "SuggestedOutcomeMapping": {
+          "FirstOption": ["product insights +1", "market insights +1"],
+          "SecondOption": ["market insights -1"]
+        }
+      },
+      {
+        "ID": "CR8",
+        "Phase": 8,
+        "FromStart": true,
+        "Day": 15,
+        "TriggerCondition": "Always triggers on day 15 of phase 8.",
+        "Title": "Launch Channel Decision",
+        "Description": "Release week is near. A coalition of community radio stations offers to explain the platform in plain language, while an academic conference invites you to present to researchers and policymakers.",
+        "FirstOption": "Launch with community media partners.",
+        "FirstOutcome": "The project reaches residents, teachers, and local organizers who can use the data immediately, boosting adoption and public trust.",
+        "SecondOption": "Prioritize the academic conference.",
+        "SecondOutcome": "Expert credibility grows and new institutions notice the project, but community awareness expands more slowly.",
+        "SuggestedOutcomeMapping": {
+          "FirstOption": ["market insights +2"],
+          "SecondOption": ["market insights +1", "product insights +1"]
+        }
+      },
+      {
+        "ID": "CR9",
+        "Phase": 9,
+        "FromStart": true,
+        "Day": 15,
+        "TriggerCondition": "Always triggers on day 15 of phase 9.",
+        "Title": "Who Guides the Roadmap After Release?",
+        "Description": "After launch, requests arrive from city teams, schools, farmers, and humanitarian groups. You now need a governance model for future updates and public accountability.",
+        "FirstOption": "Create an open steering committee with community seats.",
+        "FirstOutcome": "Decision-making takes more coordination, but the roadmap stays transparent and aligned with public needs.",
+        "SecondOption": "Keep roadmap decisions inside the core team.",
+        "SecondOutcome": "Updates move faster in the short term, but some users begin to feel the project is drifting away from community priorities.",
+        "SuggestedOutcomeMapping": {
+          "FirstOption": ["team insights +1", "market insights +1"],
+          "SecondOption": ["dev insights +1", "market insights -1"]
+        }
+      }
+    ]
+  }
+}
