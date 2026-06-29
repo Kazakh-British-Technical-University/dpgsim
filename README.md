@@ -24,19 +24,19 @@ Start http-server:
 http-server
 ```
 
-After that, go to the internet browser of your choice and go to the deployed ip address (eg.: 127.0.0.1:8080)
+After that, go to the internet browser of your choice and go to the deployed IP address (e.g.: 127.0.0.1:8080)
 
 # Contribution
-DPG Simulator itself is designed as a DPG. You can contribute by fixing bugs and addressing issues, adding localizations for other languages, and adding custom scenarios (comming soon).
+DPG Simulator itself is designed as a DPG. You can contribute by fixing bugs and addressing issues, adding localizations for other languages, and adding custom scenarios (coming soon).
 
 In order to fix any issues with internal game files, you can open the project located at <b>dpg_sim_game/project.godot</b> in Godot. This project uses [Godot version 3.5.3](https://godotengine.org/download/archive/3.5.3-stable/)
 
-Before starting the contribution, be sure to check Issues page. If needed, create a new issue, discuss it with the community and then make a pull request.
+Before starting the contribution, be sure to check the Issues page. If needed, create a new issue, discuss it with the community and then make a pull request.
 
 ## Localization
 All localization files are located under <b>dpg_sim_export/Data/[YourLanguage]</b> and appear as .csv or .txt files. List of available languages is located at <b>dpg_sim_export/Data/Languages.txt</b>.
 
-To add a new language duplicate "EN" folder and rename it as a code for new language ([Language codes](https://meta.wikimedia.org/wiki/Template:List_of_language_names_ordered_by_code)). In every file translate everything that is within quotation marks to a new language. Then add a new entry to <b>Languages.txt</b> file.
+To add a new language, duplicate "EN" folder and rename it as a code for new language ([Language codes](https://meta.wikimedia.org/wiki/Template:List_of_language_names_ordered_by_code)). In every file translate everything that is within quotation marks to a new language. Then add a new entry to <b>Languages.txt</b> file.
 * Name : Local name of the language
 * Path : Name of the created folder
 * IconIndex : index of flag associated with language. You need to open <b>dpg_sim_game/Sprites/UI/countryFlags.png</b> and calculate the index of the flag. Starting from 0 left to right and up to down. (eg.: UK is 82, Russia is 200)
