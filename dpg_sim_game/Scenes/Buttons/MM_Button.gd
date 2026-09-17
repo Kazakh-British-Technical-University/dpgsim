@@ -30,8 +30,15 @@ func _on_MM_Button_button_up():
 	$Label.rect_position -= Vector2.DOWN * pressedOffset
 	if stopShakingOnPress:
 		shaking = false
+	# Ignore repeated clicks while a press is already waiting to be emitted
+	if pressPending:
+		return
+	pressPending = true
 	yield(get_tree().create_timer(0.05),"timeout")
+	pressPending = false
 	emit_signal("buttonPressed")
+
+var pressPending = false
 
 var shaking = false
 var stopShakingOnPress = false

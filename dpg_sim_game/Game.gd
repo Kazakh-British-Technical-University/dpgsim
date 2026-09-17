@@ -60,6 +60,9 @@ func StartProject():
 	main_session.visible = true
 
 func ProjectComplete():
+	# Both the project button and the PhaseHUD button lead here; only the first call per phase counts
+	if not main_session.visible:
+		return
 	main_session.visible = false
 	if global.curPhaseIndex == -1:
 		AdvancePhase()
