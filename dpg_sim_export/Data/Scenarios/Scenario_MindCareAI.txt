@@ -1,5 +1,5 @@
 {
-  "SDG": 4,
+  "SDG": 3,
   "Money": 1800,
   "MapRegion":0,
   "PhaseProjects": [
