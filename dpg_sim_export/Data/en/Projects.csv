@@ -35,3 +35,39 @@ P32,Essential support only,"We don't have enough resources for the full scale su
 P33,Phone and email customer support,We will conduct a customer support via both phone and email.
 P34,Support with LiveOPS,"We will not only make a support up and running, but also establish regular events and activities for our clients (LiveOPS)."
 P35,Outsourced support,We no need our team to make a customer support. Let's hire an outsource company to make it for us!
+OT_P01_1,Desk research,Review public trail guides. This is quick but leaves accessibility and local concerns untested.
+OT_P01_2,Listen to residents,Ask residents and rangers which places need protection. Record concerns without publishing identities.
+OT_P01_3,Walk with users,Pay participants with different mobility needs to review route information and missing barriers.
+OT_P01_4,Joint field study,Combine ranger knowledge and access testing. Publish the method without sensitive locations.
+OT_P02_1,Simple route cards,Build text cards with distance and known hazards. Label information that has not been verified.
+OT_P02_2,Offline prototype,Test a small offline map with clear update dates. Users can plan without a constant connection.
+OT_P02_3,Screen reader prototype,Test labels and keyboard navigation with users. Resolve barriers before adding visual polish.
+OT_P02_4,Visual showcase,Create attractive map animations for a demo. Accessibility and offline access receive less attention.
+OT_P03_1,Volunteer only,Rely on unpaid volunteers. Costs stay low but availability and responsibilities remain uncertain.
+OT_P03_2,Shared review charter,Agree how maintainers handle safety reports and conflicts. Give community reviewers a clear role.
+OT_P03_3,Access reviewer,Budget for an accessibility reviewer and document how issues reach the development team.
+OT_P03_4,Community onboarding,Train local reviewers with examples and a code of conduct. Provide a documented appeal process.
+OT_P04_1,Small verified pilot,Release five reviewed routes with dates and hazard notes. Keep the pilot scope manageable.
+OT_P04_2,Private feedback pilot,Invite a small group to test routes. Collect only the feedback needed to fix problems.
+OT_P04_3,Offline access pilot,Publish a lightweight offline pack with text alternatives and clear limits on route accuracy.
+OT_P04_4,Fast public launch,Import many routes with minimal review. Reach increases but errors may affect real journeys.
+OT_P05_1,Count downloads,Use download totals as the main success measure. These numbers do not show who is excluded.
+OT_P05_2,Measure safe planning,Ask whether people could judge a route before travelling. Use anonymous responses and publish limits.
+OT_P05_3,Local feedback sessions,Ask residents about visitor pressure and missing warnings. Pay for their time and share findings.
+OT_P05_4,Inclusive pilot review,Review access failures and local impacts together. Publish changes without exposing participants.
+OT_P06_1,More routes first,Expand coverage before strengthening verification. More places appear but stale records can spread.
+OT_P06_2,Correction workflow,Add dated reviews and a clear correction route. Keep a public record of important changes.
+OT_P06_3,Protect location data,Keep trip tracking off by default. Separate private reports from public route information.
+OT_P06_4,Accessible offline release,Combine text alternatives and offline packs. Test both with users before expanding coverage.
+OT_P07_1,License review,Check ownership and compatible open licenses for code and route data. Document third party sources.
+OT_P07_2,Harm review,Document sensitive location handling and accessibility limits. Explain how users can report harm.
+OT_P07_3,Reuse documentation,Prepare installation and contribution guides with a small example dataset safe for public reuse.
+OT_P07_4,Complete evidence pack,Prepare licensing and reuse evidence plus a harm review. Submit for review without claiming approval.
+OT_P08_1,Quiet local release,Start with local groups and a clear feedback address. Reach is modest but support remains manageable.
+OT_P08_2,Partner training,Help community groups reuse the open tool. Explain uncertainty labels and how corrections work.
+OT_P08_3,Transparent launch,Publish known limitations and sponsorship details. Show a simple way to report inaccurate information.
+OT_P08_4,Viral promotion,Promote spectacular locations widely. Visitor numbers may grow faster than local review capacity.
+OT_P09_1,Reactive upkeep,Fix problems only when complaints arrive. Maintenance costs are low but silent failures may persist.
+OT_P09_2,Scheduled reviews,Assign owners and dates for safety and access checks. Mark overdue records as uncertain.
+OT_P09_3,Community stewardship,Support local reviewers and a public issue queue. Share authority with a documented appeal route.
+OT_P09_4,Long term handover,Prepare maintainer rotation and data export. Reserve time for training and continuity of service.
