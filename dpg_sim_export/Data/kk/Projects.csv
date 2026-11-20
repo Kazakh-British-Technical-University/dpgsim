@@ -35,39 +35,39 @@ P32,Тек қажетті қолдау,"Бізде толық қолдау үш�
 P33,Клиенттерге телефон және электрондық пошта арқылы қолдау көрсету,"Біз клиенттерге телефон және электрондық пошта арқылы қолдау көрсетеміз."""
 P34,Liveops-пен қолдау,"Біз қолдауды ұйымдастырып қана қоймай, клиенттеріміз үшін іс-шараларды үнемі өткіземіз (LiveOPS)."
 P35,Аутсорсингтік қолдау,Бізге клиенттерге қолдау көрсету үшін біздің команданың қажеті жоқ. Мұны біз үшін жасау үшін аутсорсингтік компанияны жалдайық!
-P46,Survey school needs,"Interview students and teachers about offline learning, device access, and essential lesson formats."
-P47,Map connectivity gaps,Collect voluntary reports of where lessons fail to load and which schools need downloads.
-P48,Inspect low-end devices,Test sample devices and storage limits before deciding which formats can work offline.
-P49,Combine research findings,"Run interviews, connectivity mapping, and device trials before committing to the product plan."
-P50,Offline lesson demo,Build a small downloadable reading lesson to verify access without a connection.
-P51,Teacher upload mock-up,Demonstrate how a teacher could prepare and share an offline lesson pack.
-P52,Sync conflict prototype,Test how a student's progress is kept when several devices reconnect later.
-P53,End-to-end classroom pilot,"Prototype downloading, offline study, teacher review, and delayed synchronization."
-P54,Agree on the mission,Write a shared goal: every student can study even when connectivity fails.
-P55,Train the support team,Prepare teammates to help teachers with old phones and limited storage.
-P56,Assign privacy ownership,"Give a teammate responsibility for consent, retention, and safe learner records."
-P57,Create a local advisory group,Invite teachers and students to review accessibility and deployment choices with the team.
-P58,Internal offline trial,Test lesson downloads with teammates before visiting a real school.
-P59,Trial with one classroom,Test with a small class and collect anonymous usability feedback.
-P60,Test with varied abilities,"Invite learners using screen readers, older phones, and different reading levels."
-P61,Multi-school MVP trial,"Run a supported pilot in several schools, with consent and a rollback plan."
-P62,Share a school flyer,Tell nearby schools about the free learning platform using simple printed guidance.
-P63,Teacher-led demonstrations,Ask educators to explain the platform to other teachers and collect questions.
-P64,Open feedback sessions,"Hold short sessions with families, students, and teachers to refine your launch message."
-P65,Regional pilot campaign,"Coordinate demonstrations, support, and accessible instructions across several districts."
-P66,Compress lesson packages,Reduce download sizes for users with slow connections and limited phone storage.
-P67,Build resumable downloads,Let interrupted lesson downloads continue without starting again.
-P68,Add accessible lesson formats,"Offer readable text, captions, and adjustable text size for offline use."
-P69,Implement resilient offline sync,"Combine smaller packages, resumable downloads, and protected progress synchronization."
-P70,Publish a clear license,Document the open-source license and explain how schools can reuse lessons.
-P71,Audit third-party materials,Review image and text licenses before distributing lesson packages openly.
-P72,Document privacy safeguards,"Explain minimum data collection, local storage, and deletion options to reviewers."
-P73,Prepare a complete DPG dossier,"Publish code, attribution, accessibility evidence, and operational documentation."
-P74,Launch with one school,Release in a single school with teacher support and collect early reports.
-P75,Release a support toolkit,"Provide printable guides, quick troubleshooting, and safe offline updates."
-P76,Release multilingual lessons,Offer core lesson instructions in locally relevant languages.
-P77,Run a supported district release,"Coordinate teachers, accessible materials, help channels, and privacy communication."
-P78,Fix urgent access problems,Prioritize broken downloads and lost progress reported by schools.
-P79,Set up teacher feedback,Collect short optional reports from educators without identifying students.
-P80,Maintain low-data updates,Keep lesson packages small and publish predictable offline update schedules.
-P81,Plan long-term stewardship,Train local maintainers and publish a sustainable open-source maintenance roadmap.
+P46,Check what schools need,Ask teachers and students which lessons they need offline and what devices they use.
+P47,Find connection gaps,Speak to schools where internet access makes online lessons difficult.
+P48,Test older devices,Try the platform on phones with little storage and older software.
+P49,Run a full school survey,"Visit schools, test devices and review which lessons should work offline first."
+P50,Make an offline lesson,Build one lesson that students can open without internet.
+P51,Try teacher uploads,Show how a teacher could prepare and share a lesson pack.
+P52,Test progress syncing,Check what happens to saved work when a phone reconnects.
+P53,Build a classroom demo,"Link downloads, offline lessons, saved progress and teacher feedback in one demo."
+P54,Set the team's goal,Agree that the platform must work for schools with weak connections.
+P55,Train school support staff,Help the team answer teachers' questions about downloads and older phones.
+P56,Assign a privacy lead,Put one person in charge of consent and safe handling of student records.
+P57,Meet local advisers,Ask teachers and students to review the plan before the next build.
+P58,Test offline with the team,Try downloading and opening lessons on the team's own devices.
+P59,Test in one classroom,Let a small class use the MVP and tell us what is confusing.
+P60,Test accessibility,"Check text size, captions, screen readers and older phones with different learners."
+P61,Test in several schools,Run a small pilot in several schools and record problems before release.
+P62,Give schools a flyer,Explain what the free platform does and how to try it.
+P63,Ask teachers to demo it,Let teachers show colleagues how lessons work without internet.
+P64,Hold feedback meetings,Meet families and teachers to hear what stops them from using it.
+P65,Run a regional pilot,Introduce the platform in nearby districts with local school support.
+P66,Shrink lesson files,Make lessons use less storage and mobile data.
+P67,Resume broken downloads,Let students continue a download after their connection drops.
+P68,Add accessible formats,"Include readable text, captions and adjustable font sizes."
+P69,Build reliable offline sync,Combine small downloads with safer syncing of students' saved work.
+P70,Write a clear license,Explain which parts of the code and lessons others may reuse.
+P71,Check content permissions,Make sure the team may share every borrowed image and lesson.
+P72,Explain privacy safeguards,"Write down what data is saved, why it is needed and how to delete it."
+P73,Prepare the DPG documents,"Publish licensing, attribution, accessibility notes and setup instructions."
+P74,Launch in one school,Release a supported version to one school and gather early reports.
+P75,Prepare a help pack,Give teachers simple printed steps and common fixes.
+P76,Translate key lessons,Make basic instructions and lessons available in local languages.
+P77,Launch across a district,"Coordinate school contacts, teaching materials and support during rollout."
+P78,Fix urgent access bugs,Start with broken downloads and missing saved progress.
+P79,Collect teacher feedback,Ask teachers for optional reports without identifying students.
+P80,Keep updates lightweight,Release small lesson updates that work on slow connections.
+P81,Plan next year's support,Train maintainers and publish a plan for fixes and future releases.
