@@ -1,3 +1,3 @@
 ID,Title,Description,Parameters
 1,"Мектеп оқушыларына арналған қосымша","Бұл сценарийде сіз оқушыларды олардың оқуларына ынталандыру үшін қосымша жасайсыз. Егер сіз сәттілікке жетсеңіз, бұл білімнің таралуына айтарлықтай әсер етеді.","Scenario_SchoolEngagement.txt"
-6,Offline Learning Platform for Rural Schools,"Lead a small open-source team creating downloadable lessons for schools with unreliable internet. Balance accessibility, privacy, development time, and a limited budget.",Scenario_OfflineLearningRuralSchools.txt
+6,Offline Learning Platform for Rural Schools,"You run a small team making free lessons for schools with weak internet. Build an offline app, test it with teachers, and work out how to keep it running.",Scenario_OfflineLearningRuralSchools.txt
