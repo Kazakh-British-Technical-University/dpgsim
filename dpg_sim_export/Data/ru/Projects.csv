@@ -35,3 +35,39 @@ P32,Только необходимая поддержка,"У нас нет д�
 P33,Поддержка клиентов по телефону и электронной почте,Мы будем оказывать поддержку клиентам по телефону и электронной почте.
 P34,Поддержка с LiveOPS,"Мы не только организуем поддержку, но и будем регулярно проводить мероприятия и активности для наших клиентов (LiveOPS)."
 P35,Аутсорсинговая поддержка,"Нам не нужно, чтобы наша команда занималась поддержкой клиентов. Давайте наймем аутсорсинговую компанию, чтобы она сделала это за нас!"
+P46,Check what schools need,Ask teachers and students which lessons they need offline and what devices they use.
+P47,Find connection gaps,Speak to schools where internet access makes online lessons difficult.
+P48,Test older devices,Try the platform on phones with little storage and older software.
+P49,Run a full school survey,"Visit schools, test devices and review which lessons should work offline first."
+P50,Make an offline lesson,Build one lesson that students can open without internet.
+P51,Try teacher uploads,Show how a teacher could prepare and share a lesson pack.
+P52,Test progress syncing,Check what happens to saved work when a phone reconnects.
+P53,Build a classroom demo,"Link downloads, offline lessons, saved progress and teacher feedback in one demo."
+P54,Set the team's goal,Agree that the platform must work for schools with weak connections.
+P55,Train school support staff,Help the team answer teachers' questions about downloads and older phones.
+P56,Assign a privacy lead,Put one person in charge of consent and safe handling of student records.
+P57,Meet local advisers,Ask teachers and students to review the plan before the next build.
+P58,Test offline with the team,Try downloading and opening lessons on the team's own devices.
+P59,Test in one classroom,Let a small class use the MVP and tell us what is confusing.
+P60,Test accessibility,"Check text size, captions, screen readers and older phones with different learners."
+P61,Test in several schools,Run a small pilot in several schools and record problems before release.
+P62,Give schools a flyer,Explain what the free platform does and how to try it.
+P63,Ask teachers to demo it,Let teachers show colleagues how lessons work without internet.
+P64,Hold feedback meetings,Meet families and teachers to hear what stops them from using it.
+P65,Run a regional pilot,Introduce the platform in nearby districts with local school support.
+P66,Shrink lesson files,Make lessons use less storage and mobile data.
+P67,Resume broken downloads,Let students continue a download after their connection drops.
+P68,Add accessible formats,"Include readable text, captions and adjustable font sizes."
+P69,Build reliable offline sync,Combine small downloads with safer syncing of students' saved work.
+P70,Write a clear license,Explain which parts of the code and lessons others may reuse.
+P71,Check content permissions,Make sure the team may share every borrowed image and lesson.
+P72,Explain privacy safeguards,"Write down what data is saved, why it is needed and how to delete it."
+P73,Prepare the DPG documents,"Publish licensing, attribution, accessibility notes and setup instructions."
+P74,Launch in one school,Release a supported version to one school and gather early reports.
+P75,Prepare a help pack,Give teachers simple printed steps and common fixes.
+P76,Translate key lessons,Make basic instructions and lessons available in local languages.
+P77,Launch across a district,"Coordinate school contacts, teaching materials and support during rollout."
+P78,Fix urgent access bugs,Start with broken downloads and missing saved progress.
+P79,Collect teacher feedback,Ask teachers for optional reports without identifying students.
+P80,Keep updates lightweight,Release small lesson updates that work on slow connections.
+P81,Plan next year's support,Train maintainers and publish a plan for fixes and future releases.
