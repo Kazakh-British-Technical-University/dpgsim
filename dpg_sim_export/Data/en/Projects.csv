@@ -35,3 +35,39 @@ P32,Essential support only,"We don't have enough resources for the full scale su
 P33,Phone and email customer support,We will conduct a customer support via both phone and email.
 P34,Support with LiveOPS,"We will not only make a support up and running, but also establish regular events and activities for our clients (LiveOPS)."
 P35,Outsourced support,We no need our team to make a customer support. Let's hire an outsource company to make it for us!
+P_SH_01,AI Market Scan,"Use AI to draft a market overview, then check its claims against public sources."
+P_SH_02,Listen to Learners,Interview employees and nonprofit trainers about barriers to practical learning.
+P_SH_03,Buyer Discovery,Ask training managers which problems would justify a paid hosting contract.
+P_SH_04,Study Both Sides,"Compare learner needs, buyer needs, and technical constraints before choosing a small scope."
+P_SH_05,Prompt a Small Demo,Generate one course flow with AI and review it before showing a local demo.
+P_SH_06,Run a Manual Pilot,Deliver lessons manually while testing whether organizations value the service.
+P_SH_07,Build the Tenant Boundary,Prototype separate organization workspaces and verify access with synthetic accounts.
+P_SH_08,Review a Working Prototype,"Use AI for routine code, then review the learner flow and core access rules."
+P_SH_09,Keep a Tiny Team,Write a short mission and retain a small team with a limited delivery scope.
+P_SH_10,Create a Review Charter,Assign an owner to each module and agree how AI-generated changes will be reviewed.
+P_SH_11,Bring Trainers into Planning,Invite learning specialists to shape the roadmap and review course usability.
+P_SH_12,Prepare a Shared Playbook,"Document the mission, review rules, and roadmap so new contributors can participate."
+P_SH_13,Test with Synthetic Accounts,Check the core course flow internally using invented learners and organizations.
+P_SH_14,Observe Real Learners,Run a consent-based pilot focused on understandable lessons and accessible navigation.
+P_SH_15,Test Workspace Isolation,"Test roles, organization boundaries, and exports before expanding the pilot."
+P_SH_16,Expand in Small Cohorts,"Test usability, access controls, and recovery with gradually larger pilot groups."
+P_SH_17,Publish a Clear Landing Page,Explain the free self-hosted edition and the paid managed service on one simple page.
+P_SH_18,Offer a Hosted Pilot,Help a small business try managed hosting and discuss a realistic support package.
+P_SH_19,Run an Open Learning Workshop,Invite businesses and nonprofits to try the platform and share learning needs.
+P_SH_20,Compare Two Customer Segments,Test demand with small businesses and nonprofits before committing to a sales strategy.
+P_SH_21,Ship a Small Hosted Service,Build essential courses and progress reports with a simple deployment and backup plan.
+P_SH_22,Make Self Hosting Practical,"Provide an installation guide, a working free deployment, and an export format."
+P_SH_23,Harden Managed Hosting,"Focus on access tests, monitoring, and restore drills for customer workspaces."
+P_SH_24,Review and Document the Core,"Review generated modules, test core flows, and document both deployment options."
+P_SH_25,Prepare the Essential Evidence,"Compile the open license, public repository, learning purpose, and data handling notes."
+P_SH_26,Ask for Community Review,Invite an external reader to check whether the evidence matches the published product.
+P_SH_27,Check Rights and Data Practices,"Review dependency notices, sample content permissions, and the use of synthetic demo data."
+P_SH_28,Prepare a Complete Evidence Pack,"Check the application guidance and document openness, usefulness, accessibility, and safeguards."
+P_SH_29,Release to a Small Cohort,Open a limited launch with a clear support channel and a manageable customer queue.
+P_SH_30,Demonstrate the Learning Flow,Show an honest live demo to training managers and explain the hosting options.
+P_SH_31,Rehearse a Safe Rollout,"Check backups, rollback instructions, and workspace access before inviting more customers."
+P_SH_32,Coordinate a Public Launch,"Prepare a tested release, contributor guide, learner documentation, and launch workshop."
+P_SH_33,Maintain the Essentials,Fix critical issues and publish known limits while keeping support promises small.
+P_SH_34,Sell Managed Support,Offer hosting and response-time packages while keeping the usable software open.
+P_SH_35,Grow a Maintainer Community,Run contributor onboarding and help nonprofits maintain their own installations.
+P_SH_36,Balance Service and Stewardship,"Plan support rotation, documentation work, and public roadmap discussions together."
