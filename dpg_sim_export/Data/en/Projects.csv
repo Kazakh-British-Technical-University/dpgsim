@@ -35,3 +35,39 @@ P32,Essential support only,"We don't have enough resources for the full scale su
 P33,Phone and email customer support,We will conduct a customer support via both phone and email.
 P34,Support with LiveOPS,"We will not only make a support up and running, but also establish regular events and activities for our clients (LiveOPS)."
 P35,Outsourced support,We no need our team to make a customer support. Let's hire an outsource company to make it for us!
+P180,Interview students about safety concerns,Community Discovery: Interview students about safety concerns
+P181,Survey campus accessibility barriers,Community Discovery: Survey campus accessibility barriers
+P182,Meet university support staff,Community Discovery: Meet university support staff
+P183,Collect reports without user interviews,Community Discovery: Collect reports without user interviews
+P184,Design anonymous reporting by default,Reporting Design: Design anonymous reporting by default
+P185,Create optional account-based reports,Reporting Design: Create optional account-based reports
+P186,Draft clear report moderation guidelines,Reporting Design: Draft clear report moderation guidelines
+P187,Require student identity for all reports,Reporting Design: Require student identity for all reports
+P188,Test the form using keyboard navigation,Accessible Prototype: Test the form using keyboard navigation
+P189,Add screen-reader labels and error messages,Accessible Prototype: Add screen-reader labels and error messages
+P190,Invite students with disabilities to test,Accessible Prototype: Invite students with disabilities to test
+P191,Build extra map features before accessibility,Accessible Prototype: Build extra map features before accessibility
+P192,Minimize the personal data collected,Privacy Safeguards: Minimize the personal data collected
+P193,Write a plain-language privacy notice,Privacy Safeguards: Write a plain-language privacy notice
+P194,Set a retention period for reports,Privacy Safeguards: Set a retention period for reports
+P195,Collect detailed activity histories,Privacy Safeguards: Collect detailed activity histories
+P196,Test with one volunteer student group,Pilot Launch: Test with one volunteer student group
+P197,Run a limited campus pilot,Pilot Launch: Run a limited campus pilot
+P198,Train campus support staff,Pilot Launch: Train campus support staff
+P199,Open the platform campus-wide immediately,Pilot Launch: Open the platform campus-wide immediately
+P200,Review access to private reports,Security Review: Review access to private reports
+P201,Invite independent security volunteers,Security Review: Invite independent security volunteers
+P202,Practice responding to a security incident,Security Review: Practice responding to a security incident
+P203,Postpone security checks until launch,Security Review: Postpone security checks until launch
+P204,Publish contribution guidelines,Open-Source Community: Publish contribution guidelines
+P205,Document the installation process,Open-Source Community: Document the installation process
+P206,Organize a community feedback session,Open-Source Community: Organize a community feedback session
+P207,Keep decisions within the core team,Open-Source Community: Keep decisions within the core team
+P208,Measure whether reported issues were resolved,Impact Evaluation: Measure whether reported issues were resolved
+P209,Ask students about trust and safety,Impact Evaluation: Ask students about trust and safety
+P210,Audit accessibility after the pilot,Impact Evaluation: Audit accessibility after the pilot
+P211,Count total reports as the only success metric,Impact Evaluation: Count total reports as the only success metric
+P212,Offer paid institutional maintenance,Long-Term Support: Offer paid institutional maintenance
+P213,Build a volunteer maintenance rota,Long-Term Support: Build a volunteer maintenance rota
+P214,Reduce scope to essential functions,Long-Term Support: Reduce scope to essential functions
+P215,Add new features without maintenance funding,Long-Term Support: Add new features without maintenance funding
