@@ -35,3 +35,39 @@ P32,Essential support only,"We don't have enough resources for the full scale su
 P33,Phone and email customer support,We will conduct a customer support via both phone and email.
 P34,Support with LiveOPS,"We will not only make a support up and running, but also establish regular events and activities for our clients (LiveOPS)."
 P35,Outsourced support,We no need our team to make a customer support. Let's hire an outsource company to make it for us!
+P36,Quick desk research,"Read public reports on disability employment and try three popular job sites yourself. Fast and cheap, but you hear no real job seekers."
+P37,Job seeker interviews,"Talk to wheelchair users, blind and Deaf candidates and people with weak internet. Learn what they check before applying."
+P38,Job site barrier audit,"Test existing job sites with a keyboard, a screen reader and a slow connection. Find where search and applying break."
+P39,Full inclusion study,"Interviews, a barrier audit and an employer survey together. The deepest picture of the problem, but slow and costly."
+P40,Paper vacancy card,"Sketch one vacancy card on paper: skills, work format and access tags. Quick to show, but nobody can click it."
+P41,Keyboard-first search demo,"A clickable search where every filter works with Tab, Enter and a screen reader. A mouse is optional."
+P42,Light text demo,"A text-only vacancy list that opens on a weak mobile connection. Plain, but it proves the idea works."
+P43,Full clickable prototype,"Search, filters, vacancy cards, a light mode and a 'Report a mistake' button in one prototype."
+P44,Founders split the roles,"The founders share design, code and outreach. No extra cost, but also no outside accessibility expertise."
+P45,Accessibility advisor,"A part-time accessibility specialist reviews forms, labels and focus order every sprint."
+P46,Disability NGO partner,A local disability organization joins as a partner. Its members test EqualWork and are paid for their time.
+P47,Inclusive core team,"Advisor, paid NGO testers and clear roles for everyone. A strong team, but it takes months to set up."
+P48,Plain vacancy list,A simple list of vacancies with skills and salary. Access details are left for later.
+P49,Access filters MVP,"Filters such as 'Step-free entrance', 'Remote interview' and 'Flexible hours'. Each tag shows its source and date, or 'Not provided'."
+P50,Trust labels MVP,"Every access fact is marked 'Employer-reported' or 'Independently checked', with the date of the last check."
+P51,Complete EqualWork MVP,"Filters, trust labels, a short how-to-apply guide on each card and a link to the official application page."
+P52,Online feedback form,"Add a short accessible form to the site and wait for answers. Cheap, but only active users reply."
+P53,Screen reader pilot,Blind and low-vision job seekers try to find and open a vacancy using only a screen reader.
+P54,Slow internet pilot,Job seekers in small towns test EqualWork on old phones and weak mobile internet.
+P55,Mixed community pilot,"One large pilot with screen reader users, wheelchair users, Deaf candidates and rural users."
+P56,Fix critical bugs,Repair only what blocks search or the apply link. Everything else has to wait.
+P57,Light text mode,Ship a lightweight text version of every page for slow connections and old phones.
+P58,Report and update flow,Job seekers can report a wrong or outdated tag. It shows 'Under review' until someone checks it.
+P59,Full accessibility sprint,"Keyboard, screen reader, light mode and the report flow, all polished. A long crunch that tires the team."
+P60,Open-source license,Publish the EqualWork code on GitHub under an open-source license. The minimum for a DPG.
+P61,Open accessibility schema,"Publish the list of access fields and a guide on how to fill them, so other job sites can reuse it."
+P62,Privacy review,"Confirm that EqualWork needs no account, no diagnosis, no CV and no medical documents, and say so clearly."
+P63,Full DPG application,"Code license, open schema, privacy policy, documentation and SDG 10 evidence in one application."
+P64,Quiet online release,Put EqualWork online and post about it once. Few people will find it at first.
+P65,Launch with NGOs,Disability organizations and employment centers share EqualWork with the people they support.
+P66,Employer onboarding,Teach employers to fill access fields honestly and to choose 'Not provided' instead of guessing.
+P67,Big public launch,"Press, social media, partners and a launch event at once. Huge reach, but exhausting for the team."
+P68,Volunteer upkeep,"Volunteers fix bugs when they have time. No budget, but also no promises."
+P69,Monthly data checks,"Every month, tags older than 90 days are flagged and employers are asked to confirm them."
+P70,Accessible support desk,"Help by email, text chat and phone, so every job seeker can ask in the way that works for them."
+P71,Long-term stewardship,"Maintainers, data checks, support and a public roadmap. EqualWork can keep running for years."
