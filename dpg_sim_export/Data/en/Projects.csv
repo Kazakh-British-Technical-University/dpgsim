@@ -35,3 +35,39 @@ P32,Essential support only,"We don't have enough resources for the full scale su
 P33,Phone and email customer support,We will conduct a customer support via both phone and email.
 P34,Support with LiveOPS,"We will not only make a support up and running, but also establish regular events and activities for our clients (LiveOPS)."
 P35,Outsourced support,We no need our team to make a customer support. Let's hire an outsource company to make it for us!
+P36,Quick online poll,"Ask the general public about routes. It is fast, but may miss people who face access barriers."
+P37,Interviews with wheelchair users,Speak directly with wheelchair users and learn about real obstacles.
+P38,Community accessibility walk,Explore streets together with people with different mobility needs.
+P39,Inclusive research program,"Pay participants, visit several districts, and validate the needs before building."
+P40,Simple map mockup,"Draw the basic map quickly, without accessibility labels."
+P41,High contrast prototype,"Test readable colors, clear icons and keyboard navigation."
+P42,Route status prototype,"Show verified, unverified and blocked routes with clear labels."
+P43,Co-designed interactive prototype,Build and test the map with wheelchair users and accessibility specialists.
+P44,Small volunteer team,"Recruit volunteers. Costs stay low, but their availability can change."
+P45,Hire a map developer,Improve the map engine and route data processing.
+P46,Recruit accessibility testers,Invite paid testers with different mobility needs.
+P47,Build a balanced team,"Hire a developer, accessibility specialist and community moderator."
+P48,Crowdsourced pins only,"Let anyone mark a barrier, but do not show whether a report was checked."
+P49,Basic barrier categories,"Add stairs, broken lifts and blocked sidewalks to the map."
+P50,Report verification labels,Show when each report was submitted and whether it was confirmed.
+P51,Accessible MVP with feedback,"Add screen-reader labels, report status and a simple feedback tool."
+P52,Promote without checking,Invite many users before the reliability of route information is tested.
+P53,Local community pilot,Test the platform with one neighborhood accessibility group.
+P54,Anonymous feedback survey,Collect opinions without asking for names or exact home addresses.
+P55,Verified routes pilot,Run field checks with users and publish the limits of your data.
+P56,Store every location trace,"Keep all location history to improve analytics, even when it is unnecessary."
+P57,Delete old reports manually,Remove stale reports when moderators have enough time.
+P58,Privacy-first route reports,Collect only necessary map details and let people report anonymously.
+P59,Safe data and moderation,"Combine minimal data collection, clear retention rules and active moderation."
+P60,Publish unclear methodology,Submit the project without explaining how route safety is verified.
+P61,Publish the source code,Share the code openly and document what the service can and cannot do.
+P62,Document data quality,"Show data sources, reporting dates and a clear correction process."
+P63,Open governance package,"Publish code, accessibility tests, privacy rules and community contribution guidance."
+P64,Fast city-wide launch,"Launch everywhere immediately, even where route checks are incomplete."
+P65,Limited verified district,Launch only in one area with verified data and expand later.
+P66,Clear uncertainty warnings,Show warnings on unverified routes and offer a report correction button.
+P67,Community-led launch,Launch gradually with accessibility groups and a rapid correction process.
+P68,Sell detailed movement data,Fund maintenance by selling personal movement histories.
+P69,Rely on occasional volunteers,"Keep costs low, but risk outdated barrier reports."
+P70,Apply for public-interest grants,Seek funding without selling user data and publish spending reports.
+P71,Community stewardship plan,"Combine grants, trained moderators and regular data-quality reviews."
