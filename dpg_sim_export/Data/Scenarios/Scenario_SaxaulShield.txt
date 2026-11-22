@@ -1,0 +1,81 @@
+{
+  "SDG": 15,
+  "Money": 1800,
+  "MapRegion": 1,
+  "PhaseProjects": [
+    [
+      "SXP1",
+      "SXP2",
+      "SXP3",
+      "SXP4"
+    ],
+    [
+      "SXP5",
+      "SXP6",
+      "SXP7",
+      "SXP8"
+    ],
+    [
+      "SXP9",
+      "SXP10",
+      "SXP11",
+      "SXP12"
+    ],
+    [
+      "SXP13",
+      "SXP14",
+      "SXP15",
+      "SXP16"
+    ],
+    [
+      "SXP17",
+      "SXP18",
+      "SXP19",
+      "SXP20"
+    ],
+    [
+      "SXP21",
+      "SXP22",
+      "SXP23",
+      "SXP24"
+    ],
+    [
+      "SXP25",
+      "SXP26",
+      "SXP27",
+      "SXP28"
+    ],
+    [
+      "SXP29",
+      "SXP30",
+      "SXP31",
+      "SXP32"
+    ],
+    [
+      "SXP33",
+      "SXP34",
+      "SXP35",
+      "SXP36"
+    ]
+  ],
+  "ScenarioEvents": [
+    "SXE1",
+    "SXE2",
+    "SXE3",
+    "SXE4",
+    "SXE5",
+    "SXE6",
+    "SXE7",
+    "SXE8",
+    "SXE9",
+    "SXE10",
+    "SXE11",
+    "SXE12",
+    "SXE13",
+    "SXE14",
+    "SXE15",
+    "SXE16",
+    "SXE17",
+    "SXE18"
+  ]
+}
