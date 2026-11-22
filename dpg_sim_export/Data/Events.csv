@@ -44,3 +44,21 @@ E42,,Good,product insights,1,Bad,product insights,-1,,,,6,TRUE,15
 E43,,Good,market insights,1,Bad,market insights,-1,,,,7,TRUE,15
 E44,,Good,product insights,2,Good,product insights,2,,,,8,TRUE,15
 E45,,Good,dev insights,2,Bad,dev insights,-1,,,,9,TRUE,15
+ZHAI01,,Good,product insights,2,Bad,product insights,-1,,,,1,TRUE,10
+ZHAI02,,Good,dev insights,1,Bad,money,-150,,,,1,TRUE,40
+ZHAI03,,Good,product insights and market insights,1,Bad,market insights,-1,,,,1,TRUE,84
+ZHAI04,,Good,dev insights,2,Bad,dev insights,-1,,,,2,TRUE,14
+ZHAI05,,Good,money,300,Good,dev insights,1,,,,2,TRUE,21
+ZHAI06,,Good,team insights,1,Good,dev insights,1,,,,3,TRUE,12
+ZHAI07,,Good,money,-50,Bad,dev insights,-1,,,,3,TRUE,40
+ZHAI08,,Good,product insights,1,Bad,market insights,-2,,,,4,TRUE,12
+ZHAI09,,Good,market insights,1,Bad,market insights,-1,,,,4,FALSE,6
+ZHAI10,,Good,market insights,1,Good,money,150,,,,5,TRUE,15
+ZHAI11,,Good,product insights,1,Bad,market insights,-2,,,,5,TRUE,44
+ZHAI12,,Good,product insights,1,Bad,product insights,-2,,,,6,TRUE,16
+ZHAI13,,Good,market insights,1,Good,dev insights,1,,,,6,TRUE,38
+ZHAI14,,Good,dev insights,1,Bad,market insights,-2,,,,7,TRUE,10
+ZHAI15,,Good,money,200,Bad,market insights,-2,,,,7,TRUE,21
+ZHAI16,,Good,product insights,1,Bad,dev insights,-1,,,,8,TRUE,12
+ZHAI17,,Good,market insights,1,Bad,product insights,-2,,,,9,TRUE,14
+ZHAI18,,Good,team insights,1,Good,money,50,,,,9,FALSE,5
