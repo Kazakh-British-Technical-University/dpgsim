@@ -32,7 +32,7 @@ var teamSize = 0
 var maxTeamSize = 0
 func UpdateMinis():
 	spawnPoints.clear()
-	spawnPoints.append($Worker1.global_position)
+	spawnPoints.append($Worker1.position)
 	$Worker11.visible = false
 	for seat in seats:
 		seat.visible = false
@@ -56,7 +56,7 @@ func UpdateMinis():
 func AddMiniWorker(worker, spot):
 	spot.texture = load("res://Sprites/MainSession/Worker" + worker + ".png")
 	spot.visible = true
-	spawnPoints.append(spot.global_position)
+	spawnPoints.append(spot.position)
 
 ###################################################
 var particle = preload("res://Scenes/MainSession/PointParticle.tscn")
@@ -107,7 +107,7 @@ func SpawnParticle(point, clean):
 		add_child(newParticle)
 	
 	if not clean:
-		newParticle.global_position = spawnPoints[rng.randi_range(0, spawnPoints.size()-1)]
+		newParticle.position = spawnPoints[rng.randi_range(0, spawnPoints.size()-1)]
 		newParticle.Launch(point)
 	else:
 		newParticle.Clean(point)

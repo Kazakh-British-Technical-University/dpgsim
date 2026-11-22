@@ -10,14 +10,14 @@ var present = true
 
 var good = 0
 var bad = 0
-var goodPos : Vector2
-var badPos : Vector2
 
 func Start():
 	visible = present
 	UpdateText()
-	goodPos = goodLabel.rect_global_position + goodLabel.rect_size / 2
-	badPos = badLabel.rect_global_position + badLabel.rect_size / 2
+
+func GetPointPosition(isGood) -> Vector2:
+	var target = goodLabel if isGood else badLabel
+	return target.get_global_transform().xform(target.rect_size / 2)
 
 func LocalizeText(labelKey: String):
 	label.text = trans.local(labelKey)
