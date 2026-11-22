@@ -35,3 +35,39 @@ P32,Essential support only,"We don't have enough resources for the full scale su
 P33,Phone and email customer support,We will conduct a customer support via both phone and email.
 P34,Support with LiveOPS,"We will not only make a support up and running, but also establish regular events and activities for our clients (LiveOPS)."
 P35,Outsourced support,We no need our team to make a customer support. Let's hire an outsource company to make it for us!
+P36,Quick waste research,"Search the web, read city reports and ask AI how waste is collected in your city. Fast, but shallow."
+P37,Talk to residents,"Interview neighbours, students and janitors. Why don't they sort their trash? What would help them?"
+P38,Study recycling tech,Learn how recycling plants work and which apps and open datasets already exist for waste sorting.
+P39,Full field study,"Visit landfills, recycling points and families at home. It takes long, but you will truly understand the problem."
+P40,Paper sorting guide,"A simple printed guide: which item goes to which bin. Ugly, but it proves people want this help."
+P41,Manual chat helper,Users send a photo of their trash in a messenger and you answer by hand which bin to use.
+P42,Scanner demo,"A technical demo that recognizes a few items by camera. It works, but nobody enjoys using it yet."
+P43,Clickable app prototype,A good-looking prototype with a sorting guide and a recycling map. Ready to show to real users.
+P44,Green mission only,"Your team knows the mission: less trash in landfills, more in recycling."
+P45,Values and roadmap,Openness and honesty guide your team. A roadmap shows which features come first.
+P46,Values and green mission,Your team shares eco values and a clear mission. Everyone knows why the work matters.
+P47,"Mission, values and roadmap","A complete team culture: why you do it, how you behave and what you build next."
+P48,Test with friends,"Only your team and friends try the app. Quick, but they are too polite to criticize."
+P49,Dormitory test group,A few dozen students from a dormitory use the app for a month and share honest feedback.
+P50,Public beta,Put the app online and let any resident try it. Real users bring real problems.
+P51,Step-by-step district testing,"Test in one building, then a block, then a whole district. Slow, but very reliable."
+P52,Simple landing page,A page that explains how the app helps to sort waste. Nothing more.
+P53,Eco social media page,Short videos with sorting tips on social media. Cheap and close to young people.
+P54,Website and eco page,"Social media brings people in, the website explains the project and links to the app."
+P55,Full green campaign,"Website, social media, eco bloggers, school visits and posters near recycling bins."
+P56,One small server,"One simple server for the sorting guide and the map. Cheap, but it may slow down later."
+P57,Cloud hosting,"Rent cloud servers. A bit pricey, but the app grows easily when the city joins."
+P58,Own server cluster,"Several of your own servers with backups, so the recycling map never goes offline."
+P59,Infrastructure team,"Hire people to plan and maintain servers, the open dataset and the recognition model."
+P60,Apply on your own,Prepare the documents yourself and submit them through the DPG Alliance website.
+P61,Ask DPG experts for help,Contact the DPG office and get advice on how to present your waste-sorting app.
+P62,Prove SDG 12 link only,Show that your app supports responsible consumption. Hope the rest will be fine.
+P63,Check all 9 DPG indicators,"Go through all nine indicators: open license, clear ownership, privacy, documentation and more."
+P64,Launch campaign,"The whole team works on promotion: posts, posters and news about the release."
+P65,Clean-up day launch,Release the app at a city clean-up event where people sort trash together.
+P66,Basic launch checklist,"There is no time for everything, so you fix only the most important issues before release."
+P67,Full launch preparation,"Everything is checked: servers, map data, translations and promotion. It costs a lot."
+P68,Minimal support,You only fix critical bugs. The rest waits.
+P69,Email and chat support,Users can ask questions by email and chat. Someone always answers.
+P70,Support and eco challenges,Support plus monthly sorting challenges and rewards to keep users active.
+P71,Volunteer community support,Trained volunteers from the community answer questions and update the recycling map.
