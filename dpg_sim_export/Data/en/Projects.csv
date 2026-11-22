@@ -35,3 +35,39 @@ P32,Essential support only,"We don't have enough resources for the full scale su
 P33,Phone and email customer support,We will conduct a customer support via both phone and email.
 P34,Support with LiveOPS,"We will not only make a support up and running, but also establish regular events and activities for our clients (LiveOPS)."
 P35,Outsourced support,We no need our team to make a customer support. Let's hire an outsource company to make it for us!
+P36,Community interviews,"Interview students, parents and teachers in rural schools to identify barriers to learning."
+P37,Education data review,Analyze public education statistics and connectivity data before defining the product scope.
+P38,School field visits,"Visit remote schools to observe lessons, devices and connectivity in real conditions."
+P39,Full discovery study,"Combine interviews, surveys and data analysis into a detailed needs assessment."
+P40,Paper wireframes,Sketch the key learning journeys before investing in interface development.
+P41,Clickable prototype,Build a clickable prototype and test navigation with a small group of students.
+P42,Offline-first prototype,Prototype downloadable lessons and low-bandwidth access for schools with weak internet.
+P43,Complete UX prototype,"Create a polished prototype covering student, teacher and administrator journeys."
+P44,Volunteer educators,Invite volunteer teachers to review content and advise the product team.
+P45,Hire core developers,Recruit developers to establish a reliable foundation for the platform.
+P46,Build a multidisciplinary team,"Recruit product, design, engineering and education expertise at once."
+P47,Partner with a university,Establish a partnership with a university to access student contributors and research support.
+P48,Basic lesson library,Release a searchable library of curriculum-aligned learning materials.
+P49,Student progress tracking,Add simple progress tracking so learners and teachers can see completed lessons.
+P50,Offline lesson downloads,Allow students to download learning packs and study without a continuous connection.
+P51,Accessible MVP,"Build an MVP with accessibility features, low-data mode and teacher tools."
+P52,Pilot in one school,Run a small pilot in one rural school and collect structured feedback.
+P53,Multi-school pilot,Test the platform across several schools with different connectivity conditions.
+P54,Teacher ambassador program,Invite respected teachers to demonstrate the platform and share practical feedback.
+P55,Independent evaluation,Commission an independent evaluation of learning outcomes and usability.
+P56,Improve core learning tools,Prioritize reliability and improve the most-used learning features.
+P57,Add teacher workspace,Create tools for teachers to assign materials and monitor class progress.
+P58,Strengthen platform security,"Invest in secure accounts, data minimization and privacy controls for minors."
+P59,Expand content catalogue,Work with educators to add more subjects and locally relevant materials.
+P60,Document open-source license,Choose and document an appropriate open-source license and contribution rules.
+P61,Prepare public documentation,"Publish installation, API and maintainer documentation for future contributors."
+P62,Complete DPG readiness review,"Review interoperability, governance, privacy and public-good requirements."
+P63,Invite external maintainers,Build a transparent process for external contributors and community governance.
+P64,Soft launch,Release to a limited group and monitor stability before wider rollout.
+P65,Launch with school partners,Coordinate a public launch with schools and local education organizations.
+P66,Open community launch,Announce the open-source release and invite educators and developers to contribute.
+P67,Large-scale launch campaign,Invest in a coordinated campaign to reach schools across multiple regions.
+P68,Community support network,Create a volunteer support network for teachers and students.
+P69,Institutional partnerships,Secure long-term partnerships with education organizations and public institutions.
+P70,Sustainable funding model,Develop transparent grants and donations to keep core services free.
+P71,Continuous improvement cycle,"Establish regular feedback, security updates and community-led releases."
