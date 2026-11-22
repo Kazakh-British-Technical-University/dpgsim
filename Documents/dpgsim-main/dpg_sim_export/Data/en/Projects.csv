@@ -1,0 +1,73 @@
+ID,Title,Description
+P0,Limited research,"Just a simple research. Web searching, AI asking and putting it all together in a dataset."
+P1,Customer focus research,Who is your main customer? Who will benefit from your service? How can you deliver a value?
+P2,Technical focus research,How to make what you wana make? What technologies would you use? How can they work together?
+P3,Full scale research,You throw all your resources and efforts to make your product the best fit possible. It will help in a long run... probably.
+P4,Essential prototype,This prototipe will just show that your idea works. It is ugly. It is buggy. But it proves the very basic concept.
+P5,Service prototype,"This isn't a technical prototype. You have your landing page up and running, and you should do everything else by hand with every client."
+P6,Technical prototype,"Now you know, that everything is working on the technical side. User experience? Never heard about this."
+P7,Product MVP,This MVP proves everything and you can ship it to selected audience. It is well designed. Well built. And it took time and effort to make it this early.
+P8,Mission only,Now your crew knows why are you doing what you are doing.
+P9,Values and Strategy,Values will help your team to make important decisions. Strategy will navigate them on which decisions they should make.
+P10,Values and Mission,Values will help your team to make important decisions. Mission will give them purpose to make these decisions.
+P11,"Values, Mission and Strategy","You have done it all. Now your team knows why, how, and which decisions they should make. It invokes confidence."
+P12,Internal testing,Your team and friends are enough to test your product. There is no need to gather the audience.
+P13,Medium focus group testing,Your testing group consists of a few dozens of people both from your audience and new ones. It will help to catch criticals in your product.
+P14,Real-world testing,It is relatively good idea to just put your product online and acquire some users to simply use it. If you are ready to rapidly fix all appearing problems.
+P15,Cascade testing with user groups,"Full-scale testing with several stages, each bigger. You have prepared and made it all"
+P16,Website building,"You definitely need a website. Anything else? Probaply, not."
+P17,Social media setup,Who needs a website when you can make it all with a proper social media account?
+P18,Website and Social Media,"It is often easier to gather audience via social media, but they should be landed somewhere."
+P19,Full marketing commitment,"Social media, website, community hub, press releases, and contacts with influencers. You should have it all to succeed."
+P20,Single server,Simple backand will be more then enough. So why bother and spend additional money on an ifrastructure? What could possibly go wrong?
+P21,Cloud infrastructure,"Why should we bother to make our own server if we can use a cloud? It is a little bit more expensive, but definitely much more convenient."
+P22,Multiple servers,We know how to make it on our own with all the redundancy we need to provide a consistent service to our clients.
+P23,DevOPS team with an infrastructure,Infrastructure needs to be carfully planned and maintained. So we need to hire a DevOPS team to help use make this project.
+P24,Self application,Just prepare all the documents and send it according to instructions on a DPG website.
+P25,Contact DPG office to assist,"We can make it with the DPG office, if they are able to help."
+P26,Address SDG relevance only,You have checked if your product is SDG relevant or not. If it is - so why bother? It will work anyway.
+P27,DPG indicator checklist,"You have your checklist, so you go thugh all 9 indicators and prepare properly your application."
+P28,Release marketing campaign,Your team is fully focused on a marketing campaign for the release. The technical side of things is not in focus.
+P29,Release event,Just throw a release event to attract an audience. They will watch the stream and then they will use your product.
+P30,Some release preparations,"You clearly have not enough time to make it all, but you can address the majore issues and prepare the campaign on a decent level."
+P31,Full scale release preparations,"Your team is working on the release, giving attention to everything. It will take time. But since you have one, you can afford it."
+P32,Essential support only,"We don't have enough resources for the full scale support, so we will do only bare essentials."
+P33,Phone and email customer support,We will conduct a customer support via both phone and email.
+P34,Support with LiveOPS,"We will not only make a support up and running, but also establish regular events and activities for our clients (LiveOPS)."
+P35,Outsourced support,We no need our team to make a customer support. Let's hire an outsource company to make it for us!
+P36,Quick Waste Survey,Ask a few local cafes how much edible food they discard each day.
+P37,Community Interviews,Interview charities and food donors to understand their daily challenges.
+P38,Food Safety Research,Study donation rules and safe food handling before designing the service.
+P39,Complete Food Rescue Study,"Research donors, charities, food safety, and delivery needs in detail."
+P40,Paper Matching Prototype,Draw simple screens showing how a cafe offers food to a charity.
+P41,Manual Donation Pilot,Coordinate food donations using messages and spreadsheets.
+P42,Interactive App Prototype,Build a clickable demo with food listings and pickup requests.
+P43,Working Rescue Prototype,"Create a small working system for donors, charities, and pickups."
+P44,Shared Mission Meeting,Explain why reducing food waste matters to the whole team.
+P45,Volunteer Coordination Plan,Define responsibilities for volunteers and partner organizations.
+P46,Food Safety Training,Train the team to recognize unsafe donations and report problems.
+P47,Complete Team Strategy,"Set clear roles, safety standards, development goals, and team values."
+P48,Internal App Test,Ask team members to test donation listings and pickup requests.
+P49,Charity Feedback Sessions,Invite several charities to test the donation process.
+P50,Real Donation Trial,Run a small pilot with real cafes and supervised food pickups.
+P51,Multi-Partner Pilot,Test the full service with several donors and charities.
+P52,Local Cafe Posters,Place simple posters explaining how businesses can donate surplus food.
+P53,Charity Information Page,Publish clear instructions for charities that want to join.
+P54,Community Awareness Campaign,Share food waste facts and invite local partners to participate.
+P55,Citywide Partner Campaign,"Organize outreach to cafes, supermarkets, charities, and volunteers."
+P56,Basic Donation Database,Store food listings and pickup requests in one simple system.
+P57,Hosted Matching Service,Use managed hosting to make food listings easier to access.
+P58,Backup and Tracking System,Add backups and pickup tracking to reduce lost donation requests.
+P59,Reliable Rescue Platform,"Build monitoring, backups, and reliable matching for growing demand."
+P60,Publish Open Source Code,Release the app code so other communities can study and reuse it.
+P61,Open Documentation,Write installation instructions and guidelines for contributors.
+P62,Privacy and Access Review,Review personal data handling and accessibility before release.
+P63,Full DPG Readiness Review,"Review licensing, documentation, privacy, inclusion, and SDG impact."
+P64,Quiet Local Launch,Open the app to a small number of trusted food donation partners.
+P65,Community Launch Event,"Demonstrate the app to local cafes, volunteers, and charities."
+P66,Gradual City Launch,Expand the service carefully while monitoring early pickup problems.
+P67,Coordinated Public Launch,"Prepare support, partner training, and public communication before launch."
+P68,Basic Email Support,Answer essential questions from donors and charity partners.
+P69,Dedicated Partner Support,Help organizations resolve pickup and account problems.
+P70,Safety and Service Monitoring,"Monitor failed pickups, food safety reports, and service reliability."
+P71,Long-Term Rescue Operations,Build a support process with partner feedback and regular improvements.
