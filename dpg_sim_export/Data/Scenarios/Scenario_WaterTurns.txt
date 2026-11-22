@@ -1,0 +1,17 @@
+{
+  "SDG": 6,
+  "Money": 1800,
+  "MapRegion": 6,
+  "PhaseProjects": [
+    ["P_WT_01", "P_WT_02", "P_WT_03", "P_WT_04"],
+    ["P_WT_05", "P_WT_06", "P_WT_07", "P_WT_08"],
+    ["P_WT_09", "P_WT_10", "P_WT_11", "P_WT_12"],
+    ["P_WT_13", "P_WT_14", "P_WT_15", "P_WT_16"],
+    ["P_WT_17", "P_WT_18", "P_WT_19", "P_WT_20"],
+    ["P_WT_21", "P_WT_22", "P_WT_23", "P_WT_24"],
+    ["P_WT_25", "P_WT_26", "P_WT_27", "P_WT_28"],
+    ["P_WT_29", "P_WT_30", "P_WT_31", "P_WT_32"],
+    ["P_WT_33", "P_WT_34", "P_WT_35", "P_WT_36"]
+  ],
+  "ScenarioEvents": ["E_WT_01", "E_WT_02", "E_WT_03", "E_WT_04", "E_WT_05", "E_WT_06", "E_WT_07", "E_WT_08", "E_WT_09"]
+}

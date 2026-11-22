@@ -35,3 +35,39 @@ P32,Essential support only,"We don't have enough resources for the full scale su
 P33,Phone and email customer support,We will conduct a customer support via both phone and email.
 P34,Support with LiveOPS,"We will not only make a support up and running, but also establish regular events and activities for our clients (LiveOPS)."
 P35,Outsourced support,We no need our team to make a customer support. Let's hire an outsource company to make it for us!
+P_WT_01,Walk the last mile,Follow the water from the last gate to the last field. Time the delay.
+P_WT_02,Read the gate book,Compare a week of pencilled turns with the hours actually delivered.
+P_WT_03,Sit the night shift,Join the night keeper and trace how word of a delay travels after dark.
+P_WT_04,Map both banks,Ask each village to mark gates and footpaths on the same sheet.
+P_WT_05,Paper wheel,Pin a turning dial to the gate board and ask growers to find their slot.
+P_WT_06,Text a turn,Try a one-line text with a gate name and a start time on a basic phone.
+P_WT_07,Stamp the revision,Give each printed roster a number that a caller can read aloud.
+P_WT_08,Build a pocket roster,Cache a whole rotation on a phone and test it out of signal range.
+P_WT_09,Pair the keepers,Ask one keeper from each end to review schedule changes together.
+P_WT_10,Train a caller,Teach a volunteer to read the roster to growers who share a phone.
+P_WT_11,Recruit a tester,Hire a field tester who can reproduce errors at the gate.
+P_WT_12,Rotate the on-call lead,Train four stewards so the same keeper need not answer every night.
+P_WT_13,Post one gate,Publish a read-only roster for one gate and collect corrections in person.
+P_WT_14,Log a handover,Let keepers record when water actually passes to the next plot.
+P_WT_15,Print the week,Fit the next seven days and a revision number on a single sheet.
+P_WT_16,Build a swap slip,Let two growers propose a swap and show it as pending until both agree.
+P_WT_17,Time a missed turn,Ask late arrivals when they first heard about the change.
+P_WT_18,Try the phone tree,Call the first grower and measure how long the message takes to reach the last.
+P_WT_19,Count empty slots,Compare the pilot roster with gate logs to find unused hours.
+P_WT_20,Run a dry rehearsal,Have both villages act out a revised rotation before opening the gate.
+P_WT_21,Flag stale copies,Show when a phone last received a roster from the keeper.
+P_WT_22,Keep both edits,Save conflicting changes side by side for a keeper to reconcile.
+P_WT_23,Add travel time,Show when water should reach the field after the gate opens.
+P_WT_24,Test a lost phone,Restore the roster on a spare handset during a simulated outage.
+P_WT_25,Publish the format,Describe each roster column so another canal can build its own reader.
+P_WT_26,Check permissions,Trace who owns the map and which parts the team can share.
+P_WT_27,Make a sample week,Replace real assignments with fictional turns for the public demo.
+P_WT_28,Package the toolkit,"Bundle the source, licence and sample roster for a second village."
+P_WT_29,Start at one gate,Launch with a small group and settle early disputes in person.
+P_WT_30,Host a gate walk,Let growers follow one live handover and question the keeper.
+P_WT_31,Train the printers,Teach shop staff to recognise the current revision before posting it.
+P_WT_32,Stage a canal relay,Roll out gate by gate with a steward at each handover.
+P_WT_33,Check the board,Compare the posted sheet with the current roster once a week.
+P_WT_34,Review missed turns,Invite growers from the last plots to review gaps after each rotation.
+P_WT_35,Practise a restore,Recover the last agreed roster from a backup before the next season.
+P_WT_36,Hand over the keys,Give the cooperative a release checklist and practise changing maintainers.
