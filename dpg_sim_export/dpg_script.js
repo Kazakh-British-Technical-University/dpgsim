@@ -281,6 +281,13 @@ function CSVToArray(strData, strDelimiter)
 		column++;
 	}
 
+	// A row is only added to "lines" when the next line break is found,
+	// so the last row is lost if the file does not end with a line break.
+	// Add it here, unless it is just the empty row after a final line break.
+	if (column > 1 || (column == 1 && dict[0] !== "")) {
+		lines["Lines"].push(dict);
+	}
+
 	// Return the parsed data.
 	//return (arrData);
 	return (lines);
