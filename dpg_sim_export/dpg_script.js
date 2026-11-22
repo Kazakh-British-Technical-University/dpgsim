@@ -17,36 +17,19 @@ async function getAvailableLanguages()
 
 function getPreferredLanguage()
 {
-	// Check URL parameters
-	let result = getURLparam("lang");
-	if (result) return result 
-		
-	// Check preferred browser languages (direct)
-	let availableLanguagePaths = availableLanguages.map(function (item) { return item["Path"].toLowerCase() })
-	navigator.languages.every(browserLanguage => {
-		if (availableLanguagePaths.includes(browserLanguage)) 
-		{
-			result = browserLanguage;
-			return false;
+	const paths = availableLanguages.map(language => language.Path);
+	const preferences = [getURLparam("lang"), ...navigator.languages];
+	for (const preference of preferences) {
+		if (!preference) continue;
+		const subtags = preference.toLowerCase().split("-");
+		while (subtags.length) {
+			const tag = subtags.join("-");
+			const match = paths.find(path => path.toLowerCase() === tag);
+			if (match) return match;
+			subtags.pop();
 		}
-	});
-	if (result) return result
-
-	// Check preferred browser languages (indirect, like en = en-US, en-UK, etc.)
-	navigator.languages.every(browserLanguage => {
-		availableLanguagePaths.every(language => {
-			if (browserLanguage.startsWith(language))
-			{
-				result = language;
-				return false;
-			}
-		})
-		if (result) return false
-	});
-	if (result) return result
-
-	// Set default
-	return availableLanguagePaths[0]
+	}
+	return paths[0];
 }
 
 function getURLparam(name) 
