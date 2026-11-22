@@ -44,3 +44,18 @@ E42,,Good,product insights,1,Bad,product insights,-1,,,,6,TRUE,15
 E43,,Good,market insights,1,Bad,market insights,-1,,,,7,TRUE,15
 E44,,Good,product insights,2,Good,product insights,2,,,,8,TRUE,15
 E45,,Good,dev insights,2,Bad,dev insights,-1,,,,9,TRUE,15
+E300,,Good,product insights,2,Bad,product insights,-1,,,,1,TRUE,10
+E301,,Good,product insights,1,Bad,product insights,-1,,,,1,FALSE,7
+E302,,Good,dev insights,2,Bad,dev insights,-1,,,,2,TRUE,12
+E303,,Good,market insights,1,Bad,market insights,-2,,,,2,FALSE,8
+E304,,Good,money,-150,Bad,product insights,-1,,,,3,TRUE,14
+E305,,Good,team insights,1,Bad,dev insights,-1,,,,3,FALSE,6
+E306,,Good,product insights,1,Bad,market insights,-2,,,,4,TRUE,9
+E307,,Good,product insights,2,Bad,product insights,-1,,,,4,FALSE,9
+E308,,Good,market insights,1,Bad,market insights,-2,,,,5,TRUE,11
+E309,,Good,product insights,2,Bad,market insights,-1,,,,6,TRUE,13
+E310,,Good,money,-150,Bad,dev insights,-2,,,,6,FALSE,10
+E311,,Good,dev insights,2,Bad,dev insights,-1,,,,7,TRUE,10
+E312,,Good,market insights,1,Bad,market insights,-2,,,,8,TRUE,12
+E313,,Good,money,300,Bad,market insights,-2,,,,9,TRUE,8
+E314,,Good,product insights,1,Bad,market insights,-1,,,,9,FALSE,6
