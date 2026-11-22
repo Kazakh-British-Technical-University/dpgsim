@@ -1,0 +1,13 @@
+ID,Image,First option outcome status,First option outcome value (param),First option outcome value (value),Second option outcome status,Second option outcome value (param),Second option outcome value (value),Condition trigger type,Condition trigger value,Default weight,Phase,FromStart,Day
+E58,,Good,market insights,1,Good,product insights,1,,,,1,TRUE,8
+E59,,Good,dev insights,1,Good,product insights,1,,,,2,TRUE,8
+E60,,Bad,money,200,Good,team insights,1,,,,3,TRUE,7
+E61,,Good,product insights,1,Good,money,-100,,,,4,TRUE,8
+E62,,Bad,money,300,Good,market insights,1,,,,4,FALSE,8
+E63,,Bad,market insights,-1,Good,money,-200,,,,5,TRUE,10
+E64,,Good,market insights,1,Good,product insights,1,,,,6,TRUE,6
+E65,,Bad,money,300,Good,product insights,1,,,,6,FALSE,8
+E66,,Good,market insights,1,Good,product insights,1,,,,7,TRUE,7
+E67,,Good,market insights,1,Good,dev insights,1,,,,7,FALSE,6
+E68,,Good,market insights,2,Good,dev insights,1,,,,8,TRUE,12
+E69,,Good,product insights,1,Good,money,-200,,,,9,FALSE,7
