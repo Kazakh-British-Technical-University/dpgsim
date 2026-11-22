@@ -35,3 +35,39 @@ P32,Essential support only,"We don't have enough resources for the full scale su
 P33,Phone and email customer support,We will conduct a customer support via both phone and email.
 P34,Support with LiveOPS,"We will not only make a support up and running, but also establish regular events and activities for our clients (LiveOPS)."
 P35,Outsourced support,We no need our team to make a customer support. Let's hire an outsource company to make it for us!
+P900,Quick desk research,"A few days of web searches, news about seal deaths and public reports. Fast and cheap, but shallow."
+P901,Coastal community research,"Talk to fishers, rangers and beach walkers. Who sees the seals? What would make them send a report?"
+P902,Technical research,"Which phones, maps and image-recognition tools can work on a windy coast with weak internet?"
+P903,Full expedition research,"Interviews, a field trip along the coast and a deep look at tech and science data. Slow and costly, but you will know the Caspian well."
+P904,Bare-bones report form,"One form: photo, place, time. It is ugly and buggy, but it proves that people will send reports."
+P905,Chat-bot prototype,Reports come in through a messenger chat-bot and land in a spreadsheet. You check and sort every one by hand.
+P906,Technical prototype,"The map, the database and a first seal-detection model work together. Nobody has checked if it is easy to use."
+P907,Early product MVP,"A polished app with a map, reports and photo recognition, ready for a small group of fishers. It took a lot of time this early."
+P908,Mission only,Everyone on the team knows the mission: protect Caspian seals with open data.
+P909,Values and strategy,"Values like ""data is open"" and ""do no harm"" guide decisions. The strategy shows which coasts to cover first."
+P910,Values and mission,"Values guide everyday decisions, and the mission reminds the team why the seals need them."
+P911,"Values, mission and strategy","Your team knows why, how and where to act. New members understand the project from day one."
+P912,Internal testing,Your team and friends walk the beach and send test reports. No outside users yet.
+P913,Fishers and divers focus group,"A few dozen fishers, divers and students test the app and tell you what is confusing."
+P914,Real-world testing,Publish the app and let anyone on the coast use it. Be ready to fix problems fast.
+P915,Step-by-step coastal testing,"First your team, then one fishing village, then the whole coast. Each round is bigger than the last."
+P916,Project website,A website with the live map and a guide on how to report. Anything else? Probably not.
+P917,Social media page,Seal photos do well online. Maybe a social media page is all you need.
+P918,Website and social media,"Social media gathers people, and the website shows them the live map and the open data."
+P919,Full coastal outreach,"Website, social media, posters in harbors, school talks, local TV and partners. Everyone on the coast should know."
+P920,Single server,One small server for the map and reports. Cheap. What could go wrong during a mass stranding?
+P921,Cloud hosting,"Cloud servers grow when thousands of reports arrive after a storm. A bit more expensive, but much easier."
+P922,Own backup servers,"Several servers you run yourself, with backups, so the open dataset never goes offline."
+P923,DevOps team and infrastructure,"Hire specialists to plan and run the servers, data backups and AI model updates."
+P924,Self application,"Fill in the DPG application yourself and send it, following the instructions on the website."
+P925,Ask the DPG team for help,Contact the Digital Public Goods Alliance team and prepare the application with their guidance.
+P926,SDG relevance only,"You show that the app supports SDG 14, Life Below Water. Surely that is enough?"
+P927,Full DPG indicator checklist,"Check all 9 indicators: SDG relevance, open license, ownership, platform independence, documentation, data export, privacy, standards and do no harm."
+P928,Release campaign,"The whole team works on press, posts and posters. Technical polish has to wait."
+P929,Seafront launch event,"A launch event on the seafront, streamed online. People watch, then download the app."
+P930,Some release preparations,There is not enough time for everything. Fix the major issues and run a decent campaign.
+P931,Full release preparations,"Every detail is checked: app stores, the open data portal, a press kit and partner news."
+P932,Essential support only,You answer only critical bug reports. There are no resources for more.
+P933,Hotline and email support,"A phone and email line, so fishers can report problems, and even strandings, without the app."
+P934,Support with community events,"Support plus regular events: seal count days, beach clean-ups and open data hackathons."
+P935,Outsourced support,"Hire an outside company to answer users, so your team can focus on the app."
