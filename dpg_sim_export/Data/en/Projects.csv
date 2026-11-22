@@ -35,3 +35,39 @@ P32,Essential support only,"We don't have enough resources for the full scale su
 P33,Phone and email customer support,We will conduct a customer support via both phone and email.
 P34,Support with LiveOPS,"We will not only make a support up and running, but also establish regular events and activities for our clients (LiveOPS)."
 P35,Outsourced support,We no need our team to make a customer support. Let's hire an outsource company to make it for us!
+P_GAUGE01,Bench Interviews,Ask two workshops which measurements they repeat most often.
+P_GAUGE02,Tool Inventory,List the calipers and rulers already used by local workshops.
+P_GAUGE03,Paired Readings,Compare how often two people get the same reading at one bench.
+P_GAUGE04,Workshop Study,Observe jobs across several shops to see where readings start to differ.
+P_GAUGE05,Paper Log,"Sketch a one-page form with fields for tool, units and reference."
+P_GAUGE06,Phone Form,Build a simple entry screen a technician can use at a bench.
+P_GAUGE07,Offline Log,Save readings locally and export them when a connection returns.
+P_GAUGE08,Two Prototype Trial,Compare a paper workflow and a phone workflow with real users.
+P_GAUGE09,Volunteer Review,Ask an experienced machinist to review the first instructions.
+P_GAUGE10,Documentation Pair,Split guide writing and bench testing between two contributors.
+P_GAUGE11,Workshop Fellows,Invite technicians from several shops to test and explain the checks.
+P_GAUGE12,Maintainer Training,Train local contributors to review records and update the guides.
+P_GAUGE13,Caliper Pilot,Publish one caliper check with sample readings and a printable sheet.
+P_GAUGE14,Two Tool Pilot,Add a ruler check and compare how users record the two tools.
+P_GAUGE15,Offline Pilot,Let testers run a check and save results without a network.
+P_GAUGE16,Shared Pilot Kit,"Ship offline forms, printable guides and examples for several tools."
+P_GAUGE17,One Shop Trial,Follow one operator through a check during a normal shift.
+P_GAUGE18,Open Bench Demo,Run a public demo where anyone can try the same reference piece.
+P_GAUGE19,Blind Repeat Trial,Ask two shops to repeat a check before they see each other's readings.
+P_GAUGE20,Multi Shop Trial,Run a shared trial across shops and compare where their procedures differ.
+P_GAUGE21,Units and Limits,Check unit labels and add clear warnings to sample records.
+P_GAUGE22,Schema and Export,"Define the fields, validate them and document the CSV export."
+P_GAUGE23,Offline Sync,Keep input local and guard against duplicate imports.
+P_GAUGE24,Cross Tool Tests,"Build tests for different tools, export formats and missing values."
+P_GAUGE25,License Audit,"Review the licenses for code, guides and the public example records."
+P_GAUGE26,Public Data Policy,Decide which fields can be shared and who can approve publication.
+P_GAUGE27,Reviewer Pack,Collect the documentation and sample exports in a short review bundle.
+P_GAUGE28,Open Governance,Write down how outside contributors can challenge or change a method.
+P_GAUGE29,Downloadable Kit,"Publish the guides, sample data and a versioned download."
+P_GAUGE30,Demo at the Bench,Show the release to shop owners using one clear example.
+P_GAUGE31,Offline Release,Ship a print-ready guide and a copy that runs without an account.
+P_GAUGE32,Partner Launch,Train partner workshops to run their own demos and collect feedback.
+P_GAUGE33,Issue Triage,Pick the first problems from the public tracker and assign owners.
+P_GAUGE34,Quarterly Review,Set dates for reviewing templates and retiring obsolete examples.
+P_GAUGE35,Regional Support,Give partner workshops a shared channel for reference questions.
+P_GAUGE36,Handover Playbook,Write down how to publish updates and hand over the release keys.

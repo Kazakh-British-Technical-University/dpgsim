@@ -1,0 +1,73 @@
+{
+  "SDG": 9,
+  "Money": 1800,
+  "MapRegion": 2,
+  "PhaseProjects": [
+    [
+      "P_GAUGE01",
+      "P_GAUGE02",
+      "P_GAUGE03",
+      "P_GAUGE04"
+    ],
+    [
+      "P_GAUGE05",
+      "P_GAUGE06",
+      "P_GAUGE07",
+      "P_GAUGE08"
+    ],
+    [
+      "P_GAUGE09",
+      "P_GAUGE10",
+      "P_GAUGE11",
+      "P_GAUGE12"
+    ],
+    [
+      "P_GAUGE13",
+      "P_GAUGE14",
+      "P_GAUGE15",
+      "P_GAUGE16"
+    ],
+    [
+      "P_GAUGE17",
+      "P_GAUGE18",
+      "P_GAUGE19",
+      "P_GAUGE20"
+    ],
+    [
+      "P_GAUGE21",
+      "P_GAUGE22",
+      "P_GAUGE23",
+      "P_GAUGE24"
+    ],
+    [
+      "P_GAUGE25",
+      "P_GAUGE26",
+      "P_GAUGE27",
+      "P_GAUGE28"
+    ],
+    [
+      "P_GAUGE29",
+      "P_GAUGE30",
+      "P_GAUGE31",
+      "P_GAUGE32"
+    ],
+    [
+      "P_GAUGE33",
+      "P_GAUGE34",
+      "P_GAUGE35",
+      "P_GAUGE36"
+    ]
+  ],
+  "ScenarioEvents": [
+    "E_GAUGE01",
+    "E_GAUGE02",
+    "E_GAUGE03",
+    "E_GAUGE04",
+    "E_GAUGE05",
+    "E_GAUGE06",
+    "E_GAUGE07",
+    "E_GAUGE08",
+    "E_GAUGE09",
+    "E_GAUGE10"
+  ]
+}
