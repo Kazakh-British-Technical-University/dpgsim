@@ -35,3 +35,39 @@ P32,Essential support only,"We don't have enough resources for the full scale su
 P33,Phone and email customer support,We will conduct a customer support via both phone and email.
 P34,Support with LiveOPS,"We will not only make a support up and running, but also establish regular events and activities for our clients (LiveOPS)."
 P35,Outsourced support,We no need our team to make a customer support. Let's hire an outsource company to make it for us!
+P36,Quick desk research,"You read open crop reports and ask an AI assistant to fill the gaps. It is fast, but you have never stood in a field."
+P37,Farmer interviews,"You visit villages and ask farmers what slows them down. What do they plant, sell and fear most each season?"
+P38,Agronomy and data research,"Which soil, weather and satellite data are open? How could sensors and models work on a small farm?"
+P39,Season-long field study,"You follow a few farms through a whole growing season. It takes months, but you will know the real problem."
+P40,SMS advice prototype,"Advice by text message, with no app at all. It is rough, but you quickly learn if farmers want it."
+P41,Agronomist-in-the-loop,"A simple web form where an agronomist answers each request by hand. It does not scale, but farmers get real help."
+P42,Sensor and forecast prototype,"A cheap soil sensor sends data to a basic model. It works in the lab, but no farmer has tried it yet."
+P43,Field-ready MVP,"A tested mobile app with sensor support and crop tips for one pilot village. It takes time, but it is ready to ship."
+P44,Mission: feed communities,"Your team knows why you build open tools for farmers. Nothing more, nothing less."
+P45,Open values and a season plan,Openness and fairness guide your team. A seasonal plan shows which decisions to make first.
+P46,Open values and mission,"Shared values guide decisions, and the mission to end hunger gives your team the reason to make them."
+P47,"Values, mission and roadmap","Your team knows why, how and what comes next season. It builds strong trust, but it takes time."
+P48,Testing within your team,"Your team and friends try the app on a small test plot. It is cheap, but real fields are still far away."
+P49,Demo farm testing,A few dozen farmers and an agricultural school test the app. They will find the big problems early.
+P50,Live harvest test,You release the app to a whole region and watch what happens. Be ready to fix problems while crops grow.
+P51,Multi-season pilot program,"Testing in stages: one village, then a district, then a region. Slow, but built on real feedback."
+P52,Simple website,"A clear site that explains the platform in plain words, with downloads for local partners."
+P53,Messaging groups and radio,"Many farmers use messaging apps and local radio, not websites. Start where they already listen."
+P54,Website and farmer networks,A website for partners and messaging groups for farmers. Easier to find and easier to trust.
+P55,Full outreach campaign,"Radio, messaging groups, a website, market-day demos and cooperatives. It costs a lot, but it reaches everyone."
+P56,One low-cost server,"Rural users need a light and simple backend. It is cheap, but let's hope it stays online during harvest."
+P57,Cloud with offline sync,"Cloud hosting and an app that works offline, then syncs when the signal returns. A bit pricey, but convenient."
+P58,Regional servers,Your own servers near the farms keep responses fast. You will have to maintain them yourself.
+P59,Open infrastructure team,"You hire a small team to build open, well-documented infrastructure that others can reuse and run."
+P60,Apply on your own,Prepare all the documents and send them in by following the instructions on the DPG website.
+P61,Ask DPG experts for help,Talk to people who have been through it. They can point out gaps in your application.
+P62,Check SDG relevance only,"You confirm that your app fits SDG 2, Zero Hunger. Is that enough for a DPG? Probably not."
+P63,Go through all 9 indicators,"You check every DPG indicator, from open licenses to privacy and do no harm, and prepare the application carefully."
+P64,Planting-season campaign,Your team puts all its energy into a marketing push before planting season. The technical side gets less attention.
+P65,Launch at a farmers' fair,"A live launch at a regional fair. People will see the app, but not all of them will keep using it."
+P66,Quick launch checklist,"You are short on time, so you fix the major issues and prepare a decent, smaller launch."
+P67,Full launch preparation,"The whole team prepares the app, partners, training and campaign. It takes time, but you can afford it."
+P68,Basic farmer helpline,"There are not enough resources for full support, so you answer only the most urgent questions."
+P69,Phone and message support,Farmers can call or message you for help in their own language.
+P70,Support and farmer clubs,You offer support and also run regular farmer clubs and training sessions (LiveOps) to keep users engaged.
+P71,Support via local partners,"Local cooperatives and extension workers handle support for you. You save time, but you depend on them."
