@@ -44,3 +44,29 @@ E42,,Good,product insights,1,Bad,product insights,-1,,,,6,TRUE,15
 E43,,Good,market insights,1,Bad,market insights,-1,,,,7,TRUE,15
 E44,,Good,product insights,2,Good,product insights,2,,,,8,TRUE,15
 E45,,Good,dev insights,2,Bad,dev insights,-1,,,,9,TRUE,15
+FEW_E01,,Good,product insights,2,Good,dev insights,1,,,,1,TRUE,8
+FEW_E02,,Good,market insights,1,Good,product insights,1,,,,1,FALSE,30
+FEW_E03,,Good,money,400,Good,product insights,1,,,,1,FALSE,60
+FEW_E04,,Good,money,-150,Bad,dev insights,-1,,,,2,FALSE,6
+FEW_E05,,Good,market insights,1,Good,dev insights,1,,,,2,FALSE,30
+FEW_E06,,Good,money,300,Good,product insights,1,,,,2,FALSE,60
+FEW_E07,,Good,team insights,1,Good,dev insights,1,,,,3,TRUE,10
+FEW_E08,,Good,team insights,1,Bad,dev insights,-1,,,,3,FALSE,30
+FEW_E09,,Good,dev insights,2,Good,product insights,1,,,,3,FALSE,60
+FEW_E10,,Good,dev insights,1,Good,product insights,1,,,,4,TRUE,12
+FEW_E11,,Good,product insights,1,Good,market insights,1,,,,4,FALSE,30
+FEW_E12,,Good,product insights,2,Good,market insights,2,,,,4,FALSE,60
+FEW_E13,,Good,market insights,1,Good,money,300,,,,5,FALSE,8
+FEW_E14,,Good,market insights,1,Bad,market insights,-1,,,,5,FALSE,30
+FEW_E15,,Good,market insights,2,Good,product insights,1,,,,5,FALSE,60
+FEW_E16,,Good,money,-200,Bad,dev insights,-1,,,,6,TRUE,9
+FEW_E17,,Good,dev insights,1,Good,product insights,1,,,,6,FALSE,30
+FEW_E18,,Good,dev insights,2,Bad,market insights,-2,,,,6,FALSE,60
+FEW_E19,,Good,product insights,1,Bad,product insights,-1,,,,7,TRUE,7
+FEW_E20,,Good,product insights,2,Good,market insights,1,,,,7,FALSE,30
+FEW_E21,,Good,market insights,1,Good,dev insights,1,,,,8,FALSE,5
+FEW_E22,,Good,market insights,2,Good,dev insights,1,,,,8,FALSE,30
+FEW_E23,,Good,product insights,2,Good,dev insights,1,,,,8,FALSE,60
+FEW_E24,,Good,money,300,Good,market insights,2,,,,9,TRUE,10
+FEW_E25,,Good,product insights,2,Good,money,300,,,,9,FALSE,30
+FEW_E26,,Good,team insights,2,Good,dev insights,1,,,,9,FALSE,60
