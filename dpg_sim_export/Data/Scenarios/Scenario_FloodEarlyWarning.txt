@@ -1,0 +1,19 @@
+{
+  "SDG": 13,
+  "Money": 1800,
+  "MapRegion": 6,
+  "PhaseProjects": [
+      ["FEW_P01","FEW_P02","FEW_P03","FEW_P04"],
+      ["FEW_P05","FEW_P06","FEW_P07","FEW_P08"],
+      ["FEW_P09","FEW_P10","FEW_P11","FEW_P12"],
+      ["FEW_P13","FEW_P14","FEW_P15","FEW_P16"],
+      ["FEW_P17","FEW_P18","FEW_P19","FEW_P20"],
+      ["FEW_P21","FEW_P22","FEW_P23","FEW_P24"],
+      ["FEW_P25","FEW_P26","FEW_P27","FEW_P28"],
+      ["FEW_P29","FEW_P30","FEW_P31","FEW_P32"],
+      ["FEW_P33","FEW_P34","FEW_P35","FEW_P36"]
+  ],
+  "ScenarioEvents": [
+  "FEW_E01","FEW_E02","FEW_E03","FEW_E04","FEW_E05","FEW_E06","FEW_E07","FEW_E08","FEW_E09","FEW_E10","FEW_E11","FEW_E12","FEW_E13","FEW_E14","FEW_E15","FEW_E16","FEW_E17","FEW_E18","FEW_E19","FEW_E20","FEW_E21","FEW_E22","FEW_E23","FEW_E24","FEW_E25","FEW_E26"
+  ]
+}
