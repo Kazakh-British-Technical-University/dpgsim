@@ -44,3 +44,18 @@ E42,,Good,product insights,1,Bad,product insights,-1,,,,6,TRUE,15
 E43,,Good,market insights,1,Bad,market insights,-1,,,,7,TRUE,15
 E44,,Good,product insights,2,Good,product insights,2,,,,8,TRUE,15
 E45,,Good,dev insights,2,Bad,dev insights,-1,,,,9,TRUE,15
+Add to the END of: dpg_sim_export/Data/Events.csv ===
+E300,,Good,product insights,2,Bad,product insights,-1,,,,1,TRUE,10
+E301,,Good,product insights,1,,,,,,,1,FALSE,8
+E302,,Good,dev insights,1,Bad,dev insights,-2,,,,2,TRUE,10
+E303,,Good,money,-100,Bad,product insights,-1,,,,3,TRUE,10
+E304,,Good,team insights,1,Bad,team insights,-1,,,,3,FALSE,8
+E305,,Good,product insights,2,Bad,market insights,-1,,,,4,TRUE,10
+E306,,Good,market insights,1,Bad,product insights,-1,,,,4,FALSE,8
+E307,,Good,market insights,1,Bad,product insights,-2,,,,5,TRUE,10
+E308,,Good,money,-150,Bad,dev insights,-1,,,,6,TRUE,10
+E309,,Good,money,300,,,,,,,6,FALSE,8
+E310,,Good,dev insights,2,Bad,dev insights,-2,,,,7,TRUE,10
+E311,,Good,product insights,1,Good,market insights,1,,,,8,TRUE,10
+E312,,Good,market insights,2,Bad,market insights,-1,,,,9,TRUE,10
+E313,,Good,market insights,2,,,,,,,9,FALSE,8
